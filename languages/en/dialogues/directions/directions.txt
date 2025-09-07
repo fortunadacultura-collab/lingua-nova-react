@@ -1,0 +1,95 @@
+title: Asking Directions
+speaker: Jake
+text: Mike, last trip I got totally turned around asking for directions in a foreign city.
+pt: Mike, na última viagem, eu fiquei completamente perdido pedindo direções em uma cidade estrangeira.
+es: Mike, en el último viaje me desorienté completamente pidiendo direcciones en una ciudad extranjera.
+
+speaker: Mike
+text: Been there! The language barriers make it even trickier.
+pt: Já estive lá! As barreiras linguísticas tornam isso ainda mais complicado.
+es: ¡He estado allí! Las barreras idiomáticas lo hacen aún más complicado.
+
+speaker: Jake
+text: Yeah, and sometimes people give vague answers like “just keep going.”
+pt: Sim, e às vezes as pessoas dão respostas vagas como “continue em frente”.
+es: Sí, y a veces la gente da respuestas vagas como "sigue derecho".
+
+speaker: Mike
+text: Which could mean anything! I try to ask for landmarks these days.
+pt: O que pode significar qualquer coisa! Hoje em dia, tento pedir pontos de referência.
+es: ¡Lo que podría significar cualquier cosa! Hoy en día trato de preguntar por puntos de referencia.
+
+speaker: Jake
+text: Smart move. It’s way easier to spot a giant building or statue.
+pt: Jogada inteligente. É muito mais fácil localizar um prédio ou estátua gigante.
+es: Jugada inteligente. Es mucho más fácil localizar un edificio o estatua gigante.
+
+speaker: Mike
+text: Also, I’ve started using translation apps to break the ice.
+pt: Além disso, comecei a usar aplicativos de tradução para quebrar o gelo.
+es: Además, he empezado a usar aplicaciones de traducción para romper el hielo.
+
+speaker: Jake
+text: Tech saves lives on the road.
+pt: A tecnologia salva vidas na estrada.
+es: La tecnología salva vidas en el camino.
+
+speaker: Mike
+text: Ever had someone go out of their way to help you though?
+pt: Mas você já teve alguém que se esforçou para te ajudar?
+es: Pero, ¿alguna vez alguien ha hecho un esfuerzo adicional para ayudarte?
+
+speaker: Jake
+text: Happened in Italy—an older gentleman walked me halfway to my destination.
+pt: Aconteceu na Itália—um senhor mais velho me acompanhou até a metade do caminho para o meu destino.
+es: Pasó en Italia—un señor mayor me acompañó hasta la mitad del camino a mi destino.
+
+speaker: Mike
+text: That’s amazing! Shows kindness is universal.
+pt: Isso é incrível! Mostra que a gentileza é universal.
+es: ¡Eso es increíble! Demuestra que la amabilidad es universal.
+
+speaker: Jake
+text: Definitely restored my faith in humanity.
+pt: Definitivamente restaurou minha fé na humanidade.
+es: Definitivamente restauró mi fe en la humanidad.
+
+speaker: Mike
+text: I try to pay it forward when travelers ask me the same.
+pt: Eu tento retribuir quando viajantes me perguntam a mesma coisa.
+es: Trato de pagarlo adelante cuando los viajeros me preguntan lo mismo.
+
+speaker: Jake
+text: Me too. Even simple gestures like pointing in the right direction count.
+pt: Eu também. Até gestos simples como apontar na direção certa contam.
+es: Yo también. Incluso los gestos simples como señalar en la dirección correcta cuentan.
+
+speaker: Mike
+text: Have you used offline maps for back-up?
+pt: Você já usou mapas offline como backup?
+es: ¿Has usado mapas sin conexión como respaldo?
+
+speaker: Jake
+text: Always, because sometimes data is spotty.
+pt: Sempre, porque às vezes o sinal de dados é irregular.
+es: Siempre, porque a veces la señal de datos es irregular.
+
+speaker: Mike
+text: Same. And it’s fun to explore streets you wouldn’t find otherwise.
+pt: Idem. E é divertido explorar ruas que você não encontraria de outra forma.
+es: Igual. Y es divertido explorar calles que no encontrarías de otra manera.
+
+speaker: Jake
+text: Yeah, getting a bit lost isn’t always bad—leads to hidden gems.
+pt: Sim, se perder um pouco nem sempre é ruim—leva a joias escondidas.
+es: Sí, perderse un poco no siempre es malo—lleva a joyas ocultas.
+
+speaker: Mike
+text: Travel wisdom right there.
+pt: Sabedoria de viagem aí.
+es: Sabiduría de viaje ahí.
+
+speaker: Jake
+text: Next trip, I’ll prepare better but stay open to spontaneous adventure.
+pt: Na próxima viagem, vou me preparar melhor, mas ficarei aberto a aventuras espontâneas.
+es: En el próximo viaje, me prepararé mejor pero me mantendré abierto a la aventura espontánea.

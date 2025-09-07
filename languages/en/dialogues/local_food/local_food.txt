@@ -1,0 +1,95 @@
+title: Local Cuisine
+speaker: Ana
+text: Mike, tried any local dishes worth remembering lately?
+pt: Mike, experimentou algum prato local que valha a pena lembrar ultimamente?
+es: Mike, ¿has probado algún plato local que valga la pena recordar últimamente?
+
+speaker: Mike
+text: Actually, yes! That spicy seafood stew in New Orleans blew my mind.
+pt: Na verdade, sim! Aquele ensopado de frutos do mar picante em Nova Orleans me surpreendeu muito.
+es: ¡En realidad, sí! Ese guiso de mariscos picantes en Nueva Orleans me voló la mente.
+
+speaker: Ana
+text: Yum! I’ve been diving into street food around Manila—it’s a flavor explosion.
+pt: Hum! Tenho me aprofundado na comida de rua em Manila—é uma explosão de sabores.
+es: ¡Mm! He estado explorando la comida callejera en Manila—es una explosión de sabores.
+
+speaker: Mike
+text: Street food is where real culture shines.
+pt: A comida de rua é onde a cultura real brilha.
+es: La comida callejera es donde brilla la cultura real.
+
+speaker: Ana
+text: Exactly. Have you picked up any cooking tips?
+pt: Exatamente. Você aprendeu alguma dica de culinária?
+es: Exactamente. ¿Has aprendido algún consejo de cocina?
+
+speaker: Mike
+text: Yeah, a few recipes from market vendors and family cooks.
+pt: Sim, algumas receitas de vendedores do mercado e cozinheiros familiares.
+es: Sí, algunas recetas de vendedores del mercado y cocineros familiares.
+
+speaker: Ana
+text: I love learning through food. It’s like tasting history.
+pt: Adoro aprender através da comida. É como saborear a história.
+es: Me encanta aprender a través de la comida. Es como saborear la historia.
+
+speaker: Mike
+text: So true. Ingredients tell stories.
+pt: Muito verdade. Ingredientes contam histórias.
+es: Muy cierto. Los ingredientes cuentan historias.
+
+speaker: Ana
+text: Have you had any food fails on your trips?
+pt: Você teve algum fracasso alimentar em suas viagens?
+es: ¿Has tenido algún fracaso alimenticio en tus viajes?
+
+speaker: Mike
+text: Once tried something that turned out too spicy to handle!
+pt: Uma vez tentei algo que acabou sendo picante demais para aguentar!
+es: ¡Una vez probé algo que resultó demasiado picante para soportar!
+
+speaker: Ana
+text: Haha, been there. How about adventuring into vegan local dishes?
+pt: Haha, já passei por isso. Que tal se aventurar em pratos locais veganos?
+es: Jaja, he estado allí. ¿Qué tal aventurarse en platos locales veganos?
+
+speaker: Mike
+text: Tough in some places but rewarding when you find them.
+pt: Difícil em alguns lugares, mas recompensador quando você os encontra.
+es: Difícil en algunos lugares pero gratificante cuando los encuentras.
+
+speaker: Ana
+text: It pushes your palate and senses.
+pt: Isso expande seu paladar e sentidos.
+es: Empuja tu paladar y sentidos.
+
+speaker: Mike
+text: Have you tried fusion foods combining local and international flavors?
+pt: Você já experimentou comidas de fusão que combinam sabores locais e internacionais?
+es: ¿Has probado comidas de fusión que combinan sabores locales e internacionales?
+
+speaker: Ana
+text: Love them! They’re a delicious mashup of cultures.
+pt: Adoro! São uma mistura deliciosa de culturas.
+es: ¡Me encantan! Son una mezcla deliciosa de culturas.
+
+speaker: Mike
+text: Food unites us like nothing else.
+pt: A comida nos une como nada mais.
+es: La comida nos une como nada más.
+
+speaker: Ana
+text: Couldn’t agree more. Planning your next culinary adventure?
+pt: Não poderia concordar mais. Planejando sua próxima aventura culinária?
+es: No podría estar más de acuerdo. ¿Planeando tu próxima aventura culinaria?
+
+speaker: Mike
+text: Definitely. Maybe Thailand for those street-side noodles.
+pt: Definitivamente. Talvez Tailândia por aqueles noodles de rua.
+es: Definitivamente. Tal vez Tailandia por esos fideos callejeros.
+
+speaker: Ana
+text: Count me in! Foodie trips rock.
+pt: Me inclua! Viagens gastronômicas são incríveis.
+es: ¡Cuenta conmigo! Los viajes gastronómicos son geniales.

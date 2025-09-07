@@ -1,0 +1,105 @@
+title: Weekend Plans
+speaker: Lucas
+text: Mike, got any exciting plans for the weekend?
+pt: Mike, tem algum plano emocionante para o fim de semana?
+es: Mike, ¿tienes algún plan emocionante para el fin de semana?
+
+speaker: Mike
+text: Thinking about hitting the hiking trails. Need to unplug from city chaos.
+pt: Pensando em ir para as trilhas de caminhada. Preciso me desligar do caos da cidade.
+es: Pensando en ir a los senderos de excursionismo. Necesito desconectarme del caos de la ciudad.
+
+speaker: Lucas
+text: Nice! I'm considering a weekend getaway—maybe a beach trip to recharge.
+pt: Legal! Estou considerando uma viagem de fim de semana—talvez uma viagem à praia para recarregar.
+es: ¡Qué bien! Estoy considerando una escapada de fin de semana—tal vez un viaje a la playa para recargar energías.
+
+speaker: Mike
+text: Sounds perfect. Sometimes a change of scenery is the best therapy.
+pt: Parece perfeito. Às vezes, uma mudança de cenário é a melhor terapia.
+es: Suena perfecto. A veces un cambio de escenario es la mejor terapia.
+
+speaker: Lucas
+text: For sure. You joining us for the barbecue at Ana's on Sunday?
+pt: Com certeza. Você vai se juntar a nós no churrasco na casa da Ana no domingo?
+es: Por supuesto. ¿Te unes a nosotros para la barbacoa en casa de Ana el domingo?
+
+speaker: Mike
+text: Wouldn't miss it. Great food and great company—best way to end the weekend.
+pt: Não perderia por nada. Boa comida e boa companhia—a melhor maneira de terminar o fim de semana.
+es: No me lo perdería. Buena comida y buena compañía—la mejor manera de terminar el fin de semana.
+
+speaker: Lucas
+text: Exactly. After all the work stress, social recharge is crucial.
+pt: Exatamente. Depois de todo o estresse do trabalho, a recarga social é crucial.
+es: Exactamente. Después de todo el estrés laboral, la recarga social es crucial.
+
+speaker: Mike
+text: Absolutely. And maybe we can squeeze in a game or two afterward?
+pt: Absolutamente. E talvez possamos incluir um ou dois jogos depois?
+es: Absolutamente. ¿Y tal vez podamos incluir un juego o dos después?
+
+speaker: Lucas
+text: Count me in. Friendly competition is always a weekend highlight.
+pt: Pode contar comigo. Competição amigável é sempre um destaque do fim de semana.
+es: Cuenta conmigo. La competencia amistosa siempre es un punto destacado del fin de semana.
+
+speaker: Mike
+text: Plus, it's great bonding time with the gang.
+pt: Além disso, é um ótimo momento para criar laços com a turma.
+es: Además, es un gran momento para crear lazos con el grupo.
+
+speaker: Lucas
+text: So, hiking Saturday, beach Sunday, then barbecue and games?
+pt: Então, caminhada no sábado, praia no domingo, depois churrasco e jogos?
+es: Entonces, ¿excursionismo el sábado, playa el domingo, luego barbacoa y juegos?
+
+speaker: Mike
+text: Sounds like a solid weekend lineup.
+pt: Parece uma programação de fim de semana sólida.
+es: Suena como una sólida programación para el fin de semana.
+
+speaker: Lucas
+text: Perfect balance of adventure and chill.
+pt: Equilíbrio perfeito entre aventura e relaxamento.
+es: Equilibrio perfecto entre aventura y relajación.
+
+speaker: Mike
+text: Can't wait. Need to disconnect and just enjoy the moment.
+pt: Mal posso esperar. Preciso me desconectar e apenas aproveitar o momento.
+es: No puedo esperar. Necesito desconectarme y simplemente disfrutar el momento.
+
+speaker: Lucas
+text: Preach! What about you—any prep for the hike?
+pt: Isso mesmo! E você—algum preparo para a caminhada?
+es: ¡Amen! ¿Y tú—alguna preparación para la caminata?
+
+speaker: Mike
+text: Just packing light and making sure my playlist is fire.
+pt: Apenas fazendo uma mochila leve e garantindo que minha playlist esteja incrível.
+es: Solo empacando ligero y asegurándome de que mi playlist esté genial.
+
+speaker: Lucas
+text: Good call! Music makes the miles fly by.
+pt: Boa decisão! A música faz as milhas passarem voando.
+es: ¡Buena idea! La música hace que las millas vuelen.
+
+speaker: Mike
+text: And snacks. Never forget snacks on a hike.
+pt: E lanches. Nunca se esqueça dos lanches em uma caminhada.
+es: Y bocadillos. Nunca olvides los bocadillos en una caminata.
+
+speaker: Lucas
+text: Essential. Trail mix and granola bars for the win.
+pt: Essencial. Mix de trilha e barras de granola para vencer.
+es: Esencial. Mix de frutos secos y barras de granola para ganar.
+
+speaker: Mike
+text: Weekend can't come soon enough.
+pt: Mal posso esperar pelo fim de semana.
+es: El fin de semana no puede llegar lo suficientemente pronto.
+
+speaker: Lucas
+text: Same here, man. Let's make it count.
+pt: Igualmente, cara. Vamos fazer valer a pena.
+es: Igualmente, hombre. Hagamos que cuente.

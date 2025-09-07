@@ -1,0 +1,111 @@
+title: Travel Tips
+speaker: Lucas
+text: Chloe, what's your top travel tip for first-timers?
+pt: Chloe, qual é sua principal dica de viagem para iniciantes?
+es: Chloe, ¿cuál es tu principal consejo de viaje para principiantes?
+
+speaker: Chloe
+text: Always pack a travel-sized first aid kit—never underestimate minor emergencies.
+pt: Sempre leve um kit de primeiros socorros de viagem—nunca subestime emergências menores.
+es: Siempre empaca un botiquín de primeros auxilios de viaje—nunca subestimes emergencias menores.
+
+speaker: Lucas
+text: Good one. I'd add keeping digital copies of important documents.
+pt: Boa. Eu acrescentaria manter cópias digitais de documentos importantes.
+es: Buena. Yo añadiría mantener copias digitales de documentos importantes.
+
+speaker: Chloe
+text: Definitely. Also, learning a few phrases in the local language goes a long way.
+pt: Definitivamente. Além disso, aprender algumas frases no idioma local ajuda muito.
+es: Definitivamente. Además, aprender algunas frases en el idioma local ayuda mucho.
+
+speaker: Lucas
+text: Tech apps help but locals appreciate the effort to speak their language.
+pt: Aplicativos tecnológicos ajudam, mas os locais apreciam o esforço de falar a língua deles.
+es: Las aplicaciones tecnológicas ayudan, pero los locales aprecian el esfuerzo de hablar su idioma.
+
+speaker: Chloe
+text: Another is to dress smart but comfortably—layers are lifesavers.
+pt: Outra é vestir-se de forma inteligente, mas confortável—camadas são salva-vidas.
+es: Otra es vestirse de manera inteligente pero cómoda—las capas son salvavidas.
+
+speaker: Lucas
+text: Smart packing is an art! I try roll instead of fold clothes.
+pt: Fazer malas inteligentes é uma arte! Eu tento enrolar em vez de dobrar roupas.
+es: ¡Hacer el equipaje inteligente es un arte! Intento enrollar en lugar de doblar la ropa.
+
+speaker: Chloe
+text: Saves space and prevents wrinkles.
+pt: Economiza espaço e evita rugas.
+es: Ahorra espacio y evita arrugas.
+
+speaker: Lucas
+text: I also research local customs and etiquette before going.
+pt: Eu também pesquiso costumes e etiqueta locais antes de ir.
+es: También investigo las costumbres y etiqueta locales antes de ir.
+
+speaker: Chloe
+text: Prevents awkward moments and shows respect.
+pt: Evita momentos constrangedores e mostra respeito.
+es: Evita momentos incómodos y muestra respeto.
+
+speaker: Lucas
+text: Mixing planned activities with spontaneous exploration works best.
+pt: Misturar atividades planejadas com exploração espontânea funciona melhor.
+es: Mezclar actividades planificadas con exploración espontánea funciona mejor.
+
+speaker: Chloe
+text: Bingo. Don't overbook, leave room for serendipity.
+pt: Bingo. Não agende demais, deixe espaço para a serendipidade.
+es: Bingo. No reserves demasiado, deja espacio para la serendipia.
+
+speaker: Lucas
+text: And travel insurance—always worth it.
+pt: E seguro de viagem—sempre vale a pena.
+es: Y seguro de viaje—siempre vale la pena.
+
+speaker: Chloe
+text: Safety nets are crucial.
+pt: Redes de segurança são cruciais.
+es: Las redes de seguridad son cruciales.
+
+speaker: Lucas
+text: What about money? Cards or cash?
+pt: E sobre dinheiro? Cartões ou dinheiro?
+es: ¿Y sobre el dinero? ¿Tarjetas o efectivo?
+
+speaker: Chloe
+text: A mix. Some cash for markets, cards for security and perks.
+pt: Uma mistura. Um pouco de dinheiro para mercados, cartões para segurança e vantagens.
+es: Una mezcla. Algo de efectivo para mercados, tarjetas para seguridad y beneficios.
+
+speaker: Lucas
+text: Charging devices and backup power banks are essential too.
+pt: Dispositivos de carregamento e power banks de reserva também são essenciais.
+es: Dispositivos de carga y power banks de respaldo también son esenciales.
+
+speaker: Chloe
+text: Never get caught with a dead phone in a new place.
+pt: Nunca seja pego com um telefone descarregado em um lugar novo.
+es: Nunca te pillen con un teléfono descargado en un lugar nuevo.
+
+speaker: Lucas
+text: Those simple tips truly transform a trip.
+pt: Essas dicas simples realmente transformam uma viagem.
+es: Esos consejos simples realmente transforman un viaje.
+
+speaker: Chloe
+text: Travel smart, travel happy.
+pt: Viaje com inteligência, viaje feliz.
+es: Viaja inteligente, viaja feliz.
+
+speaker: Lucas
+text: Amen to that. Ready for the next adventure?
+pt: Amém a isso. Pronto para a próxima aventura?
+es: Amén a eso. ¿Listo para la próxima aventura?
+
+speaker: Chloe
+text: Always!
+pt: Sempre!
+es: ¡Siempre!
+```

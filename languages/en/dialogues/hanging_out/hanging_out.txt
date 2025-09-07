@@ -1,0 +1,95 @@
+title: Hanging Out
+speaker: Ana
+text: Lucas, what's your ideal way to chill after a crazy week?
+pt: Lucas, qual é a sua maneira ideal de relaxar depois de uma semana louca?
+es: Lucas, ¿cuál es tu forma ideal de relajarte después de una semana loca?
+
+speaker: Lucas
+text: Honestly? Low-key hangouts with friends and some good food.
+pt: Honestamente? Encontros descontraídos com amigos e uma boa comida.
+es: ¿Honestamente? Reuniones tranquilas con amigos y buena comida.
+
+speaker: Ana
+text: That's the best combo. I love spontaneous get-togethers that turn into all-night talks.
+pt: Essa é a melhor combinação. Adoro reuniões espontâneas que se transformam em conversas a noite toda.
+es: Esa es la mejor combinación. Me encantan las reuniones espontáneas que se convierten en charlas nocturnas.
+
+speaker: Lucas
+text: Me too. Nothing beats cracking jokes and sharing stories with good people.
+pt: Eu também. Nada supera contar piadas e compartilhar histórias com boas pessoas.
+es: Yo también. Nada supera contar chistes y compartir historias con buena gente.
+
+speaker: Ana
+text: What about activities? Games, movies, or just chilling?
+pt: E as atividades? Jogos, filmes ou apenas relaxando?
+es: ¿Y las actividades? ¿Juegos, películas o simplemente relajarse?
+
+speaker: Lucas
+text: Depends on the mood. Sometimes board games get competitive real fast.
+pt: Depende do humor. Às vezes, os jogos de tabuleiro ficam competitivos muito rápido.
+es: Depende del estado de ánimo. A veces los juegos de mesa se vuelven competitivos muy rápido.
+
+speaker: Ana
+text: Haha, I've witnessed those battles! Other times, a chill movie night is perfect.
+pt: Haha, eu testemunhei essas batalhas! Outras vezes, uma noite de cinema tranquila é perfeita.
+es: ¡Jaja, he sido testigo de esas batallas! Otras veces, una noche de película tranquila es perfecta.
+
+speaker: Lucas
+text: For sure. And snacks—can't forget those.
+pt: Com certeza. E lanches—não pode esquecer deles.
+es: Por supuesto. Y los snacks—no pueden olvidarse.
+
+speaker: Ana
+text: Oreos and popcorn? Classic.
+pt: Oreos e pipoca? Clássico.
+es: ¿Oreos y palomitas de maíz? Clásico.
+
+speaker: Lucas
+text: Always. Do you ever plan ahead or just go with the flow?
+pt: Sempre. Você planeja com antecedência ou apenas vai no fluxo?
+es: Siempre. ¿Alguna vez planeas con anticipación o simplemente te dejas llevar?
+
+speaker: Ana
+text: I'm definitely more go with the flow. That's when the best memories happen.
+pt: Eu definitivamente sou mais de ir no fluxo. É quando as melhores memórias acontecem.
+es: Definitivamente me dejo llevar más. Es cuando ocurren los mejores recuerdos.
+
+speaker: Lucas
+text: Agreed. Overplanning kills spontaneity.
+pt: Concordo. Planejar demais mata a espontaneidade.
+es: De acuerdo. Planificar en exceso mata la espontaneidad.
+
+speaker: Ana
+text: True. How about outdoor hangs?
+pt: Verdade. Que tal encontros ao ar livre?
+es: Cierto. ¿Qué tal las reuniones al aire libre?
+
+speaker: Lucas
+text: Love that. Parks, bonfires, rooftop chill sessions—anything with a breeze.
+pt: Adoro isso. Parques, fogueiras, sessões de relaxamento no telhado—qualquer coisa com uma brisa.
+es: Me encanta eso. Parques, fogatas, sesiones relajadas en la azotea—cualquier cosa con brisa.
+
+speaker: Ana
+text: Perfect for summer nights. Fresh air and laughter.
+pt: Perfeito para noites de verão. Ar fresco e risadas.
+es: Perfecto para las noches de verano. Aire fresco y risas.
+
+speaker: Lucas
+text: Couldn't ask for more.
+pt: Não poderia pedir mais.
+es: No podría pedir más.
+
+speaker: Ana
+text: Same here. It's all about connection, really.
+pt: O mesmo aqui. É tudo sobre conexão, realmente.
+es: Igualmente. Se trata de la conexión, en realidad.
+
+speaker: Lucas
+text: Hanging out is a therapy session in disguise.
+pt: Sair com os amigos é uma sessão de terapia disfarçada.
+es: Salir es una sesión de terapia disfrazada.
+
+speaker: Ana
+text: Well said. Let's make plans soon—more good vibes needed.
+pt: Bem dito. Vamos fazer planos em breve—precisamos de mais boas vibrações.
+es: Bien dicho. Hagamos planes pronto—se necesitan más buenas vibras.

@@ -1,0 +1,107 @@
+```
+title: Renting a Car
+speaker: Emily
+text: Ana, renting a car abroad always makes me a little nervous.
+pt: Ana, alugar um carro no exterior sempre me deixa um pouco nervosa.
+es: Ana, alquilar un coche en el extranjero siempre me pone un poco nerviosa.
+
+speaker: Ana
+text: Me too! But there are ways to make it smooth.
+pt: Eu também! Mas há maneiras de tornar isso tranquilo.
+es: ¡Yo también! Pero hay formas de hacerlo sin problemas.
+
+speaker: Emily
+text: Like booking in advance and reading the fine print?
+pt: Como reservar com antecedência e ler as letras miúdas?
+es: ¿Como reservar con antelación y leer la letra pequeña?
+
+speaker: Ana
+text: Exactly. I always compare prices on different sites before committing.
+pt: Exatamente. Eu sempre comparo preços em sites diferentes antes de me comprometer.
+es: Exactamente. Siempre comparo precios en diferentes sitios antes de comprometerme.
+
+speaker: Emily
+text: Insurance options confuse me sometimes.
+pt: As opções de seguro me confundem às vezes.
+es: Las opciones de seguro a veces me confunden.
+
+speaker: Ana
+text: I usually go for full coverage—it’s peace of mind on a trip.
+pt: Eu geralmente opto pela cobertura total—é paz de espírito em uma viagem.
+es: Normalmente elijo la cobertura total—es tranquilidad en un viaje.
+
+speaker: Emily
+text: Good call. Also, checking the fuel policy is important.
+pt: Boa decisão. Além disso, verificar a política de combustível é importante.
+es: Buena decisión. Además, verificar la política de combustible es importante.
+
+speaker: Ana
+text: Yes! “Full to full” is my preferred choice—fair and simple.
+pt: Sim! “Tanque cheio para tanque cheio” é minha escolha preferida—justa e simples.
+es: ¡Sí! "Lleno a lleno" es mi opción preferida—justa y sencilla.
+
+speaker: Emily
+text: Have you ever had to deal with tricky pickup or drop-off locations?
+pt: Você já teve que lidar com locais de retirada ou devolução complicados?
+es: ¿Alguna vez has tenido que lidar con lugares de recogida o entrega complicados?
+
+speaker: Ana
+text: A few times. I always confirm exactly where to go the day before.
+pt: Algumas vezes. Eu sempre confirmo exatamente para onde ir no dia anterior.
+es: Algunas veces. Siempre confirmo exactamente adónde ir el día anterior.
+
+speaker: Emily
+text: Smart move. What about those extra fees that pop up?
+pt: Jogada inteligente. E aquelas taxas extras que aparecem?
+es: Jugada inteligente. ¿Y esos cargos adicionales que aparecen?
+
+speaker: Ana
+text: Always read the terms carefully, ask about fees for additional drivers or young drivers.
+pt: Sempre leia os termos com cuidado, pergunte sobre taxas para motoristas adicionais ou jovens.
+es: Siempre lee los términos cuidadosamente, pregunta por las tarifas para conductores adicionales o jóvenes.
+
+speaker: Emily
+text: Did you ever get upsold at the counter?
+pt: Você já foi alvo de venda adicional no balcão?
+es: ¿Alguna vez te han intentado vender extras en el mostrador?
+
+speaker: Ana
+text: Yes, but I usually stick to what I booked to avoid surprises.
+pt: Sim, mas geralmente fico com o que reservei para evitar surpresas.
+es: Sí, pero generalmente me apego a lo que reservé para evitar sorpresas.
+
+speaker: Emily
+text: Safety checks before driving off are a must, right?
+pt: Verificações de segurança antes de dirigir são obrigatórias, certo?
+es: Las comprobaciones de seguridad antes de conducir son obligatorias, ¿verdad?
+
+speaker: Ana
+text: Definitely—check for damages, tire conditions, and mirrors.
+pt: Definitivamente—verifique danos, condições dos pneus e espelhos.
+es: Definitivamente—comprueba daños, estado de los neumáticos y espejos.
+
+speaker: Emily
+text: And GPS or phone mount?
+pt: E GPS ou suporte para telefone?
+es: ¿Y GPS o soporte para teléfono?
+
+speaker: Ana
+text: Essential! Navigating unfamiliar roads is stressful enough without tech troubles.
+pt: Essencial! Navegar por estradas desconhecidas já é estressante o suficiente sem problemas tecnológicos.
+es: ¡Esencial! Navegar por carreteras desconocidas ya es lo suficientemente estresante sin problemas tecnológicos.
+
+speaker: Emily
+text: I love road trips but renting can be a headache without careful planning.
+pt: Eu adoro viagens de carro, mas alugar pode ser uma dor de cabeça sem um planejamento cuidadoso.
+es: Me encantan los viajes por carretera, pero alquilar puede ser un dolor de cabeza sin una planificación cuidadosa.
+
+speaker: Ana
+text: Stay organized and aware, and it becomes part of the adventure.
+pt: Mantenha-se organizado e consciente, e isso se torna parte da aventura.
+es: Mantente organizado y consciente, y se convierte en parte de la aventura.
+
+speaker: Emily
+text: Here’s to smooth rides and memorable trips!
+pt: Um brinde a viagens tranquilas e memoráveis!
+es: ¡Brindo por viajes tranquilos y memorables!
+```

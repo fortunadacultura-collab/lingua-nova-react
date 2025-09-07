@@ -1,0 +1,100 @@
+title: Public Transport
+speaker: Mike
+text: Ana, how's your experience with public transport abroad?
+pt: Ana, como é sua experiência com transporte público no exterior?
+es: Ana, ¿cómo es tu experiencia con el transporte público en el extranjero?
+
+speaker: Ana
+text: Mixed bag! Some cities have stellar systems, others... not so much.
+pt: Resultados mistos! Algumas cidades têm sistemas excelentes, outras... nem tanto.
+es: ¡Resultados mixtos! Algunas ciudades tienen sistemas estelares, otras... no tanto.
+
+speaker: Mike
+text: I remember Istanbul's metro was efficient but insanely crowded.
+pt: Lembro que o metrô de Istambul era eficiente, mas insanamente lotado.
+es: Recuerdo que el metro de Estambul era eficiente pero increíblemente lleno.
+
+speaker: Ana
+text: Yep, rush hour there was like sardines in a can.
+pt: Sim, a hora do rush lá era como sardinhas enlatadas.
+es: Sí, la hora pico allí era como sardinas en lata.
+
+speaker: Mike
+text: Ever gotten lost on public transport?
+pt: Já se perdeu no transporte público?
+es: ¿Alguna vez te has perdido en el transporte público?
+
+speaker: Ana
+text: More than once! But it's part of the adventure, right?
+pt: Mais de uma vez! Mas faz parte da aventura, certo?
+es: ¡Más de una vez! Pero es parte de la aventura, ¿verdad?
+
+speaker: Mike
+text: True. And great way to meet locals and observe daily life.
+pt: Verdade. E uma ótima maneira de conhecer locais e observar a vida cotidiana.
+es: Cierto. Y una gran manera de conocer locales y observar la vida diaria.
+
+speaker: Ana
+text: Absolutely. I always try local transport for authenticity.
+pt: Absolutamente. Eu sempre experimento o transporte local para autenticidade.
+es: Absolutamente. Siempre pruebo el transporte local para autenticidad.
+
+speaker: Mike
+text: Any hacks for navigating confusing transport networks?
+pt: Algum truque para navegar em redes de transporte confusas?
+es: ¿Algún truco para navegar por redes de transporte confusas?
+
+speaker: Ana
+text: Offline maps and always having a backup app. Plus, asking friendly locals.
+pt: Mapas offline e sempre ter um aplicativo de backup. Além disso, perguntar a locais simpáticos.
+es: Mapas sin conexión y siempre tener una aplicación de respaldo. Además, preguntar a locales amables.
+
+speaker: Mike
+text: Locals know best! Do you prefer buses, trains, or trams?
+pt: Os locais sabem melhor! Você prefere ônibus, trens ou bondes?
+es: ¡Los locales saben mejor! ¿Prefieres autobuses, trenes o tranvías?
+
+speaker: Ana
+text: Trams have a charm, but subways are speedy.
+pt: Bondes têm um charme, mas os metrôs são rápidos.
+es: Los tranvías tienen un encanto, pero los metros son rápidos.
+
+speaker: Mike
+text: I agree. And avoiding peak hours helps sanity.
+pt: Concordo. E evitar horários de pico ajuda a manter a sanidade.
+es: Estoy de acuerdo. Y evitar las horas pico ayuda a mantener la cordura.
+
+speaker: Ana
+text: Definitely. Public transport can be chaotic but rewarding.
+pt: Definitivamente. O transporte público pode ser caótico, mas recompensador.
+es: Definitivamente. El transporte público puede ser caótico pero gratificante.
+
+speaker: Mike
+text: Plus, it's more eco-friendly than taxis or rideshares.
+pt: Além disso, é mais ecológico do que táxis ou rideshares.
+es: Además, es más ecológico que taxis o viajes compartidos.
+
+speaker: Ana
+text: Winning on the environment front.
+pt: Ganhando na frente ambiental.
+es: Ganando en el frente ambiental.
+
+speaker: Mike
+text: What's your must-have when riding transit?
+pt: O que é indispensável para você ao usar o transporte?
+es: ¿Qué es imprescindible para ti al usar el transporte?
+
+speaker: Ana
+text: Noise-canceling headphones and a good playlist.
+pt: Fones de ouvido com cancelamento de ruído e uma boa playlist.
+es: Auriculares con cancelación de ruido y una buena lista de reproducción.
+
+speaker: Mike
+text: Same here. Makes those commutes much more enjoyable.
+pt: Idem aqui. Torna esses deslocamentos muito mais agradáveis.
+es: Igual aquí. Hace esos viajes mucho más agradables.
+
+speaker: Ana
+text: Public transport isn't just travel; it's an experience.
+pt: Transporte público não é apenas viagem; é uma experiência.
+es: El transporte público no es solo viajar; es una experiencia.

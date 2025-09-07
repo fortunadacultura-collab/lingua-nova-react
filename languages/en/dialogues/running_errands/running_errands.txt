@@ -1,0 +1,90 @@
+title: Running Errands
+speaker: Chloe
+text: Ana, how do you tackle errands on crazy busy days?
+pt: Ana, como você lida com as tarefas em dias super ocupados?
+es: Ana, ¿cómo te enfrentas a los recados en los días locamente ocupados?
+
+speaker: Ana
+text: I usually group them together—makes the whole process less stressful.
+pt: Eu geralmente os agrupo—isso torna todo o processo menos estressante.
+es: Suelo agruparlos—hace que todo el proceso sea menos estresante.
+
+speaker: Chloe
+text: Smart. I tend to forget something and end up making multiple trips.
+pt: Esperta. Eu costumo esquecer algo e acabo fazendo várias viagens.
+es: Inteligente. Suelo olvidar algo y termino haciendo múltiples viajes.
+
+speaker: Ana
+text: Been there! Lists saved my sanity more times than I can count.
+pt: Já passei por isso! Listas salvaram minha sanidade mais vezes do que posso contar.
+es: ¡He estado ahí! Las listas salvaron mi cordura más veces de las que puedo contar.
+
+speaker: Chloe
+text: Same! And using reminder apps helps me stay on track.
+pt: Idem! E usar aplicativos de lembrete me ajuda a me manter no caminho certo.
+es: ¡Igual! Y usar aplicaciones de recordatorio me ayuda a mantenerme en el camino.
+
+speaker: Ana
+text: Technology to the rescue, always.
+pt: Tecnologia para o resgate, sempre.
+es: La tecnología al rescate, siempre.
+
+speaker: Chloe
+text: What's your least favorite errand?
+pt: Qual é a sua tarefa menos favorita?
+es: ¿Cuál es tu recado menos favorito?
+
+speaker: Ana
+text: Probably the post office—long lines and slow service.
+pt: Provavelmente o correio—filas longas e serviço lento.
+es: Probablemente la oficina de correos—largas colas y servicio lento.
+
+speaker: Chloe
+text: Ugh, yes. Waiting there feels like time standing still.
+pt: Ugh, sim. Esperar lá parece que o tempo para.
+es: Uf, sí. Esperar allí se siente como si el tiempo se detuviera.
+
+speaker: Ana
+text: Definitely. How about grocery shopping on errand days?
+pt: Definitivamente. E quanto às compras de supermercado nos dias de tarefas?
+es: Definitivamente. ¿Y las compras de supermercado en los días de recados?
+
+speaker: Chloe
+text: I try to hit farmers markets to make it more enjoyable.
+pt: Eu tento ir a feiras livres para tornar isso mais agradável.
+es: Intento ir a los mercados de agricultores para hacerlo más agradable.
+
+speaker: Ana
+text: Good idea. Fresh produce makes it less like a chore.
+pt: Boa ideia. Produtos frescos fazem com que pareça menos uma tarefa doméstica.
+es: Buena idea. Los productos frescos hacen que sea menos una tarea.
+
+speaker: Chloe
+text: And what about unexpected errands? They always pop up at the worst times.
+pt: E quanto às tarefas inesperadas? Elas sempre aparecem nas piores horas.
+es: ¿Y los recados inesperados? Siempre aparecen en los peores momentos.
+
+speaker: Ana
+text: Life loves throwing curveballs, doesn't it?
+pt: A vida adora lançar surpresas, não é?
+es: La vida ama lanzarnos curvas, ¿verdad?
+
+speaker: Chloe
+text: For sure. If only we could batch process life's errands like we do emails.
+pt: Com certeza. Se ao menos pudéssemos processar em lote as tarefas da vida como fazemos com os e-mails.
+es: Por supuesto. Si tan pudiéramos procesar por lotes los recados de la vida como hacemos con los correos electrónicos.
+
+speaker: Ana
+text: Ha! That'd be a game changer.
+pt: Ha! Isso mudaria o jogo.
+es: ¡Ja! Eso cambiaría las reglas del juego.
+
+speaker: Chloe
+text: Until then, it's all about planning and staying flexible.
+pt: Até lá, é tudo uma questão de planejamento e flexibilidade.
+es: Hasta entonces, se trata de planificar y mantenerse flexible.
+
+speaker: Ana
+text: Agreed. Errands are part of the hustle, but we've got this.
+pt: Concordo. Tarefas são parte do corre, mas a gente dá conta.
+es: De acuerdo. Los recados son parte del ajetreo, pero nosotras podemos con esto.

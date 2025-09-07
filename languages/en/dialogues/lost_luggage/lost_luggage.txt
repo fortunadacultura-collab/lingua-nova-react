@@ -1,0 +1,105 @@
+title: Lost Luggage
+speaker: Lucas
+text: Emily, ever had your luggage lost on a trip?
+pt: Emily, você já perdeu sua bagagem em uma viagem?
+es: Emily, ¿alguna vez has perdido tu equipaje en un viaje?
+
+speaker: Emily
+text: Sadly, yes. Twice. Both times I had to improvise big time.
+pt: Infelizmente, sim. Duas vezes. Nas duas vezes tive que improvisar muito.
+es: Lamentablemente, sí. Dos veces. En ambas tuve que improvisar mucho.
+
+speaker: Lucas
+text: That's the nightmare! How'd you cope?
+pt: Esse é o pesadelo! Como você lidou?
+es: ¡Esa es la pesadilla! ¿Cómo lo manejaste?
+
+speaker: Emily
+text: Bought essentials locally and kept calm. Patience is key.
+pt: Comprei itens essenciais localmente e mantive a calma. Paciência é fundamental.
+es: Compré artículos esenciales localmente y me mantuve calmada. La paciencia es clave.
+
+speaker: Lucas
+text: Easier said than done sometimes.
+pt: Mais fácil dizer do que fazer às vezes.
+es: Más fácil decirlo que hacerlo a veces.
+
+speaker: Emily
+text: For sure, but losing it only lasts a few days. The trip goes on.
+pt: Com certeza, mas perder dura apenas alguns dias. A viagem continua.
+es: Por seguro, pero perderlo solo dura unos días. El viaje continúa.
+
+speaker: Lucas
+text: True. Did you make insurance claims?
+pt: Verdade. Você fez reclamações ao seguro?
+es: Cierto. ¿Hiciste reclamos al seguro?
+
+speaker: Emily
+text: Always. It helps with the financial hit.
+pt: Sempre. Isso ajuda com o prejuízo financeiro.
+es: Siempre. Ayuda con el golpe financiero.
+
+speaker: Lucas
+text: What about packing strategies to avoid disaster?
+pt: E as estratégias de empacotamento para evitar desastres?
+es: ¿Y las estrategias de empaque para evitar desastres?
+
+speaker: Emily
+text: I pack a change of clothes and basics in carry-on now.
+pt: Agora eu coloco uma muda de roupa e itens básicos na bagagem de mão.
+es: Ahora empaco una muda de ropa y artículos básicos en el equipaje de mano.
+
+speaker: Lucas
+text: Smart move. Do you track your bags?
+pt: Jogada inteligente. Você rastreia suas malas?
+es: Jugada inteligente. ¿Rastreas tus maletas?
+
+speaker: Emily
+text: Yep, with apps and always tagging them clearly.
+pt: Sim, com aplicativos e sempre etiquetando-as claramente.
+es: Sí, con aplicaciones y siempre etiquetándolas claramente.
+
+speaker: Lucas
+text: Have you ever volunteered to watch luggage for strangers?
+pt: Você já se voluntariou para cuidar da bagagem de estranhos?
+es: ¿Alguna vez te has ofrecido a vigilar el equipaje de extraños?
+
+speaker: Emily
+text: Haha, no, too risky! But I help friends with theirs.
+pt: Haha, não, muito arriscado! Mas ajudo amigos com as deles.
+es: Jaja, no, ¡demasiado arriesgado! Pero ayudo a amigos con los suyos.
+
+speaker: Lucas
+text: Same. Sharing is caring.
+pt: Idem. Compartilhar é se importar.
+es: Igual. Compartir es demostrar interés.
+
+speaker: Emily
+text: Lost luggage builds character... and patience.
+pt: Bagagem perdida fortalece o caráter... e a paciência.
+es: El equipaje perdido fortalece el carácter... y la paciencia.
+
+speaker: Lucas
+text: That it does. Lesson learned the hard way.
+pt: Realmente. Lição aprendida da maneira difícil.
+es: Eso sí que lo hace. Lección aprendida por las malas.
+
+speaker: Emily
+text: Next trip, I'm ready for anything.
+pt: Próxima viagem, estou pronta para qualquer coisa.
+es: Próximo viaje, estoy lista para lo que sea.
+
+speaker: Lucas
+text: Me too. We just roll with the punches.
+pt: Eu também. Nós apenas nos adaptamos aos imprevistos.
+es: Yo también. Simplemente nos adaptamos a los imprevistos.
+
+speaker: Emily
+text: Exactly. Travel comes with surprises. We adapt.
+pt: Exatamente. Viajar vem com surpresas. Nós nos adaptamos.
+es: Exactamente. Viajar viene con sorpresas. Nos adaptamos.
+
+speaker: Lucas
+text: That's what makes it memorable.
+pt: É isso que torna memorável.
+es: Eso es lo que lo hace memorable.

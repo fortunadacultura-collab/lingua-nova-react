@@ -1,0 +1,111 @@
+title: Hotel Check-in
+speaker: Ana
+text: Chloe, do you prefer dropping your bags at the front desk or using mobile check-in?
+pt: Chloe, você prefere deixar suas malas na recepção ou usar o check-in móvel?
+es: Chloe, ¿prefieres dejar tus maletas en la recepción o usar el check-in móvil?
+
+speaker: Chloe
+text: Mobile check-in is my go-to when available—it speeds things up big time.
+pt: O check-in móvel é minha primeira opção quando disponível—acelera muito as coisas.
+es: El check-in móvil es mi preferido cuando está disponible—acelera mucho las cosas.
+
+speaker: Ana
+text: I'm with you, but sometimes I like talking to staff for local tips.
+pt: Estou com você, mas às vezes gosto de falar com a equipe para dicas locais.
+es: Estoy contigo, pero a veces me gusta hablar con el personal para consejos locales.
+
+speaker: Chloe
+text: Good point. Personalized recommendations can make your stay special.
+pt: Bom ponto. Recomendações personalizadas podem tornar sua estadia especial.
+es: Buen punto. Las recomendaciones personalizadas pueden hacer tu estancia especial.
+
+speaker: Ana
+text: Ever had a rough check-in experience?
+pt: Já teve uma experiência difícil de check-in?
+es: ¿Alguna vez has tenido una experiencia difícil de check-in?
+
+speaker: Chloe
+text: Once, they lost my reservation. Nightmare.
+pt: Uma vez, eles perderam minha reserva. Pesadelo.
+es: Una vez, perdieron mi reserva. Pesadilla.
+
+speaker: Ana
+text: Ugh, worst feeling. I always double-check confirmations these days.
+pt: Aff, pior sensação. Eu sempre verifico as confirmações duas vezes hoje em dia.
+es: Uf, la peor sensación. Siempre verifico las confirmaciones dos veces estos días.
+
+speaker: Chloe
+text: Same. A quick email before arrival saves headaches.
+pt: Idem. Um e-mail rápido antes da chegada evita dores de cabeça.
+es: Igual. Un correo rápido antes de la llegada ahorra dolores de cabeza.
+
+speaker: Ana
+text: I appreciate when hotels upgrade room types unexpectedly. Nice surprise!
+pt: Eu gosto quando os hotéis atualizam os tipos de quarto inesperadamente. Surpresa agradável!
+es: Aprecio cuando los hotéis mejoran los tipos de habitación inesperadamente. ¡Buena sorpresa!
+
+speaker: Chloe
+text: Yes! Free upgrades make the trip feel luxe.
+pt: Sim! Upgrades gratuitos fazem a viagem parecer luxuosa.
+es: ¡Sí! Las mejoras gratuitas hacen que el viaje se sienta lujoso.
+
+speaker: Ana
+text: What about early check-in?
+pt: E o check-in antecipado?
+es: ¿Y el check-in temprano?
+
+speaker: Chloe
+text: Useful but not always guaranteed. I always ask politely.
+pt: Útil, mas nem sempre garantido. Eu sempre pergunto educadamente.
+es: Útil pero no siempre garantizado. Siempre pregunto educadamente.
+
+speaker: Ana
+text: You gotta be charming! Sometimes they help if rooms are ready.
+pt: Você tem que ser charmosa! À vezes eles ajudam se os quartos estiverem prontos.
+es: ¡Tienes que ser encantador! A veces ayudan si las habitaciones están listas.
+
+speaker: Chloe
+text: Totally. Also, loyalty programs have perks like late check-out or free breakfast.
+pt: Totalmente. Além disso, programas de fidelidade têm vantagens como check-out tardio ou café da manhã gratuito.
+es: Totalmente. Además, los programas de lealtad tienen beneficios como check-out tardío o desayuno gratis.
+
+speaker: Ana
+text: I'm all for loyalty points. Used mine for a spa day last weekend!
+pt: Eu adoro pontos de fidelidade. Usei os meus para um dia de spa no fim de semana passado!
+es: Estoy a favor de los puntos de lealtad. ¡Usé los míos para un día de spa el fin de semana pasado!
+
+speaker: Chloe
+text: Nice! Speaking of extras, do you tip bellhops and housekeeping?
+pt: Legal! Falando em extras, você dá gorjeta para carregadores e equipe de limpeza?
+es: ¡Bien! Hablando de extras, ¿das propina a los botones y al personal de limpieza?
+
+speaker: Ana
+text: Always. Small gestures go a long way.
+pt: Sempre. Pequenos gestos fazem toda a diferença.
+es: Siempre. Los pequeños gestos ayudan mucho.
+
+speaker: Chloe
+text: Absolutely. Service industry folks appreciate it.
+pt: Absolutamente. As pessoas da indústria de serviços apreciam.
+es: Absolutamente. La gente de la industria de servicios lo aprecia.
+
+speaker: Ana
+text: Especially if they help with unexpected requests like late luggage drop-offs.
+pt: Especialmente se eles ajudam com pedidos inesperados como deixar bagagens tarde.
+es: Especialmente si ayudan con solicitudes inesperadas como dejar equipaje tarde.
+
+speaker: Chloe
+text: Hotels can make or break your trip. Good check-in sets the tone.
+pt: Hotéis podem fazer ou quebrar sua viagem. Um bom check-in define o tom.
+es: Los hoteles pueden hacer o deshacer tu viaje. Un buen check-in marca la pauta.
+
+speaker: Ana
+text: Couldn't agree more. Hotel vibes matter.
+pt: Não poderia concordar mais. As vibrações do hotel importam.
+es: No podría estar más de acuerdo. El ambiente del hotel importa.
+
+speaker: Chloe
+text: Time for me to book my next stay!
+pt: Hora de reservar minha próxima estadia!
+es: ¡Hora de reservar mi próxima estancia!
+```

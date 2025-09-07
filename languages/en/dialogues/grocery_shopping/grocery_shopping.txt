@@ -1,0 +1,100 @@
+title: Grocery Shopping
+speaker: Lucas
+text: Ana, do you plan your grocery trips, or just wing it?
+pt: Ana, você planeja suas compras de supermercado ou simplesmente improvisa?
+es: Ana, ¿planeas tus compras de supermercado o simplemente improvisas?
+
+speaker: Ana
+text: I like to plan. It helps me stay on budget and avoid buying things I don't need.
+pt: Eu gosto de planejar. Isso me ajuda a manter o orçamento e evita que eu compre coisas desnecessárias.
+es: Me gusta planificar. Me ayuda a mantenerme dentro del presupuesto y evita que compre cosas que no necesito.
+
+speaker: Lucas
+text: I'm more of a last-minute grabber—which is why I sometimes end up with random snacks.
+pt: Sou mais do tipo que compra de última hora—por isso às vezes acabo com lanches aleatórios.
+es: Soy más de comprar de último minuto, por eso a veces termino con snacks aleatorios.
+
+speaker: Ana
+text: Guilty pleasure alert! But I get it, sometimes life's hectic.
+pt: Alerta de prazer culposo! Mas eu entendo, às vezes a vida é agitada.
+es: ¡Alerta de placer culposo! Pero lo entiendo, a veces la vida es ajetreada.
+
+speaker: Lucas
+text: Do you shop online or prefer the store?
+pt: Você compra online ou prefere a loja física?
+es: ¿Compras en línea o prefieres la tienda?
+
+speaker: Ana
+text: Depends. I love browsing markets, but online saves so much time.
+pt: Depende. Adoro passear pelos mercados, mas online economiza muito tempo.
+es: Depende. Me encanta recorrer mercados, pero en línea ahorra mucho tiempo.
+
+speaker: Lucas
+text: True. I've started using grocery apps which track sales and coupons. Big help.
+pt: Verdade. Comecei a usar aplicativos de supermercado que rastreiam promoções e cupons. Ajuda muito.
+es: Cierto. He empezado a usar aplicaciones de supermercado que rastrean ventas y cupones. Gran ayuda.
+
+speaker: Ana
+text: That's smart! I tend to get distracted but using a list keeps me focused.
+pt: Isso é inteligente! Eu costumo me distrair, mas usar uma lista me mantém focada.
+es: ¡Eso es inteligente! Suelo distraerme pero usar una lista me mantiene enfocada.
+
+speaker: Lucas
+text: Lists save lives, for sure. I've learned the hard way many times.
+pt: Listas salvam vidas, com certeza. Já aprendi da maneira difícil várias vezes.
+es: Las listas salvan vidas, seguro. Lo he aprendido por las malas muchas veces.
+
+speaker: Ana
+text: How about fresh produce? Do you stick to local and seasonal?
+pt: E quanto aos produtos frescos? Você prefere locais e da estação?
+es: ¿Y los productos frescos? ¿Te apegas a lo local y de temporada?
+
+speaker: Lucas
+text: I try. Farmers markets are great for that vibe and fresh stuff.
+pt: Eu tento. Feiras livres são ótimas para essa vibe e coisas frescas.
+es: Intento. Los mercados de agricultores son geniales para ese ambiente y cosas frescas.
+
+speaker: Ana
+text: Absolutely. Plus, supporting local is a huge plus.
+pt: Com certeza. Além disso, apoiar o local é uma grande vantagem.
+es: Absolutamente. Además, apoyar lo local es una gran ventaja.
+
+speaker: Lucas
+text: And healthier, right? I notice the taste difference immediately.
+pt: E mais saudável, certo? Percebo a diferença de sabor imediatamente.
+es: ¿Y más saludable, cierto? Noto la diferencia de sabor inmediatamente.
+
+speaker: Ana
+text: Totally. Plus, I make meal prep weekends fun by trying new recipes.
+pt: Totalmente. Além disso, faço os fins de semana de preparação de refeições divertidos, experimentando novas receitas.
+es: Totalmente. Además, hago que los fines de semana de preparación de comidas sean divertidos probando nuevas recetas.
+
+speaker: Lucas
+text: Nice! I need to do that more instead of eating out every night.
+pt: Legal! Preciso fazer mais isso em vez de comer fora toda noite.
+es: ¡Genial! Necesito hacer eso más en lugar de cenar fuera todas las noches.
+
+speaker: Ana
+text: Small changes make a big impact on health and budget.
+pt: Pequenas mudanças têm um grande impacto na saúde e no orçamento.
+es: Los pequeños cambios tienen un gran impacto en la salud y el presupuesto.
+
+speaker: Lucas
+text: Speaking of budget, coupons and cashback apps have helped me save big.
+pt: Falando em orçamento, cupons e aplicativos de cashback me ajudaram a economizar muito.
+es: Hablando de presupuesto, los cupones y las aplicaciones de cashback me han ayudado a ahorrar mucho.
+
+speaker: Ana
+text: Love those apps! Shopping smart doesn't have to be boring.
+pt: Adoro esses aplicativos! Comprar com inteligência não precisa ser chato.
+es: ¡Me encantan esas aplicaciones! Comprar de forma inteligente no tiene que ser aburrido.
+
+speaker: Lucas
+text: Exactly! It's about working with the plan, not against it.
+pt: Exatamente! Trata-se de trabalhar com o plano, não contra ele.
+es: ¡Exactamente! Se trata de trabajar con el plan, no en contra.
+
+speaker: Ana
+text: So true. Grocery trips feel less like a chore and more like an adventure now.
+pt: Muito verdade. As idas ao supermercado agora parecem menos uma tarefa e mais uma aventura.
+es: Muy cierto. Ahora los viajes de compras se sienten menos como una tarea y más como una aventura.

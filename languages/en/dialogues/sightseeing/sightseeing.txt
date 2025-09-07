@@ -1,0 +1,106 @@
+title: Sightseeing
+speaker: Chloe
+text: Jake, what’s your go-to when exploring a new city?
+pt: Jake, qual é a sua primeira escolha ao explorar uma cidade nova?
+es: Jake, ¿cuál es tu primera opción al explorar una ciudad nueva?
+
+speaker: Jake
+text: I usually hit the landmarks first, then wander off the beaten path.
+pt: Geralmente visito os pontos turísticos primeiro, depois saio do caminho tradicional.
+es: Normalmente visito los puntos de referencia primero, luego me alejo del camino trillado.
+
+speaker: Chloe
+text: Love that! Some of the best spots are hidden gems.
+pt: Adoro isso! Alguns dos melhores lugares são joias escondidas.
+es: ¡Me encanta! Algunos de los mejores lugares son joyas ocultas.
+
+speaker: Jake
+text: Exactly. And I always make sure to try local food along the way.
+pt: Exatamente. E eu sempre me certifico de experimentar a comida local pelo caminho.
+es: Exactamente. Y siempre me aseguro de probar la comida local en el camino.
+
+speaker: Chloe
+text: Food is a big part of the experience! Ever join a guided tour?
+pt: A comida é uma grande parte da experiência! Já participou de um tour guiado?
+es: ¡La comida es una gran parte de la experiencia! ¿Alguna vez te unes a un tour guiado?
+
+speaker: Jake
+text: Sometimes. They’re good for history buffs but I prefer a self-paced stroll.
+pt: Às vezes. Eles são bons para amantes de história, mas prefiro um passeio no meu próprio ritmo.
+es: A veces. Son buenos para los amantes de la historia, pero prefiero un paseo a mi propio ritmo.
+
+speaker: Chloe
+text: Makes sense. What about museums?
+pt: Faz sentido. E os museus?
+es: Tiene sentido. ¿Y los museos?
+
+speaker: Jake
+text: Can’t miss those. I usually spend hours in at least one major museum.
+pt: Não posso perdê-los. Geralmente passo horas em pelo menos um museu importante.
+es: No me los puedo perder. Normalmente paso horas en al menos un museo importante.
+
+speaker: Chloe
+text: Same here. I love audio guides—they add depth without being overwhelming.
+pt: Idem aqui. Adoro audioguias—eles acrescentam profundidade sem ser overwhelming.
+es: Igual aquí. Me encantan las audioguías—añaden profundidad sin ser abrumadoras.
+
+speaker: Jake
+text: Totally. And city maps or travel apps help me plan efficient routes.
+pt: Totalmente. E mapas da cidade ou aplicativos de viagem me ajudam a planejar rotas eficientes.
+es: Totalmente. Y los mapas de la ciudad o las apps de viaje me ayudan a planificar rutas eficientes.
+
+speaker: Chloe
+text: How do you balance seeing everything vs just relaxing?
+pt: Como você equilibra ver tudo versus apenas relaxar?
+es: ¿Cómo equilibras ver todo versus simplemente relajarte?
+
+speaker: Jake
+text: Tough! I try not to over-schedule, leave pockets of free time.
+pt: Difícil! Eu tento não agendar demais, deixo intervalos de tempo livre.
+es: ¡Difícil! Trato de no sobrecargar la agenda, dejo espacios de tiempo libre.
+
+speaker: Chloe
+text: Smart. Burnout ruins the fun.
+pt: Inteligente. O esgotamento estraga a diversão.
+es: Inteligente. El agotamiento arruina la diversión.
+
+speaker: Jake
+text: Exactly. Plus, spontaneous detours are sometimes the best memories.
+pt: Exatamente. Além disso, desvios espontâneos são às vezes as melhores lembranças.
+es: Exactamente. Además, los desvíos espontáneos a veces son los mejores recuerdos.
+
+speaker: Chloe
+text: Agreed. And don’t forget snapping pics to freeze moments.
+pt: Concordo. E não se esqueça de tirar fotos para congelar momentos.
+es: De acuerdo. Y no olvides tomar fotos para congelar momentos.
+
+speaker: Jake
+text: Absolutely. Capturing the vibe for later.
+pt: Absolutamente. Capturar a vibe para depois.
+es: Absolutamente. Capturar la vibra para después.
+
+speaker: Chloe
+text: Any favorite city so far?
+pt: Alguma cidade favorita até agora?
+es: ¿Alguna ciudad favorita hasta ahora?
+
+speaker: Jake
+text: Tokyo topped my list for energy and culture.
+pt: Tóquio encabeçou minha lista por energia e cultura.
+es: Tokio encabezó mi lista por energía y cultura.
+
+speaker: Chloe
+text: Nice! Mine’s Paris—food and art heaven.
+pt: Legal! A minha é Paris—paraíso da comida e da arte.
+es: ¡Genial! La mía es París—paraíso de la comida y el arte.
+
+speaker: Jake
+text: Both classics. Ready for the next adventure?
+pt: Ambos clássicos. Pronto para a próxima aventura?
+es: Ambos clásicos. ¿Listo para la próxima aventura?
+
+speaker: Chloe
+text: Always. Travel dreams never sleep.
+pt: Sempre. Sonhos de viagem nunca dormem.
+es: Siempre. Los sueños de viaje nunca duermen.
+```

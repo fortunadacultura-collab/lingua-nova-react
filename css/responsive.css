@@ -1,0 +1,802 @@
+/* ============================================
+   RESPONSIVIDADE PARA O NAVBAR
+   ============================================ */
+
+@media (max-width: 1100px) {
+    .nav-links {
+        gap: 0.8rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .logo .logo-text {
+        display: none;
+    }
+    
+    .language-icon-selector .icon-tooltip {
+        display: none;
+    }
+    
+    .language-selector-wrapper {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px;
+        gap: 1.5rem;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.1rem;
+        padding: 0.5rem 1.5rem;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        width: 100%;
+        padding-left: 1.5rem;
+        display: none;
+        margin-top: 0.5rem;
+    }
+    
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-toggle::after {
+        display: none;
+    }
+    
+    .nav-actions {
+        margin-left: auto;
+        margin-right: 0.5rem;
+        gap: 0.8rem;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .user-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+    
+    /* Ajustes para o menu do usuário em mobile */
+    .user-dropdown-menu {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 16px 16px 0 0;
+        transform: translateY(100%);
+    }
+    
+    .user-menu:hover .user-dropdown-menu,
+    .user-menu.active .user-dropdown-menu {
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   OTIMIZAÇÕES ESPECÍFICAS PARA MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .content-below-navbar {
+        padding-top: 70px;
+        padding-bottom: 1rem;
+    }
+    
+    .nav-actions {
+        gap: 0.5rem;
+    }
+    
+    .language-icon-selector {
+        margin-right: 0.3rem;
+    }
+    
+    /* Page Title Otimizado */
+    .page-title-container {
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+        padding: 0 1rem;
+    }
+    
+    .page-title::after {
+        width: 60px;
+    }
+    
+    /* Dialogue Container Maximizado */
+    .dialogue-container {
+        margin: 1rem 0.5rem !important;
+        border-radius: 12px;
+    }
+    
+    #dialogue-content {
+        padding: 1rem !important;
+        height: 55vh;
+        max-height: 400px;
+    }
+    
+    /* Bolhas de Diálogo Otimizadas */
+    .message {
+        max-width: 92% !important;
+        padding: 14px 16px !important;
+        margin: 0 auto 12px auto;
+    }
+    
+    .message-user {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    
+    .message-other {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    .message-text {
+        font-size: 1rem !important;
+        line-height: 1.5;
+    }
+    
+    .message-sender {
+        font-size: 1rem !important;
+        margin-bottom: 4px;
+    }
+    
+    .translation-text {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+    
+    /* Media Player Otimizado - LINHA ÚNICA */
+    .media-player {
+        padding: 1rem;
+        margin: 1rem 0.5rem;
+    }
+    
+    .player-controls {
+        flex-direction: row !important;
+        justify-content: space-between;
+        gap: 8px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 1rem;
+        min-height: 60px;
+        align-items: center;
+    }
+    
+    .player-btn {
+        width: 50px !important;
+        height: 50px !important;
+        min-width: 50px !important;
+        min-height: 50px !important;
+        padding: 14px !important;
+        flex-shrink: 0;
+        margin: 0 2px;
+        transition: all 0.2s ease;
+    }
+    
+    .player-btn i {
+        font-size: 1.2rem !important;
+    }
+    
+    /* Correção específica para o botão de tradução */
+    .player-btn#translate-toggle-btn {
+        position: relative;
+        z-index: 10;
+        transition: all 0.3s ease;
+    }
+    
+    .player-btn#translate-toggle-btn.active {
+        background: var(--secondary);
+        transform: none !important;
+        box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.3);
+    }
+    
+    /* Volume Control Inteligente */
+    .volume-control {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 0 !important;
+    }
+    
+    .volume-btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+    }
+    
+    /* Progress Bar Otimizada */
+    .progress-container {
+        margin-top: 1rem;
+    }
+    
+    .progress-bar {
+        height: 6px;
+        margin-bottom: 12px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .progress-bar::before {
+        height: 12px;
+        top: -3px;
+    }
+    
+    .progress-bar::after {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 0;
+        right: 0;
+        bottom: -8px;
+        z-index: 1;
+    }
+    
+    .time-display {
+        font-size: 0.8rem;
+    }
+    
+    /* Section Title Otimizado */
+    .section-title {
+        margin: 2rem 0 1.5rem;
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .section-title::after {
+        width: 80px;
+    }
+    
+    /* Theme Grid Otimizado */
+    .theme-grid {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .theme-card {
+        padding: 1.2rem;
+        margin: 0 0.5rem;
+    }
+    
+    .theme-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .theme-card li {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Theme Controls */
+    .theme-controls {
+        margin: 2rem 0;
+    }
+    
+    .theme-control-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    /* CTA Button */
+    .cta-button {
+        padding: 0.9rem 1.8rem;
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+    
+    /* Feedback Tátil Melhorado */
+    .player-btn:active {
+        transform: scale(0.92) !important;
+        transition: transform 0.1s ease;
+    }
+    
+    .message:active {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        transition: background-color 0.1s ease;
+    }
+    
+    /* Esconder controles desktop em mobile */
+    .volume-control {
+        display: none !important;
+    }
+}
+
+/* ============================================
+   CONTROLE DE VOLUME MOBILE
+   ============================================ */
+
+.volume-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.volume-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.volume-popup-content {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.volume-popup.active .volume-popup-content {
+    transform: translateY(0);
+}
+
+.volume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.volume-header span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.volume-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.volume-close-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--text);
+}
+
+.volume-slider-container {
+    margin-bottom: 2rem;
+}
+
+.mobile-volume-slider {
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right, var(--primary) 0%, var(--primary) 50%, #e2e8f0 50%, #e2e8f0 100%);
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--primary);
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-volume-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--primary);
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.volume-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.volume-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+}
+
+.volume-preset-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.volume-preset-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.volume-feedback {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 2001;
+    opacity: 0;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.volume-feedback.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.volume-feedback i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.volume-feedback span {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* ============================================
+   OTIMIZAÇÕES PARA TELAS MUITO PEQUENAS
+   ============================================ */
+
+@media (max-width: 360px) {
+    .navbar {
+        padding: 0.7rem 0.8rem;
+    }
+    
+    .player-controls {
+        gap: 4px;
+        padding: 0 4px;
+    }
+    
+    .player-btn {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+        padding: 10px !important;
+    }
+    
+    .player-btn i {
+        font-size: 1.1rem !important;
+    }
+    
+    .volume-btn {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .message {
+        max-width: 94% !important;
+        padding: 12px 14px !important;
+    }
+    
+    .message-text {
+        font-size: 0.95rem !important;
+    }
+    
+    .theme-card {
+        padding: 1rem;
+        margin: 0 0.3rem;
+    }
+    
+    .theme-card li {
+        padding: 0.6rem 0.7rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Ajustes para o popup de volume em telas pequenas */
+    .volume-popup-content {
+        padding: 1.5rem;
+    }
+    
+    .volume-buttons {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .volume-preset-btn {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   OTIMIZAÇÕES PARA LANDSCAPE MOBILE
+   ============================================ */
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .content-below-navbar {
+        padding-top: 65px;
+    }
+    
+    #dialogue-content {
+        height: 45vh;
+        max-height: 300px;
+    }
+    
+    .message {
+        max-width: 85% !important;
+        padding: 12px 14px !important;
+    }
+    
+    .media-player {
+        padding: 0.8rem;
+        margin: 0.8rem 0.5rem;
+    }
+    
+    .player-controls {
+        gap: 6px;
+    }
+    
+    .player-btn {
+        width: 45px !important;
+        height: 45px !important;
+        min-width: 45px !important;
+        min-height: 45px !important;
+        padding: 12px !important;
+    }
+    
+    .player-btn i {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* ============================================
+   AJUSTES ESPECÍFICOS PARA iOS
+   ============================================ */
+
+@supports (-webkit-touch-callout: none) {
+    .player-btn {
+        -webkit-tap-highlight-color: transparent;
+        padding: 14px 16px;
+    }
+    
+    .player-btn i, .player-btn svg {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Prevenir zoom em inputs */
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+    
+    /* Melhorar scrolling */
+    .dialogue-container {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Correção específica para iOS */
+    .player-btn#translate-toggle-btn.active {
+        transform: none !important;
+        scale: none !important;
+    }
+    
+    /* Melhorar performance do volume popup */
+    .volume-popup {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* ============================================
+   AJUSTES ESPECÍFICOS PARA ANDROID
+   ============================================ */
+
+@media (-webkit-device-pixel-ratio: 2) and (max-width: 768px) {
+    .player-btn i, .player-btn svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .player-btn {
+        min-height: 52px;
+        min-width: 56px;
+    }
+    
+    /* Melhorar renderização de fontes */
+    body {
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+}
+
+/* ============================================
+   PREVENIR FLICKER EM ANIMAÇÕES
+   ============================================ */
+
+@media (max-width: 768px) {
+    .message {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+    }
+    
+    .player-btn {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+/* ============================================
+   MELHORAR VISIBILIDADE EM MODE CLARO/ESCURO
+   ============================================ */
+
+@media (max-width: 768px) {
+    .dialogue-container {
+        background: var(--chat-bg);
+    }
+    
+    .media-player {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+    
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+        .media-player {
+            background: rgba(30, 30, 40, 0.95);
+        }
+        
+        .volume-popup-content {
+            background: #2d3748;
+            color: white;
+        }
+        
+        .volume-header span {
+            color: var(--accent);
+        }
+        
+        .volume-close-btn {
+            color: #a0aec0;
+        }
+        
+        .volume-close-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .volume-labels {
+            color: #a0aec0;
+        }
+        
+        .mobile-volume-slider {
+            background: linear-gradient(to right, var(--accent) 0%, var(--accent) 50%, #4a5568 50%, #4a5568 100%);
+        }
+        
+        .volume-preset-btn {
+            background: var(--accent);
+        }
+        
+        .volume-preset-btn:hover {
+            background: var(--secondary);
+        }
+    }
+}
+
+/* ============================================
+   ANIMAÇÕES SUAVES PARA MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .volume-popup,
+    .volume-popup-content {
+        transition: all 0.3s ease;
+    }
+    
+    .volume-feedback {
+        transition: all 0.3s ease;
+    }
+    
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) rotate(-90deg) translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-50%) rotate(-90deg) translateY(0);
+        }
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+}

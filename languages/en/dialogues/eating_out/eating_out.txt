@@ -1,0 +1,105 @@
+title: Eating Out
+speaker: Chloe
+text: Ana, have you tried the new Italian place downtown yet?
+pt: Ana, você já experimentou o novo restaurante italiano no centro?
+es: Ana, ¿has probado el nuevo lugar italiano en el centro?
+
+speaker: Ana
+text: I have! Their homemade pasta was heavenly.
+pt: Experimentei! A massa caseira deles estava divina.
+es: ¡Lo he hecho! Su pasta casera estaba celestial.
+
+speaker: Chloe
+text: I'm dying to go but haven't found the right occasion.
+pt: Estou morrendo de vontade de ir, mas não encontrei a ocasião certa.
+es: Me muero por ir pero no he encontrado la ocasión adecuada.
+
+speaker: Ana
+text: Sometimes you just need to treat yourself without excuses!
+pt: Às vezes você só precisa se mimar sem desculpas!
+es: ¡A veces solo necesitas consentirte sin excusas!
+
+speaker: Chloe
+text: True! I usually pick spots with great vegetarian options.
+pt: Verdade! Geralmente escolho lugares com ótimas opções vegetarianas.
+es: ¡Cierto! Suelo elegir lugares con grandes opciones vegetarianas.
+
+speaker: Ana
+text: Same. The menu diversity can make or break a restaurant for me.
+pt: Idem. A diversidade do cardápio pode fazer ou quebrar um restaurante para mim.
+es: Igual. La diversidad del menú puede hacer o deshacer un restaurante para mí.
+
+speaker: Chloe
+text: What's your go-to for casual hangouts?
+pt: Qual é o seu lugar preferido para encontros casuais?
+es: ¿Cuál es tu lugar preferido para salidas casuales?
+
+speaker: Ana
+text: Love cozy cafes where you can chat for hours.
+pt: Adoro cafés aconchegantes onde você pode conversar por horas.
+es: Me encantan los cafés acogedores donde puedes charlar durante horas.
+
+speaker: Chloe
+text: Perfect for brunch dates!
+pt: Perfeito para encontros de brunch!
+es: ¡Perfecto para citas de brunch!
+
+speaker: Ana
+text: Exactly. Oh, and have you checked out food trucks around the city?
+pt: Exatamente. Ah, e você já conferiu os food trucks pela cidade?
+es: Exactamente. Ah, ¿y has revisado los food trucks por la ciudad?
+
+speaker: Chloe
+text: Totally, they're amazing for variety and quick bites.
+pt: Totalmente, eles são incríveis para variedade e lanches rápidos.
+es: Totalmente, son increíbles para variedad y bocados rápidos.
+
+speaker: Ana
+text: Plus, usually more environmentally friendly than big chains.
+pt: Além disso, geralmente são mais ecológicos do que as grandes redes.
+es: Además, usually más ecológicos que las grandes cadenas.
+
+speaker: Chloe
+text: Love supporting local businesses and unique flavors.
+pt: Adoro apoiar negócios locais e sabores únicos.
+es: Me encanta apoyar negocios locales y sabores únicos.
+
+speaker: Ana
+text: Me too! Food is such a huge part of culture and connection.
+pt: Eu também! A comida é uma parte tão grande da cultura e conexão.
+es: ¡Yo también! La comida es una parte tan grande de la cultura y la conexión.
+
+speaker: Chloe
+text: Agreed. Eating out is about more than food—it's the experience.
+pt: Concordo. Comer fora é mais do que comida—é a experiência.
+es: De acuerdo. Comer fuera es más que comida—es la experiencia.
+
+speaker: Ana
+text: Couldn't have said it better. Good food, good company, good vibes.
+pt: Não poderia ter dito melhor. Boa comida, boa companhia, boas vibrações.
+es: No podría haberlo dicho mejor. Buena comida, buena compañía, buen ambiente.
+
+speaker: Chloe
+text: And sometimes a little adventure, trying unfamiliar dishes.
+pt: E às vezes um pouco de aventura, experimentando pratos desconhecidos.
+es: Y a veces un poco de aventura, probando platos desconocidos.
+
+speaker: Ana
+text: That's the best way to expand your palette—and your world.
+pt: Essa é a melhor maneira de expandir seu paladar—e seu mundo.
+es: Esa es la mejor manera de expandir tu paladar—y tu mundo.
+
+speaker: Chloe
+text: Totally. Food memories stick longer than most.
+pt: Totalmente. As memórias gastronômicas duram mais que a maioria.
+es: Totalmente. Los recuerdos de comida perduran más que la mayoría.
+
+speaker: Ana
+text: Now I'm craving Italian again. Let's make a plan!
+pt: Agora estou com vontade de italiano de novo. Vamos fazer um plano!
+es: Ahora se me antoja italiano again. ¡Hagamos un plan!
+
+speaker: Chloe
+text: Yes! Let's do it soon.
+pt: Sim! Vamos fazer isso em breve.
+es: ¡Sí! Hagámoslo pronto.

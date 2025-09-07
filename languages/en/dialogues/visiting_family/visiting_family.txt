@@ -1,0 +1,90 @@
+title: Visiting Family
+speaker: Mike
+text: Jake, do you visit your family often or are you more of a holiday-only type?
+pt: Jake, você visita sua família com frequência ou é mais do tipo que só vai nas festas?
+es: Jake, ¿visitas a tu familia a menudo o eres más de solo ir en las fiestas?
+
+speaker: Jake
+text: I try to visit at least once a month—family time keeps me grounded.
+pt: Eu tento visitar pelo menos uma vez por mês—o tempo em família me mantém centrado.
+es: Intento visitar al menos una vez al mes—el tiempo en familia me mantiene con los pies en la tierra.
+
+speaker: Mike
+text: I get that. For me, it tends to be packed around holidays due to crazy schedules.
+pt: Eu entendo isso. Para mim, tende a ser concentrado em torno dos feriados devido a agendas malucas.
+es: Lo entiendo. Para mí, tiende a estar concentrado alrededor de las fiestas debido a horarios locos.
+
+speaker: Jake
+text: It can get hectic, but those moments are precious.
+pt: Pode ficar caótico, mas esses momentos são preciosos.
+es: Puede volverse agitado, pero esos momentos son preciosos.
+
+speaker: Mike
+text: Totally. My mom always cooks family favorites that bring everyone together.
+pt: Totalmente. Minha mãe sempre cozinha os favoritos da família que reúnem todos.
+es: Totalmente. Mi mamá siempre cocina los favoritos de la familia que reúnen a todos.
+
+speaker: Jake
+text: Nothing beats home-cooked meals from mom's kitchen.
+pt: Nada supera as refeições caseiras da cozinha da mãe.
+es: Nada supera las comidas caseras de la cocina de mamá.
+
+speaker: Mike
+text: Anyone tough to deal with at family gatherings?
+pt: Alguém difícil de lidar nas reuniões de família?
+es: ¿Alguien difícil de tratar en las reuniones familiares?
+
+speaker: Jake
+text: Oh yeah, always a few characters. But hey, that's what makes it interesting.
+pt: Ah sim, sempre alguns personagens. Mas ei, é isso que torna interessante.
+es: Oh sí, siempre algunos personajes. Pero oye, eso es lo que lo hace interesante.
+
+speaker: Mike
+text: True. Family dynamics can be complex but full of love.
+pt: Verdade. A dinâmica familiar pode ser complexa, mas cheia de amor.
+es: Cierto. La dinámica familiar puede ser compleja pero llena de amor.
+
+speaker: Jake
+text: Exactly. How's your family doing lately?
+pt: Exatamente. Como está sua família ultimamente?
+es: Exactamente. ¿Cómo está tu familia últimamente?
+
+speaker: Mike
+text: Good, thanks. Big birthday coming up for my sister, planning a surprise bash.
+pt: Bem, obrigado. Um grande aniversário chegando para minha irmã, planejando uma festa surpresa.
+es: Bien, gracias. Se acerca un gran cumpleaños para mi hermana, planeando una fiesta sorpresa.
+
+speaker: Jake
+text: Nice! Those events create lifelong memories.
+pt: Legal! Esses eventos criam memórias para a vida toda.
+es: ¡Qué bien! Esos eventos crean recuerdos para toda la vida.
+
+speaker: Mike
+text: They sure do. Visiting family is a nice reminder of where I come from.
+pt: Eles realmente criam. Visitar a família é um bom lembrete de onde eu venho.
+es: Sí que lo hacen. Visitar a la familia es un buen recordatorio de de dónde vengo.
+
+speaker: Jake
+text: And the perfect way to recharge emotionally.
+pt: E a maneira perfeita de recarregar as energias emocionalmente.
+es: Y la forma perfecta de recargarse emocionalmente.
+
+speaker: Mike
+text: Couldn't have said it better myself.
+pt: Não poderia ter dito melhor.
+es: No podría haberlo dicho mejor yo mismo.
+
+speaker: Jake
+text: When's your next visit?
+pt: Quando é sua próxima visita?
+es: ¿Cuándo es tu próxima visita?
+
+speaker: Mike
+text: Planning for next weekend—can't wait.
+pt: Planejando para o próximo fim de semana—mal posso esperar.
+es: Planeando para el próximo fin de semana—no puedo esperar.
+
+speaker: Jake
+text: Sounds like a plan. Family first, always.
+pt: Parece um plano. Família em primeiro lugar, sempre.
+es: Suena como un plan. La familia primero, siempre.

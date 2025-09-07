@@ -1,0 +1,100 @@
+title: Household Chores
+speaker: Mike
+text: Jake, how do you keep up with chores without losing your mind?
+pt: Jake, como você dá conta das tarefas domésticas sem enlouquecer?
+es: Jake, ¿cómo te mantienes al día con las tareas domésticas sin volverte loco?
+
+speaker: Jake
+text: Man, I break them into bite-sized tasks. Makes it less overwhelming.
+pt: Cara, eu as divido em tarefas pequenas. Isso torna tudo menos avassalador.
+es: Hombre, las divido en tareas manejables. Hace que sea menos abrumador.
+
+speaker: Mike
+text: Good call. I tend to procrastinate until the mess becomes unbearable.
+pt: Boa ideia. Eu costumo procrastinar até a bagunça se tornar insuportável.
+es: Buena idea. Suelo procrastinar hasta que el desorden se vuelve insoportable.
+
+speaker: Jake
+text: Guilty. I use playlists to keep energy high while cleaning.
+pt: Culpado. Eu uso playlists para manter a energia alta durante a limpeza.
+es: Culpable. Uso listas de reproducción para mantener la energía alta mientras limpio.
+
+speaker: Mike
+text: Music is a lifesaver! Makes folding laundry way less boring.
+pt: Música é uma salvação! Deixa dobrar roupas muito menos chato.
+es: ¡La música es un salvavidas! Hace doblar la ropa mucho menos aburrido.
+
+speaker: Jake
+text: Totally. And setting a timer turns boring tasks into a game.
+pt: Totalmente. E definir um temporizador transforma tarefas chatas em um jogo.
+es: Totalmente. Y poner un temporizador convierte las tareas aburridas en un juego.
+
+speaker: Mike
+text: I like that! I also multitask—laundry while cooking, for example.
+pt: Gosto disso! Também faço várias coisas ao mesmo tempo—lavar roupa enquanto cozinho, por exemplo.
+es: ¡Me gusta eso! También hago multitareas—lavar la ropa mientras cocino, por ejemplo.
+
+speaker: Jake
+text: Smart move. At my place, chores are shared, which cuts the workload in half.
+pt: Jogada inteligente. Na minha casa, as tarefas são divididas, o que corta a carga de trabalho pela metade.
+es: Movimiento inteligente. En mi casa, las tareas se comparten, lo que reduce la carga de trabajo a la mitad.
+
+speaker: Mike
+text: I need to suggest that to my roommate!
+pt: Preciso sugerir isso ao meu companheiro de casa!
+es: ¡Necesito sugerir eso a mi compañero de piso!
+
+speaker: Jake
+text: It changes the vibe, less like a chore and more teamwork.
+pt: Isso muda a vibe, menos como uma tarefa e mais como trabalho em equipe.
+es: Cambia el ambiente, menos como una tarea y más como trabajo en equipo.
+
+speaker: Mike
+text: How about deep cleaning? Do you schedule that or wing it?
+pt: E a limpeza pesada? Você agenda ou improvisa?
+es: ¿Y la limpeza profunda? ¿La programas o improvisas?
+
+speaker: Jake
+text: Scheduled. Quarterly blitz sessions—makes bit-by-bit manageable.
+pt: Agendada. Sessões trimestrais intensivas—torna tudo mais gerenciável aos poucos.
+es: Programada. Sesiones intensivas trimestrales—hace que sea manejable poco a poco.
+
+speaker: Mike
+text: That sounds doable. I might actually stick to that plan.
+pt: Isso parece factível. Talvez eu realmente consiga seguir esse plano.
+es: Eso suena factible. Podría realmente seguir ese plan.
+
+speaker: Jake
+text: Maintenance tasks like checking smoke alarms shouldn't be skipped either.
+pt: Tarefas de manutenção, como verificar alarmes de fumaça, também não devem ser ignoradas.
+es: Las tareas de mantenimiento como revisar las alarmas de humo tampoco deben saltarse.
+
+speaker: Mike
+text: Adulting level: next.
+pt: Nível de vida adulta: avançado.
+es: Nivel de adultez: siguiente nivel.
+
+speaker: Jake
+text: Ha! But chores teach responsibility and calm, believe it or not.
+pt: Ha! Mas as tarefas domésticas ensinam responsabilidade e calma, acredite ou não.
+es: ¡Ja! Pero las tareas enseñan responsabilidad y calma, créelo o no.
+
+speaker: Mike
+text: I can see that. They're a form of mindful self-care if you let them be.
+pt: Consigo ver isso. Elas são uma forma de autocuidado consciente, se você permitir.
+es: Puedo ver eso. Son una forma de autocuidado consciente si lo permites.
+
+speaker: Jake
+text: Exactly. Plus, a clean space = cleaner mind.
+pt: Exatamente. Além disso, um espaço limpo = mente mais limpa.
+es: Exactamente. Además, un espacio limpio = mente más clara.
+
+speaker: Mike
+text: I'll buy into that—starting with the dishes tonight.
+pt: Vou comprar essa ideia—começando com a louça hoje à noite.
+es: Compraré esa idea—empezando con los platos esta noche.
+
+speaker: Jake
+text: Baby steps, my friend. Baby steps.
+pt: Passos de bebê, meu amigo. Passos de bebê.
+es: Pasos de bebé, mi amigo. Pasos de bebé.

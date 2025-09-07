@@ -1,0 +1,105 @@
+title: Weather Chat
+speaker: Chloe
+text: Can you believe this heatwave? It's like summer cranked the thermostat to max.
+pt: Você acredita nesta onda de calor? É como se o verão tivesse aumentado o termostato ao máximo.
+es: ¿Puedes creer esta ola de calor? Es como si el verano hubiera subido el termostato al máximo.
+
+speaker: Emily
+text: I know! Walking outside feels like stepping into an oven.
+pt: Eu sei! Caminhar lá fora parece entrar em um forno.
+es: ¡Lo sé! Salir a caminar se siente como entrar en un horno.
+
+speaker: Chloe
+text: Perfect excuse for iced coffee runs all day long.
+pt: A desculpa perfeita para tomar café gelado o dia todo.
+es: La excusa perfecta para tomar café helado todo el día.
+
+speaker: Emily
+text: Speaking of which, any favorite spots you recommend?
+pt: Falando nisso, algum lugar favorito que você recomenda?
+es: Hablando de eso, ¿algún lugar favorito que recomiendes?
+
+speaker: Chloe
+text: There's a little café down the block that makes the best cold brew.
+pt: Tem um cafezinho naquela quadra que faz o melhor cold brew.
+es: Hay un pequeño café en la cuadra que hace el mejor cold brew.
+
+speaker: Emily
+text: I'm sold. What about weekends? Any plans to beat the heat?
+pt: Estou convencida. E os fins de semana? Algum plano para escapar do calor?
+es: Me convenciste. ¿Y los fines de semana? ¿Algún plan para combatir el calor?
+
+speaker: Chloe
+text: Pool party at my place. You in?
+pt: Festa na piscina na minha casa. Topa?
+es: Fiesta en la piscina en mi casa. ¿Te apuntas?
+
+speaker: Emily
+text: Absolutely! Water and good vibes are the antidote to summer sweat.
+pt: Com certeza! Água e boas vibrações são o antídoto para o suor do verão.
+es: ¡Absolutamente! El agua y las buenas vibras son el antídoto para el sudor del verano.
+
+speaker: Chloe
+text: Couldn't agree more. Have you switched up your skincare for the sun?
+pt: Não poderia concordar mais. Você mudou sua skincare para o sol?
+es: No podría estar más de acuerdo. ¿Has cambiado tu cuidado de la piel para el sol?
+
+speaker: Emily
+text: Trying! Sunscreen and aloe gel have become my new best friends.
+pt: Tentando! Protetor solar e gel de aloe vera se tornaram meus novos melhores amigos.
+es: ¡Intentando! El protector solar y el gel de aloe vera se han convertido en mis nuevos mejores amigos.
+
+speaker: Chloe
+text: Smart move. Heat's rough on skin and mood.
+pt: Jogada inteligente. O calor é difícil para a pele e o humor.
+es: Movimiento inteligente. El calor es duro para la piel y el estado de ánimo.
+
+speaker: Emily
+text: True. Hot weather always makes me crave lighter meals too.
+pt: Verdade. O tempo quente sempre me faz desejar refeições mais leves também.
+es: Cierto. El clima caluroso siempre me hace desear comidas más ligeras también.
+
+speaker: Chloe
+text: Salads and smoothies on repeat.
+pt: Saladas e smoothies em repetição.
+es: Ensaladas y smoothies en repetición.
+
+speaker: Emily
+text: What's your go-to weather app? Mine keeps surprising me with sudden storms.
+pt: Qual é o seu aplicativo de clima de confiança? O meu fica me surpreendendo com tempestades repentinas.
+es: ¿Cuál es tu aplicación meteorológica de confianza? La mía me sigue sorprendiendo con tormentas repentinas.
+
+speaker: Chloe
+text: I rely on one that sends hourly updates—no more getting caught in the rain unexpectedly.
+pt: Eu confio em um que envia atualizações horárias—não sou mais pega pela chuva inesperadamente.
+es: Confío en uno que envía actualizaciones por hora—ya no me sorprende la lluvia inesperadamente.
+
+speaker: Emily
+text: Lifesaver for sure. Nothing ruins plans faster than a surprise downpour.
+pt: Salva-vidas, com certeza. Nada estraga planos mais rápido do que um aguaceiro surpresa.
+es: Un salvavidas seguro. Nada arruina los planes más rápido que un aguacero sorpresa.
+
+speaker: Chloe
+text: Exactly. Speaking of, how's your AC holding up?
+pt: Exatamente. Falando nisso, como está o seu ar-condicionado?
+es: Exactamente. Hablando de eso, ¿cómo está tu aire acondicionado?
+
+speaker: Emily
+text: Works like a charm, thank god. Essential in this heat.
+pt: Funciona perfeitamente, graças a Deus. Essencial neste calor.
+es: Funciona a la perfección, gracias a Dios. Esencial en este calor.
+
+speaker: Chloe
+text: Couldn't live without mine.
+pt: Não viveria sem o meu.
+es: No podría vivir sin el mío.
+
+speaker: Emily
+text: Same here. Let's hope the cool breeze kicks in soon.
+pt: Idem. Vamos torcer para que a brisa fresca chegue logo.
+es: Igual. Esperemos que la brisa fresca llegue pronto.
+
+speaker: Chloe
+text: Fingers crossed! Meanwhile, keep those iced drinks coming.
+pt: Dedos cruzados! Enquanto isso, continue tomando aquelas bebidas geladas.
+es: ¡Dedos cruzados! Mientras tanto, sigue tomando esas bebidas heladas.
