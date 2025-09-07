@@ -1,4 +1,67 @@
 // Navbar functionality
+// Função para configurar os dropdowns
+function setupDropdowns() {
+    // Limpar todos os dropdowns e remover listeners antigos
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+    });
+    
+    // Remover todos os event listeners antigos clonando os elementos
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        const clone = toggle.cloneNode(true);
+        toggle.parentNode.replaceChild(clone, toggle);
+    });
+    
+    // Adicionar novos event listeners para todos os dropdown toggles
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const dropdown = this.parentElement;
+            const isActive = dropdown.classList.contains('active');
+            
+            // Fechar todos os dropdowns primeiro
+            document.querySelectorAll('.dropdown').forEach(d => {
+                d.classList.remove('active');
+            });
+            
+            // Se não estava ativo, ativar este dropdown
+            if (!isActive) {
+                dropdown.classList.add('active');
+            }
+        });
+    });
+    
+    // Prevenir que o clique nos dropdowns propague para o documento
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+    
+    // Remover listener antigo de clique fora
+    if (window.dropdownClickOutsideListener) {
+        document.removeEventListener('click', window.dropdownClickOutsideListener);
+    }
+    
+    // Fechar dropdowns ao clicar fora
+    const clickOutsideListener = function(event) {
+        // Verificar se o clique foi fora de qualquer dropdown
+        const clickedInsideDropdown = event.target.closest('.dropdown');
+        
+        // Fechar dropdowns ao clicar fora
+        if (!clickedInsideDropdown) {
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    };
+    
+    document.addEventListener('click', clickOutsideListener);
+    window.dropdownClickOutsideListener = clickOutsideListener;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Load navbar and footer
     loadNavbar();
@@ -41,13 +104,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Toggle dropdown menus on mobile
+    // Toggle dropdown menus on all devices (mobile and desktop)
     document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
         toggle.addEventListener('click', function(e) {
-            if (window.innerWidth <= 900) {
-                e.preventDefault();
-                const dropdown = this.parentElement;
-                dropdown.classList.toggle('active');
+            e.preventDefault();
+            e.stopPropagation();
+            const dropdown = this.parentElement;
+            
+            // Toggle active state
+            const isActive = dropdown.classList.contains('active');
+            
+            // Fechar todos os dropdowns primeiro
+            document.querySelectorAll('.dropdown').forEach(d => {
+                if (d.classList.contains('active')) {
+                    d.classList.remove('active');
+                    // Resetar estilos inline
+                    const menu = d.querySelector('.dropdown-menu');
+                    if (menu) {
+                        menu.style.opacity = '';
+                        menu.style.visibility = '';
+                        menu.style.transform = '';
+                    }
+                }
+            });
+            
+            // Se não estava ativo, ativar este dropdown
+            if (!isActive) {
+                dropdown.classList.add('active');
             }
         });
     });
@@ -56,13 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(event) {
         // Fechar menus de idioma
         closeLanguageSelectorsOnClickOutside(event);
-        
-        // Fechar dropdowns ao clicar fora
-        document.querySelectorAll('.dropdown').forEach(dropdown => {
-            if (!event.target.closest('.dropdown') && dropdown.classList.contains('active')) {
-                dropdown.classList.remove('active');
-            }
-        });
         
         // Fechar menu do usuário ao clicar fora
         closeUserMenuOnClickOutside(event);
@@ -183,6 +259,40 @@ function closeUserMenuOnClickOutside(event) {
     }
 }
 
+// Função para destacar o item de menu da página atual
+function highlightCurrentPage() {
+    // Verificar se a página atual foi definida explicitamente
+    let pageName;
+    
+    if (window.currentPage) {
+        // Usar a página definida explicitamente
+        pageName = window.currentPage;
+        console.log('Usando página definida explicitamente:', pageName);
+    } else {
+        // Obter o caminho da página atual
+        const currentPath = window.location.pathname;
+        pageName = currentPath.split('/').pop() || 'index.html';
+        console.log('Página atual detectada:', pageName);
+    }
+    
+    // Remover a classe 'active' de todos os links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Adicionar a classe 'active' ao link da página atual
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        const href = link.getAttribute('href');
+        
+        if (href === pageName || 
+            (pageName === 'index.html' && href === 'index.html') ||
+            (pageName === '' && href === 'index.html')) {
+            console.log('Link ativo encontrado:', href);
+            link.classList.add('active');
+        }
+    });
+}
+
 // Load navbar from external file
 function loadNavbar() {
     fetch('navbar.html')
@@ -194,6 +304,12 @@ function loadNavbar() {
             setTimeout(() => {
                 setupLanguageSelectors();
                 initTooltips();
+                
+                // Configurar os dropdowns após o carregamento do navbar
+                setupDropdowns();
+                
+                // Destacar o item de menu da página atual
+                highlightCurrentPage();
                 
                 const userMenu = document.querySelector('.user-menu');
                 const userDropdownMenu = document.querySelector('.user-dropdown-menu');
