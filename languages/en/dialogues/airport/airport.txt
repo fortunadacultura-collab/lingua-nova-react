@@ -1,0 +1,105 @@
+title: Airport Security
+speaker: Mike
+text: Emily, every time I go through airport security I feel like I’m in a reality show.
+pt: Emily, toda vez que passo pela segurança do aeroporto, me sinto como se estivesse em um reality show.
+es: Emily, cada vez que paso por la seguridad del aeropuerto, me siento como si estuviera en un programa de telerrealidad.
+
+speaker: Emily
+text: Same! It’s like a race to get through but you never know what’s gonna slow you down.
+pt: Idem! É como uma corrida para passar, mas você nunca sabe o que vai te atrasar.
+es: ¡Igual! Es como una carrera para pasar, pero nunca sabes qué te va a frenar.
+
+speaker: Mike
+text: Did you know removing shoes and belts is almost universal now?
+pt: Você sabia que tirar os sapatos e o cinto é quase universal agora?
+es: ¿Sabías que quitarse los zapatos y el cinturón es casi universal ahora?
+
+speaker: Emily
+text: Yep, and those bins fill up so fast, you gotta be on your toes.
+pt: Sim, e aquelas caixas enchem tão rápido, você tem que estar alerta.
+es: Sí, y esas bandejas se llenan tan rápido que tienes que estar alerta.
+
+speaker: Mike
+text: I try to pack my liquids carefully to avoid having to toss stuff.
+pt: Eu tento arrumar meus líquidos com cuidado para evitar ter que jogar coisas fora.
+es: Intento empacar mis líquidos con cuidado para evitar tener que tirar cosas.
+
+speaker: Emily
+text: Me too, or you risk the whole bag getting searched.
+pt: Eu também, senão você corre o risco de ter a mala toda revistada.
+es: Yo también, o te arriesgas a que registren todo el bolso.
+
+speaker: Mike
+text: Electronic devices have their own tray—makes separating my gear a hassle.
+pt: Dispositivos eletrônicos têm sua própria bandeja—torna a separação do meu equipamento uma complicação.
+es: Los dispositivos electrónicos tienen su propia bandeja—hace que separar mi equipo sea una molestia.
+
+speaker: Emily
+text: On the plus side, TSA PreCheck and Global Entry make it a breeze when you have them.
+pt: Por outro lado, o TSA PreCheck e o Global Entry facilitam muito quando você os tem.
+es: Por otro lado, TSA PreCheck y Global Entry lo hacen muy fácil cuando los tienes.
+
+speaker: Mike
+text: So worth the application process.
+pt: Vale muito a pena o processo de inscrição.
+es: Valen tanto la pena el proceso de solicitud.
+
+speaker: Emily
+text: Do you ever get randomly selected for extra screening?
+pt: Você já é selecionado aleatoriamente para uma triagem adicional?
+es: ¿Alguna vez te seleccionan al azar para un control adicional?
+
+speaker: Mike
+text: Probably too often. It’s nerve-wracking but I try to stay calm.
+pt: Provavelmente com muita frequência. É deixa nervoso, mas tento manter a calma.
+es: Probablemente con demasiada frecuencia. Es estresante pero trato de mantener la calma.
+
+speaker: Emily
+text: Staying cool is key—and smiling doesn’t hurt.
+pt: Manter a calma é fundamental—e sorrir não custa nada.
+es: Mantener la calma es clave—y sonreír no cuesta nada.
+
+speaker: Mike
+text: Especially when it means less hassle.
+pt: Especialmente quando significa menos complicação.
+es: Especialmente cuando significa menos problemas.
+
+speaker: Emily
+text: How about packing chargers and laptops on top so you can grab easily?
+pt: Que tal arrumar carregadores e laptops em cima para você pegar facilmente?
+es: ¿Qué tal empacar cargadores y laptops encima para que puedas agarrarlos fácilmente?
+
+speaker: Mike
+text: All about efficiency. Never want to hold up the line.
+pt: Tudo questão de eficiência. Nunca quero atrasar a fila.
+es: Todo es cuestión de eficiencia. Nunca quiero retrasar la fila.
+
+speaker: Emily
+text: I’ve learned to dress simply—less metal, less popping alarms.
+pt: Aprendi a me vestir de forma simples—menos metal, menos disparo de alarmes.
+es: He aprendido a vestirme simple—menos metal, menos alarmas que suenan.
+
+speaker: Mike
+text: Same. Last time my belt set off the alarm... twice!
+pt: Idem. Da última vez, meu cinto disparou o alarme... duas vezes!
+es: Igual. ¡La última vez mi cinturón hizo sonar la alarma... dos veces!
+
+speaker: Emily
+text: Oh no! Time to retire that belt, maybe?
+pt: Ah não! Hora de aposentar esse cinto, talvez?
+es: ¡Oh no! ¿Hora de retirar ese cinturón, tal vez?
+
+speaker: Mike
+text: Definitely. Airport security is like an obstacle course sometimes.
+pt: Definitivamente. A segurança do aeroporto é como uma pista de obstáculos às vezes.
+es: Definitivamente. La seguridad del aeropuerto es como una pista de obstáculos a veces.
+
+speaker: Emily
+text: But better safe than sorry on flights.
+pt: Mas é melhor prevenir do que remediar em voos.
+es: Pero más vale prevenir que lamentar en los vuelos.
+
+speaker: Mike
+text: Couldn’t agree more. Prep smart, fly easy.
+pt: Concordo plenamente. Prepare-se com inteligência, voe tranquilo.
+es: No podría estar más de acuerdo. Prepárate de forma inteligente, vuela tranquilo.
