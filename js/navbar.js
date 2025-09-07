@@ -142,6 +142,8 @@ function setupLanguageOptions(optionsContainer, type) {
                 this.closest('.language-selector').classList.remove('active');
                 window.location.href = `study-${value}.html`;
             } else if (type === 'native') {
+                console.log(`Selecionado idioma nativo: ${value} (bandeira: ${flag})`);
+                
                 // NOTIFICAR a mudança de idioma de tradução
                 notifyNativeLanguageChange(value);
                 
@@ -276,8 +278,20 @@ function notifyNativeLanguageChange(langCode) {
 // Sincronizar com idioma detectado
 async function syncWithDetectedLanguage() {
     try {
-        // Aguarda a detecção automática completar
+        // Verificar se já existe um idioma salvo no localStorage
+        const savedLanguage = localStorage.getItem('nativeLanguage');
+        if (savedLanguage) {
+            console.log("Usando idioma salvo do localStorage:", savedLanguage);
+            applyLanguageToUI(savedLanguage);
+            return;
+        }
+        
+        // Se não houver idioma salvo, aguardar a detecção automática completar
+        console.log("Nenhum idioma salvo encontrado, detectando automaticamente...");
         const detectedLanguage = await languageDetector.detectLanguage();
+        console.log("Idioma detectado pelo navbar.js:", detectedLanguage);
+        
+        // Aplicar o idioma detectado à UI
         applyLanguageToUI(detectedLanguage);
         
     } catch (error) {
@@ -305,12 +319,24 @@ function applyLanguageToUI(langCode) {
             const flagImg = selectedLanguage.querySelector('img');
             if (flagImg) {
                 const flag = targetOption.getAttribute('data-flag');
-                flagImg.src = `assets/images/flags/${flag}.svg`;
+                const flagUrl = `assets/images/flags/${flag}.svg`;
+                flagImg.src = flagUrl;
                 flagImg.alt = langCode.toUpperCase();
+                console.log(`Bandeira atualizada no navbar: ${flagUrl} (${langCode})`);
             }
             
             console.log("UI sincronizada com idioma detectado:", langCode);
+            
+            // Salvar a preferência no localStorage (se ainda não estiver salva)
+            if (!localStorage.getItem('nativeLanguage')) {
+                localStorage.setItem('nativeLanguage', langCode);
+                console.log(`Idioma ${langCode} salvo no localStorage pela primeira vez`);
+            }
+        } else {
+            console.warn(`Opção para o idioma ${langCode} não encontrada no seletor`);
         }
+    } else {
+        console.warn('Seletor de idioma não encontrado no DOM');
     }
 }
 

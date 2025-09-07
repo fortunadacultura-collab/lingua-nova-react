@@ -47,8 +47,13 @@ class NativeLanguageManager {
 
         // 2. Se não tiver preferência, detecta automaticamente
         try {
+            console.log("Detectando idioma do usuário...");
+            // Aguardar a detecção de idioma antes de continuar
             const detectedLanguage = await languageDetector.detectLanguage();
-            this.applyLanguage(detectedLanguage, true); // ⚠️ true = é detecção automática
+            console.log("Idioma detectado:", detectedLanguage);
+            
+            // Aplicar o idioma detectado
+            await this.applyLanguage(detectedLanguage, true); // ⚠️ true = é detecção automática
             
         } catch (error) {
             console.error("Erro na detecção automática:", error);
@@ -58,20 +63,25 @@ class NativeLanguageManager {
     }
 
     // ⚠️ NOVA FUNÇÃO: Aplicar idioma sem causar loop
-    applyLanguage(langCode, isAutoDetection = false) {
+    async applyLanguage(langCode, isAutoDetection = false) {
         if (this.isChangingLanguage || langCode === this.currentNativeLanguage) {
             return;
         }
 
         this.isChangingLanguage = true;
         
+        console.log(`Aplicando idioma: ${langCode} (detecção automática: ${isAutoDetection})`);
+        
         this.currentNativeLanguage = langCode;
         this.updateUITexts(langCode);
-        this.updateLanguageSelector(langCode);
+        
+        // Garantir que o seletor de idioma seja atualizado corretamente
+        await this.updateLanguageSelector(langCode);
         
         if (isAutoDetection) {
             // Salva a detecção automática para futuro
             localStorage.setItem('nativeLanguage', langCode);
+            console.log(`Idioma detectado automaticamente salvo: ${langCode}`);
         }
         
         this.notifyLanguageChange(langCode, false); // ⚠️ Não redisparar evento
@@ -87,16 +97,18 @@ class NativeLanguageManager {
         }
     }
 
-    changeNativeLanguage(langCode) {
+    async changeNativeLanguage(langCode) {
         if (this.isChangingLanguage || !this.translations[langCode]) {
             return;
         }
 
         this.isChangingLanguage = true;
         
+        console.log(`Mudando idioma nativo para: ${langCode}`);
+        
         this.currentNativeLanguage = langCode;
         this.updateUITexts(langCode);
-        this.updateLanguageSelector(langCode);
+        await this.updateLanguageSelector(langCode);
         this.saveNativeLanguagePreference(langCode);
 
         console.log(`Native language changed to: ${langCode}`);
@@ -106,26 +118,40 @@ class NativeLanguageManager {
         this.isChangingLanguage = false;
     }
 
-    updateLanguageSelector(langCode) {
+    async updateLanguageSelector(langCode) {
         const userSelectedLanguage = document.getElementById('user-language');
         const userLanguageOptions = document.getElementById('user-language-options');
         
         if (userSelectedLanguage && userLanguageOptions) {
+            // Encontrar a opção correspondente ao idioma
             const option = userLanguageOptions.querySelector(`li[data-value="${langCode}"]`);
+            
             if (option) {
                 const flag = option.getAttribute('data-flag');
+                console.log(`Atualizando seletor de idioma para: ${langCode} (bandeira: ${flag})`);
                 
+                // Atualizar a imagem da bandeira
                 const flagImg = userSelectedLanguage.querySelector('img');
                 if (flagImg) {
-                    flagImg.src = `assets/images/flags/${flag}.svg`;
+                    // Garantir que a URL da bandeira esteja correta
+                    const flagUrl = `assets/images/flags/${flag}.svg`;
+                    flagImg.src = flagUrl;
                     flagImg.alt = langCode.toUpperCase();
+                    console.log(`Bandeira atualizada: ${flagUrl}`);
+                } else {
+                    console.warn('Elemento de imagem da bandeira não encontrado');
                 }
                 
+                // Atualizar a seleção nas opções
                 userLanguageOptions.querySelectorAll('li').forEach(li => {
                     li.classList.remove('selected');
                 });
                 option.classList.add('selected');
+            } else {
+                console.warn(`Opção para o idioma ${langCode} não encontrada no seletor`);
             }
+        } else {
+            console.warn('Seletor de idioma não encontrado no DOM');
         }
     }
 
