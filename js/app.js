@@ -1064,14 +1064,15 @@ function updateThemeControls() {
     
     const translations = appConfig.data.translations[translationManager.currentLanguage] || appConfig.data.translations['en'] || {};
     
-    const loadMoreText = loadMoreBtn.querySelector('span');
-    const showLessText = showLessBtn.querySelector('span');
+    const loadMoreSpan = loadMoreBtn.querySelector('span[data-translate="loadMore"]');
+    const showLessSpan = showLessBtn.querySelector('span[data-translate="showLess"]');
     
-    if (loadMoreText) {
-        loadMoreText.textContent = translations['loadMore'] || 'Load More Themes';
+    if (loadMoreSpan && translations['loadMore']) {
+        loadMoreSpan.textContent = translations['loadMore'];
     }
-    if (showLessText) {
-        showLessText.textContent = translations['showLess'] || 'Show Less';
+    
+    if (showLessSpan && translations['showLess']) {
+        showLessSpan.textContent = translations['showLess'];
     }
     
     if (appConfig.visibleThemes >= appConfig.data.themes.length) {
@@ -1391,6 +1392,24 @@ function updateUITexts(langCode) {
             element.textContent = translations[key];
         }
     });
+    
+    // Atualizar explicitamente os botões de carregar mais e mostrar menos
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const showLessBtn = document.getElementById('show-less-btn');
+    
+    if (loadMoreBtn) {
+        const loadMoreSpan = loadMoreBtn.querySelector('span[data-translate="loadMore"]');
+        if (loadMoreSpan && translations['loadMore']) {
+            loadMoreSpan.textContent = translations['loadMore'];
+        }
+    }
+    
+    if (showLessBtn) {
+        const showLessSpan = showLessBtn.querySelector('span[data-translate="showLess"]');
+        if (showLessSpan && translations['showLess']) {
+            showLessSpan.textContent = translations['showLess'];
+        }
+    }
 }
 
 function updateDialogueTranslations(langCode) {
