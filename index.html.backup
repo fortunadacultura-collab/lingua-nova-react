@@ -3,12 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Lingua Nova | Aprenda Idiomas</title>
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/navbar.css">
@@ -87,24 +82,10 @@
     <!-- Footer (será carregado via JavaScript) -->
     <div id="footer-container"></div>
 
-    <script>
-    // Initialize the application after everything is loaded
-    document.addEventListener("DOMContentLoaded", function() {
-        // Set a small timeout to ensure all elements are rendered
-        setTimeout(function() {
-            if (typeof init === "function") {
-                init().catch(function(error) {
-                    console.error("Failed to initialize app:", error);
-                });
-            }
-        }, 100);
-    });
-    </script>
     <script src="js/data.js"></script>
     <script src="js/geo-ip-detector.js"></script>
-    <script src="js/user-avatar.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/language-manager.js"></script>
-    <script src="js/native-language.js"></script>
     <script src="js/index.js"></script>
-</body></html>
+</body>
+</html>

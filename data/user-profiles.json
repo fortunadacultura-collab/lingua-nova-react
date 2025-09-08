@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "user-123",
-      "username": "johndoe",
+      "username": "user",
       "email": "john.doe@example.com",
       "nativeLanguage": "pt",
       "targetLanguages": ["en", "es"],

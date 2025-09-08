@@ -2,8 +2,41 @@
 let currentLanguage = 'pt';
 let targetLanguage = 'en';
 
+// Global variable to store user data
+let userData = null;
+
+// Function to load user data
+async function loadUserData() {
+    try {
+        const response = await fetch("data/user-profiles.json");
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const userProfiles = await response.json();
+        // For now, use the first user as the current user
+        userData = userProfiles.users[0];
+        console.log("User data loaded successfully:", userData);
+        return userData;
+    } catch (error) {
+        console.error("Error loading user data:", error);
+        // Fallback user data
+        userData = {
+            id: "guest",
+            username: "Guest",
+            email: "guest@example.com",
+            nativeLanguage: "pt",
+            targetLanguages: ["en"],
+            currentTargetLanguage: "en"
+        };
+        return userData;
+    }
+}
 // Initialize the application
-document.addEventListener('DOMContentLoaded', async () => {
+async function init() {
+    console.log("Initializing index page...");
+        
+        // Load user data first
+        await loadUserData();
     // Wait for app data to load
     try {
         if (!appData) {
@@ -21,6 +54,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (appData) {
             initLanguageSelectors();
         }
+        
+        // Initialize user interface
+        setTimeout(() => {
+            initUserInterface();
+        }, 100);
+        
     } catch (error) {
         console.error('Error loading app data:', error);
     }
@@ -50,12 +89,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderDialoguesPreview();
     renderStoriesPreview();
     renderFlashcardsPreview();
-});
 
 // Initialize language selectors
 function initLanguageSelectors() {
-    const langDropdown = document.querySelector('.language-dropdown');
-    const targetLangDropdown = document.querySelector('.target-language-dropdown');
+    const langDropdown = document.querySelector("#learning-language-options");
+    
+    const targetLangDropdown = document.querySelector(".target-language-dropdown");
+    
+    if (!langDropdown || !targetLangDropdown || !appData || !appData.languages) {
+        console.warn("Language selectors or data not available");
+        return;
+    }
     
     // Populate language selector
     langDropdown.innerHTML = appData.languages.map(lang => `
@@ -139,6 +183,7 @@ function changeTargetLanguage(langCode) {
 // Render dialogues preview
 function renderDialoguesPreview() {
     const dialoguesPreview = document.getElementById('dialogues-preview');
+    if (!appData || !appData.dialogues || !appData.dialogues[0]) return;
     const dialogue = appData.dialogues[0];
     
     if (dialoguesPreview) {
@@ -166,6 +211,7 @@ function renderDialoguesPreview() {
 // Render stories preview
 function renderStoriesPreview() {
     const storiesPreview = document.getElementById('stories-preview');
+    if (!appData || !appData.stories || !appData.stories[0]) return;
     const story = appData.stories[0];
     const translations = appData.translations[currentLanguage];
     
@@ -189,6 +235,7 @@ function renderStoriesPreview() {
 // Render flashcards preview
 function renderFlashcardsPreview() {
     const flashcardsPreview = document.getElementById('flashcards-preview');
+    if (!appData || !appData.flashcards || !appData.flashcards[0]) return;
     const flashcard = appData.flashcards[0];
     const translations = appData.translations[currentLanguage];
     
@@ -323,4 +370,22 @@ function setupEventListeners() {
             }
         }
     });
+}
+}
+
+// Function to initialize user interface
+function initUserInterface() {
+    if (userData) {
+        // User avatar initialization moved to navbar.js
+        
+        // Set user language preferences
+        if (userData.nativeLanguage) {
+            currentLanguage = userData.nativeLanguage;
+        }
+        if (userData.currentTargetLanguage) {
+            targetLanguage = userData.currentTargetLanguage;
+        }
+        
+        console.log("User interface initialized for:", userData.username);
+    }
 }

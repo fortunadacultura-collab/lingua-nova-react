@@ -160,3 +160,25 @@
 .language-options li span {
     display: inline-block;
 }
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .language-options {
+        left: -80px;
+        width: 160px;
+        max-height: 250px;
+    }
+    
+    .language-selector-wrapper {
+        position: relative;
+    }
+    
+    .selected-language {
+        padding: 0.3rem 0.5rem;
+    }
+    
+    .selected-language img {
+        width: 18px;
+        height: 14px;
+    }
+}

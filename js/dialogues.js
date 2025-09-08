@@ -273,8 +273,8 @@ const volumeManager = {
     }
 };
 
-// Gerenciador de idioma de tradução
-const translationManager = {
+// Gerenciador de idioma de tradução para diálogos
+const dialogueTranslationManager = {
     currentLanguage: 'pt',
     
     init() {
@@ -308,7 +308,11 @@ const translationManager = {
     
     updateAllTranslations() {
         updateDialogueTranslations(this.currentLanguage);
-        updateUITexts(this.currentLanguage);
+        updateDialogueUITexts(this.currentLanguage);
+        // Notificar navbar para atualizar suas traduções
+        if (window.updateUITexts) {
+            window.updateUITexts(this.currentLanguage);
+        }
     }
 };
 
@@ -328,7 +332,7 @@ async function init() {
         initDomElements();
         
         // Inicializar o gerenciador de traduções PRIMEIRO
-        translationManager.init();
+        dialogueTranslationManager.init();
         
         // Load data from external JSON
         const response = await fetch('data/data.json');
@@ -348,7 +352,7 @@ async function init() {
         setupMobileOptimizations();
         optimizeForMobile();
         
-        updateUITexts(translationManager.currentLanguage);
+        updateDialogueUITexts(dialogueTranslationManager.currentLanguage);
         
         appConfig.initialized = true;
         console.log("Application initialized successfully");
@@ -414,8 +418,8 @@ async function loadDialogue(dialogueId) {
             
             const translationDiv = document.createElement('div');
             translationDiv.className = 'translation-text';
-            translationDiv.setAttribute('data-lang', translationManager.currentLanguage);
-            translationDiv.textContent = line.translations[translationManager.currentLanguage] || getFallbackTranslation(translationManager.currentLanguage);
+            translationDiv.setAttribute('data-lang', dialogueTranslationManager.currentLanguage);
+            translationDiv.textContent = line.translations[dialogueTranslationManager.currentLanguage] || getFallbackTranslation(dialogueTranslationManager.currentLanguage);
             translationDiv.style.display = 'none';
             
             messageDiv.appendChild(infoDiv);
@@ -1062,7 +1066,7 @@ function updateThemeControls() {
     
     if (!loadMoreBtn || !showLessBtn || !appConfig.data || !appConfig.data.translations) return;
     
-    const translations = appConfig.data.translations[translationManager.currentLanguage] || appConfig.data.translations['en'] || {};
+    const translations = appConfig.data.translations[dialogueTranslationManager.currentLanguage] || appConfig.data.translations['en'] || {};
     
     const loadMoreSpan = loadMoreBtn.querySelector('span[data-translate="loadMore"]');
     const showLessSpan = showLessBtn.querySelector('span[data-translate="showLess"]');
@@ -1381,17 +1385,21 @@ function calculateThemesPerLine() {
     return Math.max(1, Math.floor(gridWidth / (cardWidth + gap)));
 }
 
-function updateUITexts(langCode) {
+function updateDialogueUITexts(langCode) {
     if (!appConfig.data || !appConfig.data.translations) return;
     
     const translations = appConfig.data.translations[langCode] || appConfig.data.translations['en'] || {};
     
-    document.querySelectorAll('[data-translate]').forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (translations[key]) {
-            element.textContent = translations[key];
-        }
-    });
+    // Atualizar apenas elementos específicos da página de diálogos (não do navbar)
+    const dialogueContainer = document.querySelector('.content-below-navbar');
+    if (dialogueContainer) {
+        dialogueContainer.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.getAttribute('data-translate');
+            if (translations[key]) {
+                element.textContent = translations[key];
+            }
+        });
+    }
     
     // Atualizar explicitamente os botões de carregar mais e mostrar menos
     const loadMoreBtn = document.getElementById('load-more-btn');

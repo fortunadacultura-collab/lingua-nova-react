@@ -335,6 +335,13 @@ function loadNavbar() {
                 // ⚠️ SÓ SINCRONIZAR DEPOIS QUE TUDO ESTIVER CARREGADO
                 setTimeout(() => syncWithDetectedLanguage(), 500);
                 
+                // Inicializar gerenciador de traduções do navbar
+                if (typeof navbarTranslationManager !== 'undefined') {
+                    navbarTranslationManager.init();
+                }
+                
+                // User avatar is now initialized automatically by UserAvatarManager
+                
             }, 100);
         })
         .catch(error => {
@@ -500,3 +507,128 @@ function initTooltips() {
         });
     });
 }
+// Melhorar suporte touch para dropdowns em mobile
+function addTouchSupport() {
+    const dropdowns = document.querySelectorAll('.language-selector, .target-language-wrapper');
+    
+    dropdowns.forEach(dropdown => {
+        const trigger = dropdown.querySelector('.selected-language, .target-language-selector');
+        if (trigger) {
+            // Adicionar eventos touch para melhor responsividade mobile
+            trigger.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Fechar outros dropdowns
+                dropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active');
+                    }
+                });
+                
+                // Toggle do dropdown atual
+                dropdown.classList.toggle('active');
+            }, { passive: false });
+        }
+    });
+    
+    // Fechar dropdowns ao tocar fora em mobile
+    document.addEventListener('touchstart', function(e) {
+        const touchedDropdown = e.target.closest('.language-selector, .target-language-wrapper');
+        if (!touchedDropdown) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+}
+
+// Chamar a função após carregar o navbar
+if (typeof loadNavbar !== 'undefined') {
+    const originalLoadNavbar = loadNavbar;
+    loadNavbar = function() {
+        originalLoadNavbar.apply(this, arguments);
+        setTimeout(addTouchSupport, 200);
+    };
+}
+
+// ===== MOVIDO DO DIALOGUES.JS =====
+// Gerenciador de idioma de tradução para o navbar
+const navbarTranslationManager = {
+    currentLanguage: 'pt',
+    
+    init() {
+        this.setupEventListeners();
+        this.loadStoredLanguage();
+    },
+    
+    setupEventListeners() {
+        document.addEventListener('translationLanguageChanged', (e) => {
+            this.changeLanguage(e.detail.language);
+        });
+        
+        document.addEventListener('nativeLanguageChanged', (e) => {
+            this.changeLanguage(e.detail.language);
+        });
+    },
+    
+    loadStoredLanguage() {
+        const storedLang = localStorage.getItem('translationLanguage') || 'pt';
+        this.changeLanguage(storedLang);
+    },
+    
+    changeLanguage(langCode) {
+        this.currentLanguage = langCode;
+        localStorage.setItem('translationLanguage', langCode);
+        
+        // Atualizar traduções do navbar imediatamente
+        this.updateNavbarTranslations();
+    },
+    
+    async updateNavbarTranslations() {
+        try {
+            // Carregar dados de tradução se não estiverem disponíveis
+            if (!window.translationsData) {
+                const response = await fetch('data/translations.json');
+                window.translationsData = await response.json();
+            }
+            
+            const translations = window.translationsData[this.currentLanguage] || window.translationsData['en'] || {};
+            
+            // Atualizar apenas elementos do navbar
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                navbar.querySelectorAll('[data-translate]').forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (translations[key]) {
+                        element.textContent = translations[key];
+                    }
+                });
+            }
+        } catch (error) {
+            console.error('Erro ao atualizar traduções do navbar:', error);
+        }
+    }
+};
+
+// Função para atualizar traduções globais (mantida para compatibilidade)
+function updateUITexts(langCode) {
+    if (typeof navbarTranslationManager !== 'undefined') {
+        navbarTranslationManager.changeLanguage(langCode);
+    }
+}
+
+// Function to initialize user avatar
+// Avatar initialization is now handled by UserAvatarManager
+// This function is kept for backward compatibility but delegates to the centralized module
+function initUserAvatar() {
+    if (typeof UserAvatarManager !== 'undefined') {
+        UserAvatarManager.reinitialize();
+    } else {
+        console.warn('UserAvatarManager not loaded. Please include user-avatar.js');
+    }
+}
+
+// Disponibilizar globalmente para compatibilidade
+window.updateUITexts = updateUITexts;
+window.navbarTranslationManager = navbarTranslationManager;
