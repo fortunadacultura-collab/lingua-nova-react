@@ -1,4 +1,87 @@
 {
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "flag": "https://flagcdn.com/w20/us.png",
+      "targetName": "English"
+    },
+    {
+      "code": "pt",
+      "name": "Português",
+      "flag": "https://flagcdn.com/w20/br.png",
+      "targetName": "Portuguese"
+    },
+    {
+      "code": "es",
+      "name": "Español",
+      "flag": "https://flagcdn.com/w20/es.png",
+      "targetName": "Spanish"
+    },
+    {
+      "code": "ja",
+      "name": "日本語",
+      "flag": "https://flagcdn.com/w20/jp.png",
+      "targetName": "Japanese"
+    }
+  ],
+  "features": [
+    {
+      "icon": "fas fa-comments",
+      "title": "Dialogues",
+      "description": "Learn with authentic conversations in everyday situations.",
+      "linkText": "Explore Dialogues"
+    },
+    {
+      "icon": "fas fa-book-open",
+      "title": "Stories",
+      "description": "Short engaging stories written specifically for your level.",
+      "linkText": "Read Stories"
+    },
+    {
+      "icon": "fas fa-layer-group",
+      "title": "Flashcards",
+      "description": "Smart flashcards with spaced repetition system.",
+      "linkText": "Start Practicing"
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "At the Supermarket",
+      "icon": "fas fa-shopping-cart",
+      "lines": [
+        {
+          "speaker": "Ana",
+          "text": "How much does a kilo of apples cost?",
+          "translation": "Quanto custa o quilo da maçã?"
+        },
+        {
+          "speaker": "Clerk",
+          "text": "It's on sale today for $2.99 per kilo.",
+          "translation": "Está em promoção hoje por R$ 4,99 o quilo."
+        },
+        {
+          "speaker": "Ana",
+          "text": "Can I have two kilos, please?",
+          "translation": "Pode me dar dois quilos, por favor?"
+        }
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "title": "The Mountain Adventure",
+      "icon": "fas fa-mountain",
+      "content": "It was a cold morning when Carlos decided to climb the mountain. He packed his backpack with water, food, and a map. The trail was harder than he imagined...",
+      "translation": "Era uma manhã fria quando Carlos decidiu escalar a montanha. Ele preparou sua mochila com água, comida e um mapa. A trilha era mais difícil do que ele imaginava..."
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Happiness",
+      "back": "Felicidade"
+    }
+  ],
   "themes": [
     {
       "title": "Daily Life",
@@ -226,7 +309,7 @@
       "navCreateDeck": "Crear Mazo",
       "navStatistics": "Estadísticas",
       "learningLabel": "Aprendiendo:",
-      "userLanguageLabel": "Mi idioma:",
+      "userLanguageLabel": "My idioma:",
       "userName": "Usuario",
       "logoutButton": "Salir",
       "pageTitle": "Diálogos",
