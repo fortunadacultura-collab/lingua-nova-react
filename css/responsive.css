@@ -82,19 +82,32 @@
         height: 3px;
         width: 100%;
         background-color: var(--primary);
+        background-color: #4361ee; /* Fallback para dispositivos antigos */
         border-radius: 3px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
     }
     
     .mobile-menu-toggle.active span:nth-child(1) {
+        -webkit-transform: translateY(9px) rotate(45deg);
+        -moz-transform: translateY(9px) rotate(45deg);
+        -ms-transform: translateY(9px) rotate(45deg);
+        -o-transform: translateY(9px) rotate(45deg);
         transform: translateY(9px) rotate(45deg);
     }
     
     .mobile-menu-toggle.active span:nth-child(2) {
         opacity: 0;
+        filter: alpha(opacity=0); /* IE fallback */
     }
     
     .mobile-menu-toggle.active span:nth-child(3) {
+        -webkit-transform: translateY(-9px) rotate(-45deg);
+        -moz-transform: translateY(-9px) rotate(-45deg);
+        -ms-transform: translateY(-9px) rotate(-45deg);
+        -o-transform: translateY(-9px) rotate(-45deg);
         transform: translateY(-9px) rotate(-45deg);
     }
     
@@ -118,6 +131,14 @@
     .content-below-navbar {
         padding-top: 70px;
         padding-bottom: 1rem;
+    }
+    
+    /* Fallbacks para dispositivos Android antigos */
+    .navbar {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     
     /* Menu hambúrguer - esconder nav-links e mostrar toggle */
