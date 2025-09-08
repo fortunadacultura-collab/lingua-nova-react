@@ -62,17 +62,16 @@ function setupDropdowns() {
     window.dropdownClickOutsideListener = clickOutsideListener;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Load navbar and footer
-    loadNavbar();
-    loadFooter();
-    
-    // Setup mobile menu toggle
+function setupMobileMenuToggle() {
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const navLinks = document.getElementById('nav-links');
     
     if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', function(e) {
+        // Remove existing listeners by cloning elements
+        const newToggle = mobileMenuToggle.cloneNode(true);
+        mobileMenuToggle.parentNode.replaceChild(newToggle, mobileMenuToggle);
+        
+        newToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             this.classList.toggle('active');
             navLinks.classList.toggle('active');
@@ -88,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close menu when clicking on links
         document.querySelectorAll('.nav-links a, .dropdown-item').forEach(link => {
             link.addEventListener('click', function() {
-                mobileMenuToggle.classList.remove('active');
+                newToggle.classList.remove('active');
                 navLinks.classList.remove('active');
                 document.body.style.overflow = '';
             });
@@ -97,12 +96,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
             if (!event.target.closest('.nav-links') && !event.target.closest('.mobile-menu-toggle') && navLinks.classList.contains('active')) {
-                mobileMenuToggle.classList.remove('active');
+                newToggle.classList.remove('active');
                 navLinks.classList.remove('active');
                 document.body.style.overflow = '';
             }
         });
     }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Load navbar and footer
+    loadNavbar();
+    loadFooter();
     
     // Toggle dropdown menus on all devices (mobile and desktop)
     document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
@@ -341,6 +346,9 @@ function loadNavbar() {
                 }
                 
                 // User avatar is now initialized automatically by UserAvatarManager
+                
+                // Setup mobile menu toggle after navbar is loaded
+                setupMobileMenuToggle();
                 
             }, 100);
         })

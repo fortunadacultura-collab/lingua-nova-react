@@ -474,7 +474,7 @@ body {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 6rem;
+        padding-top: 8rem;
     }
 
     .hero-content {
@@ -492,6 +492,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding-top: 9rem;
+    }
 
     .nav-links {
         margin: 1rem 0;
