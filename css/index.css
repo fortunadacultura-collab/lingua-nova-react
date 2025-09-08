@@ -495,21 +495,6 @@ body {
     .hero {
         padding-top: 9rem;
     }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-    }
-    
-    .preview-example {
-        height: auto;
-        padding: 1.5rem;
-    }
 }
 
 @media (max-width: 576px) {
@@ -558,8 +543,6 @@ body {
 
 /* Mobile Styles - Consolidated */
 @media (max-width: 768px) {
-    /* Mobile navbar styles moved to navbar.css and responsive.css */
-    
     .language-selector .language-options {
         position: fixed;
         top: 70px;
@@ -574,21 +557,5 @@ body {
         right: 20px;
         left: auto;
         width: 200px;
-    }
-    
-    /* Other Mobile Styles */
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-    }
-    
-    .preview-example {
-        height: auto;
-        padding: 1.5rem;
     }
 }
