@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>My Decks | Lingua Nova</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/language-selector.css">
+    <link rel="stylesheet" href="css/my_decks.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script>
+        // Definir a página atual para o destaque do menu
+        window.currentPage = 'my_decks.html';
+    </script>
+</head>
+<body>
+    <!-- Navbar (será carregada via JavaScript) -->
+    <div id="navbar-container"></div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1 class="hero-title">Domine idiomas com Flashcards Inteligentes</h1>
+            <p class="hero-subtitle">Sistema de repetição espaçada baseado em IA para aprender vocabulário de forma eficiente e duradoura.</p>
+            
+            <div class="cta-buttons">
+                <button class="btn btn-solid btn-large">
+                    <i class="fas fa-plus"></i> Criar Deck
+                </button>
+                <button class="btn btn-outline btn-large">
+                    <i class="fas fa-users"></i> Explorar Comunidade
+                </button>
+            </div>
+        </div>
+
+        <!-- Deck Grid -->
+        <h2 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text);">Seus Decks Recentes</h2>
+        
+        <div class="deck-grid">
+            <!-- Deck 1 -->
+            <div class="deck-card">
+                <div class="deck-image">
+                    <i class="fas fa-flag-usa"></i>
+                </div>
+                <div class="deck-content">
+                    <h3 class="deck-title">Inglês Básico</h3>
+                    <p class="deck-description">Vocabulário essencial para iniciantes em inglês.</p>
+                    <div class="deck-stats">
+                        <span class="deck-stat"><i class="fas fa-cards"></i> 52 cartas</span>
+                        <span class="deck-stat"><i class="fas fa-check-circle"></i> 80%</span>
+                    </div>
+                    <div class="deck-actions">
+                        <button class="action-btn btn-study">
+                            <i class="fas fa-play"></i> Estudar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deck 2 -->
+            <div class="deck-card">
+                <div class="deck-image" style="background: linear-gradient(135deg, #f8961e 0%, #e36414 100%);">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="deck-content">
+                    <h3 class="deck-title">Gastronomia Francesa</h3>
+                    <p class="deck-description">Termos culinários e vocabulário gastronômico.</p>
+                    <div class="deck-stats">
+                        <span class="deck-stat"><i class="fas fa-cards"></i> 78 cartas</span>
+                        <span class="deck-stat"><i class="fas fa-check-circle"></i> 65%</span>
+                    </div>
+                    <div class="deck-actions">
+                        <button class="action-btn btn-study">
+                            <i class="fas fa-play"></i> Estudar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deck 3 -->
+            <div class="deck-card">
+                <div class="deck-image" style="background: linear-gradient(135deg, #4ad66d 0%, #2a9d8f 100%);">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="deck-content">
+                    <h3 class="deck-title">Espanhol Comercial</h3>
+                    <p class="deck-description">Expressões para reuniões e negócios em espanhol.</p>
+                    <div class="deck-stats">
+                        <span class="deck-stat"><i class="fas fa-cards"></i> 45 cartas</span>
+                        <span class="deck-stat"><i class="fas fa-check-circle"></i> 92%</span>
+                    </div>
+                    <div class="deck-actions">
+                        <button class="action-btn btn-study">
+                            <i class="fas fa-play"></i> Estudar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/geo-ip-detector.js"></script>
+    <script src="js/user-avatar.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/language-manager.js"></script>
+    <script src="js/native-language.js"></script>
+    <script src="js/my_decks.js"></script>
+</body>
+</html>

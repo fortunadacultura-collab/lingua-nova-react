@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Add Cards | Lingua Nova</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/language-selector.css">
+    <link rel="stylesheet" href="css/add_cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script>
+        // Definir a página atual para o destaque do menu
+        window.currentPage = 'add_cards.html';
+    </script>
+</head>
+<body>
+    <!-- Navbar (será carregada via JavaScript) -->
+    <div id="navbar-container"></div>
+
+    <div class="content-below-navbar">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title" data-translate="addCards">
+                <i class="fas fa-plus-circle"></i>
+                Adicionar Cartões
+            </h1>
+            <p class="page-subtitle" data-translate="addCardsSubtitle">
+                Crie novos flashcards ou importe de templates existentes
+            </p>
+        </div>
+        
+        <div class="container">
+            <div class="cards-container">
+                <!-- Create New Deck Card -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <h3 class="feature-title" data-translate="createNewDeck">Criar Novo Deck</h3>
+                    <p class="feature-description" data-translate="createNewDeckDesc">
+                        Comece do zero criando um novo deck de flashcards personalizado
+                    </p>
+                    <a href="new_deck.html" class="btn btn-primary" data-action="create-deck">
+                        <i class="fas fa-plus"></i>
+                        <span data-translate="createDeck">Criar Deck</span>
+                    </a>
+                </div>
+
+                <!-- Import Cards Card -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-import"></i>
+                    </div>
+                    <h3 class="feature-title" data-translate="importCards">Importar Cartões</h3>
+                    <p class="feature-description" data-translate="importCardsDesc">
+                        Importe cartões de arquivos CSV, Excel ou outros formatos
+                    </p>
+                    <button class="btn btn-outline" data-action="import-cards">
+                        <i class="fas fa-upload"></i>
+                        <span data-translate="import">Importar</span>
+                    </button>
+                </div>
+
+                <!-- Browse Templates Card -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="feature-title" data-translate="browseTemplates">Navegar Templates</h3>
+                    <p class="feature-description" data-translate="browseTemplatesDesc">
+                        Explore templates prontos para diferentes tópicos e idiomas
+                    </p>
+                    <button class="btn btn-outline" data-action="browse-templates">
+                        <i class="fas fa-search"></i>
+                        <span data-translate="browse">Navegar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (será carregado via JavaScript) -->
+    <div id="footer-container"></div>
+
+    <script>
+    // Initialize the application after everything is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set a small timeout to ensure all elements are rendered
+        setTimeout(function() {
+            if (typeof init === 'function') {
+                init().catch(function(error) {
+                    console.error('Failed to initialize app:', error);
+                });
+            }
+        }, 100);
+    });
+    </script>
+    <script src="js/data.js"></script>
+    <script src="js/geo-ip-detector.js"></script>
+    <script src="js/user-avatar.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/language-manager.js"></script>
+    <script src="js/native-language.js"></script>
+    <script src="js/add_cards.js"></script>
+</body>
+</html>

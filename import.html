@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Import | Lingua Nova</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/language-selector.css">
+    <link rel="stylesheet" href="css/import.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script>
+        // Definir a página atual para o destaque do menu
+        window.currentPage = 'import.html';
+    </script>
+</head>
+<body>
+    <!-- Navbar (será carregada via JavaScript) -->
+    <div id="navbar-container"></div>
+
+    <!-- Content below navbar -->
+    <div class="content-below-navbar">
+        <!-- Page Title -->
+        <div class="page-title-container">
+            <h1 class="page-title">Importar Flashcards</h1>
+        </div>
+
+        <!-- Main Container -->
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Buscar decks...">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Flashcard Grid -->
+            <div class="flashcard-grid" id="flashcardGrid">
+                <!-- Decks will be rendered here by JavaScript -->
+            </div>
+
+            <!-- Load More/Less Buttons -->
+            <div class="load-buttons-container">
+                <button class="load-more-btn" id="loadMoreBtn">
+                    <i class="fas fa-chevron-down"></i>
+                    Carregar Mais
+                </button>
+                <button class="load-less-btn" id="loadLessBtn">
+                    <i class="fas fa-chevron-up"></i>
+                    Mostrar Menos
+                </button>
+            </div>
+
+            <!-- Create Deck Button -->
+            <div class="create-deck-container">
+                <button class="create-deck-btn" onclick="createNewDeck()">
+                    <i class="fas fa-plus"></i>
+                    Criar Novo Deck
+                </button>
+            </div>
+
+            <!-- Import/Export Section -->
+            <div class="import-export-section">
+                <h2 class="section-title">Importar & Exportar</h2>
+                <div class="import-export-options">
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-file-csv"></i>
+                        </div>
+                        <h3 class="option-title">Importar CSV</h3>
+                        <p class="option-description">Importe flashcards de arquivos CSV com mapeamento automático de campos.</p>
+                        <button class="option-btn" id="importCSVBtn">Importar CSV</button>
+                    </div>
+                    
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-file-archive"></i>
+                        </div>
+                        <h3 class="option-title">Importar Anki</h3>
+                        <p class="option-description">Importe decks do Anki (.apkg) mantendo toda a formatação.</p>
+                        <button class="option-btn" id="importAnkiBtn">Importar Anki</button>
+                    </div>
+                    
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-file-code"></i>
+                        </div>
+                        <h3 class="option-title">Importar JSON</h3>
+                        <p class="option-description">Importe dados estruturados em formato JSON.</p>
+                        <button class="option-btn" id="importJSONBtn">Importar JSON</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (será carregada via JavaScript) -->
+    <div id="footer-container"></div>
+
+    <!-- Import Modal -->
+    <div class="modal-overlay" id="importModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">Importar Flashcards</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Selecione o formato:</label>
+                    <div class="format-options">
+                        <div class="format-option active" data-format="csv">
+                            <div class="format-icon">📄</div>
+                            <div>CSV</div>
+                        </div>
+                        <div class="format-option" data-format="anki">
+                            <div class="format-icon">📦</div>
+                            <div>Anki</div>
+                        </div>
+                        <div class="format-option" data-format="json">
+                            <div class="format-icon">📋</div>
+                            <div>JSON</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Selecione o arquivo:</label>
+                    <div class="file-upload">
+                        <div class="file-upload-icon">📁</div>
+                        <div>Clique para selecionar ou arraste o arquivo aqui</div>
+                        <input type="file" class="file-input" id="fileInput" accept=".csv,.json,.apkg">
+                    </div>
+                </div>
+                
+                <div id="csvPreview" style="display: none;"></div>
+                <div id="fieldMapping" style="display: none;"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline modal-close">Cancelar</button>
+                <button class="btn btn-solid" onclick="confirmImport()">Importar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Deck Modal -->
+    <div class="modal-overlay" id="createDeckModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">Criar Novo Deck</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Nome do Deck:</label>
+                    <input type="text" class="form-control" placeholder="Digite o nome do deck">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Descrição:</label>
+                    <textarea class="form-control" rows="3" placeholder="Descreva o conteúdo do deck"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Categoria:</label>
+                    <select class="form-control">
+                        <option>Vocabulário</option>
+                        <option>Gramática</option>
+                        <option>Conversação</option>
+                        <option>Expressões</option>
+                        <option>Outros</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline modal-close">Cancelar</button>
+                <button class="btn btn-solid">Criar Deck</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle" id="toastIcon"></i>
+        <span id="toastMessage">Mensagem de notificação</span>
+    </div>
+
+    <!-- Cloud Sync Status -->
+    <div class="sync-status" id="syncStatus">
+        <i class="fas fa-sync-alt sync-icon"></i>
+        Verificando sincronização...
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/geo-ip-detector.js"></script>
+    <script src="js/user-avatar.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/language-manager.js"></script>
+    <script src="js/native-language.js"></script>
+    <script src="js/my_decks.js"></script>
+</body>
+</html>
