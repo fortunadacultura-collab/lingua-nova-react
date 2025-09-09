@@ -4,7 +4,7 @@
       "id": "user-123",
       "username": "user",
       "email": "john.doe@example.com",
-      "nativeLanguage": "pt",
+      "nativeLanguage": "en",
       "targetLanguages": ["en", "es"],
       "currentTargetLanguage": "en",
       "preferences": {

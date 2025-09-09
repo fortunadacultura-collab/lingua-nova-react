@@ -1,5 +1,5 @@
 // Current language state
-let currentLanguage = 'pt';
+let currentLanguage = 'en';
 let targetLanguage = 'en';
 
 // Global variable to store user data
@@ -67,20 +67,16 @@ async function init() {
     // Load language from localStorage if available
     const savedLang = localStorage.getItem('linguaNovaLanguage');
     if (savedLang) {
-        currentLanguage = savedLang;
-        updateLanguageSelector();
+        translatePage(savedLang);
+    } else {
+        // Default to English if no saved language
+        translatePage('en');
     }
     
     const savedTargetLang = localStorage.getItem('linguaNovaTargetLanguage');
     if (savedTargetLang) {
-        targetLanguage = savedTargetLang;
-        updateTargetLanguageSelector();
+        changeTargetLanguage(savedTargetLang);
     }
-    // Skip dropdown update for now
-    // updateTargetLanguageDropdown();
-    
-    // Translate page to current language
-    translatePage(currentLanguage);
     
     // Setup event listeners
     setupEventListeners();
@@ -223,6 +219,8 @@ function renderStoriesPreview() {
             </h3>
             <div class="story-content">
                 ${story.content}
+                ${currentLanguage !== 'en' && story.translation && story.translation[currentLanguage] ? 
+                    `<div class="story-translation">${story.translation[currentLanguage]}</div>` : ''}
             </div>
             <a href="#" class="story-read-more">
                 ${translations.featureStoriesLink}
@@ -385,6 +383,11 @@ function initUserInterface() {
         if (userData.currentTargetLanguage) {
             targetLanguage = userData.currentTargetLanguage;
         }
+        
+        // Render cards with correct language
+        renderDialoguesPreview();
+        renderStoriesPreview();
+        renderFlashcardsPreview();
         
         console.log("User interface initialized for:", userData.username);
     }

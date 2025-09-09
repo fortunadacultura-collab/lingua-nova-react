@@ -53,17 +53,29 @@
         {
           "speaker": "Ana",
           "text": "How much does a kilo of apples cost?",
-          "translation": "Quanto custa o quilo da maçã?"
+          "translation": {
+            "pt": "Quanto custa o quilo da maçã?",
+            "es": "¿Cuánto cuesta un kilo de manzanas?",
+            "ja": "りんご1キロはいくらですか？"
+          }
         },
         {
           "speaker": "Clerk",
           "text": "It's on sale today for $2.99 per kilo.",
-          "translation": "Está em promoção hoje por R$ 4,99 o quilo."
+          "translation": {
+            "pt": "Está em promoção hoje por R$ 4,99 o quilo.",
+            "es": "Está en oferta hoy por $2.99 por kilo.",
+            "ja": "今日は1キロ2.99ドルでセール中です。"
+          }
         },
         {
           "speaker": "Ana",
           "text": "Can I have two kilos, please?",
-          "translation": "Pode me dar dois quilos, por favor?"
+          "translation": {
+            "pt": "Pode me dar dois quilos, por favor?",
+            "es": "¿Puedo tener dos kilos, por favor?",
+            "ja": "2キロください。"
+          }
         }
       ]
     }
@@ -73,13 +85,21 @@
       "title": "The Mountain Adventure",
       "icon": "fas fa-mountain",
       "content": "It was a cold morning when Carlos decided to climb the mountain. He packed his backpack with water, food, and a map. The trail was harder than he imagined...",
-      "translation": "Era uma manhã fria quando Carlos decidiu escalar a montanha. Ele preparou sua mochila com água, comida e um mapa. A trilha era mais difícil do que ele imaginava..."
+      "translation": {
+        "pt": "Era uma manhã fria quando Carlos decidiu escalar a montanha. Ele preparou sua mochila com água, comida e um mapa. A trilha era mais difícil do que ele imaginava...",
+        "es": "Era una mañana fría cuando Carlos decidió escalar la montaña. Empacó su mochila con agua, comida y un mapa. El sendero era más difícil de lo que imaginaba...",
+        "ja": "カルロスが山に登ることを決めた寒い朝でした。彼は水、食べ物、地図をバックパックに詰めました。道のりは彼が想像していたよりも困難でした..."
+      }
     }
   ],
   "flashcards": [
     {
       "front": "Happiness",
-      "back": "Felicidade"
+      "back": {
+        "pt": "Felicidade",
+        "es": "Felicidad",
+        "ja": "幸福"
+      }
     }
   ],
   "themes": [
