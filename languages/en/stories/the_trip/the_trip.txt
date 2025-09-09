@@ -1,0 +1,28 @@
+title: The Trip
+text: Sarah had been planning this trip for months, carefully saving every penny and researching every destination.
+pt: Sarah vinha planejando esta viagem há meses, economizando cuidadosamente cada centavo e pesquisando cada destino.
+es: Sarah había estado planeando este viaje durante meses, ahorrando cuidadosamente cada centavo e investigando cada destino.
+
+text: The morning sun painted the train station in golden hues as she clutched her worn leather suitcase, her heart racing with anticipation.
+pt: O sol da manhã pintou a estação de trem em tons dourados enquanto ela segurava sua mala de couro gasta, seu coração acelerado de expectativa.
+es: El sol de la mañana pintó la estación de tren en tonos dorados mientras ella agarraba su maleta de cuero gastada, su corazón acelerado de expectativa.
+
+text: This wasn't just any ordinary journey; it was her first solo adventure, a leap into the unknown that both terrified and exhilarated her.
+pt: Esta não era apenas uma jornada comum; era sua primeira aventura solo, um salto no desconhecido que a aterrorizava e a exaltava ao mesmo tempo.
+es: Este no era solo un viaje ordinario; era su primera aventura en solitario, un salto a lo desconocido que la aterrorizaba y la emocionaba a la vez.
+
+text: As the train whistle echoed through the station, she took a deep breath and stepped aboard, leaving her comfort zone behind.
+pt: Quando o apito do trem ecoou pela estação, ela respirou fundo e subiu a bordo, deixando sua zona de conforto para trás.
+es: Cuando el silbato del tren resonó por la estación, respiró profundamente y subió a bordo, dejando su zona de confort atrás.
+
+text: The landscape rushed past her window like pages in a book, each scene telling a different story of the world beyond her small hometown.
+pt: A paisagem passou rapidamente por sua janela como páginas de um livro, cada cena contando uma história diferente do mundo além de sua pequena cidade natal.
+es: El paisaje pasó rápidamente por su ventana como páginas de un libro, cada escena contando una historia diferente del mundo más allá de su pequeño pueblo natal.
+
+text: Hours later, she arrived at her destination, a bustling city where the air hummed with possibility and adventure.
+pt: Horas depois, ela chegou ao seu destino, uma cidade movimentada onde o ar vibrava com possibilidade e aventura.
+es: Horas después, llegó a su destino, una ciudad bulliciosa donde el aire vibraba con posibilidad y aventura.
+
+text: That evening, as she sat in a small café watching strangers pass by, Sarah realized that the real journey had just begun.
+pt: Naquela noite, enquanto estava sentada em um pequeno café observando estranhos passarem, Sarah percebeu que a verdadeira jornada havia apenas começado.
+es: Esa noche, mientras estaba sentada en un pequeño café viendo pasar a extraños, Sarah se dio cuenta de que el verdadero viaje acababa de comenzar.
