@@ -64,14 +64,9 @@ async function init() {
         console.error('Error loading app data:', error);
     }
     
-    // Load language from localStorage if available
-    const savedLang = localStorage.getItem('linguaNovaLanguage');
-    if (savedLang) {
-        translatePage(savedLang);
-    } else {
-        // Default to English if no saved language
-        translatePage('en');
-    }
+    // Load saved language
+    const savedLang = localStorage.getItem('linguaNovaLanguage') || 'en';
+    translatePage(savedLang);
     
     const savedTargetLang = localStorage.getItem('linguaNovaTargetLanguage');
     if (savedTargetLang) {

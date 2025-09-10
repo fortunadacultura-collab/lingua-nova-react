@@ -9,6 +9,7 @@ class LanguageManager {
     async init() {
         await this.loadLanguageConfig();
         this.setupEventListeners();
+        this.loadSavedLanguagePreference();
     }
 
     async loadLanguageConfig() {
@@ -107,6 +108,16 @@ class LanguageManager {
                 });
             }
         });
+    }
+
+    loadSavedLanguagePreference() {
+        // Load from localStorage
+        const savedLanguage = localStorage.getItem('preferredLanguage');
+        if (savedLanguage && this.availableLanguages.some(lang => lang.code === savedLanguage)) {
+            this.currentLanguage = savedLanguage;
+            this.updateLanguageSelectors(savedLanguage);
+            console.log(`Loaded saved language preference: ${savedLanguage}`);
+        }
     }
 
     saveLanguagePreference(langCode) {

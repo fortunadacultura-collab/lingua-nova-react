@@ -251,11 +251,18 @@ const storyTranslationManager = {
         if (translateBtn) {
             translateBtn.addEventListener('click', () => toggleTranslationMode());
         }
+        
+        // Listen for language changes from language-manager
+        document.addEventListener('translationLanguageChanged', (e) => {
+            const newLanguage = e.detail.language;
+            this.changeLanguage(newLanguage);
+        });
     },
     
     loadStoredLanguage() {
-        const stored = localStorage.getItem('storyTranslationLanguage');
-        if (stored) this.currentLanguage = stored;
+        // Load saved language
+        const savedLang = localStorage.getItem('storyTranslationLanguage') || 'en';
+        this.currentLanguage = savedLang;
     },
     
     changeLanguage(langCode) {
@@ -266,6 +273,16 @@ const storyTranslationManager = {
     
     updateAllTranslations() {
         // Update story translations based on current language
+        const translationElements = document.querySelectorAll('.translation-text');
+        const paragraphs = appConfig.stories[appConfig.currentStory]?.paragraphs || [];
+        
+        translationElements.forEach((element, index) => {
+            if (paragraphs[index] && paragraphs[index].translations) {
+                const translation = paragraphs[index].translations[this.currentLanguage] || 
+                                  paragraphs[index].translations.pt || '';
+                element.textContent = translation;
+            }
+        });
     }
 };
 

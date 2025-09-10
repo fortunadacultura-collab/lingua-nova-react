@@ -34,31 +34,13 @@ class NativeLanguageManager {
         });
     }
 
-    async loadUserPreference() {
-        // 1. Primeiro verifica se já tem preferência salva
-        const savedLanguage = localStorage.getItem('nativeLanguage');
-        if (savedLanguage && this.translations[savedLanguage]) {
-            this.currentNativeLanguage = savedLanguage;
-            this.updateUITexts(this.currentNativeLanguage);
-            this.updateLanguageSelector(this.currentNativeLanguage);
-            this.notifyLanguageChange(savedLanguage, false); // ⚠️ false = não redisparar evento
-            return;
-        }
-
-        // 2. Se não tiver preferência, detecta automaticamente
-        try {
-            console.log("Detectando idioma do usuário...");
-            // Aguardar a detecção de idioma antes de continuar
-            const detectedLanguage = await languageDetector.detectLanguage();
-            console.log("Idioma detectado:", detectedLanguage);
-            
-            // Aplicar o idioma detectado
-            await this.applyLanguage(detectedLanguage, true); // ⚠️ true = é detecção automática
-            
-        } catch (error) {
-            console.error("Erro na detecção automática:", error);
-            // 3. Fallback para português
-            this.applyLanguage('pt', true);
+    loadUserPreference() {
+        const savedLang = localStorage.getItem('nativeLanguage');
+        if (savedLang) {
+            this.changeNativeLanguage(savedLang);
+        } else {
+            // Auto-detect if no preference is saved
+            this.autoDetectLanguage();
         }
     }
 

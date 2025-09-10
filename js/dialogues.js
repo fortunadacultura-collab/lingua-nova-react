@@ -293,8 +293,9 @@ const dialogueTranslationManager = {
     },
     
     loadStoredLanguage() {
-        const storedLang = localStorage.getItem('translationLanguage') || 'pt';
-        this.changeLanguage(storedLang);
+        // Load saved language
+        const savedLang = localStorage.getItem('translationLanguage') || 'pt';
+        this.changeLanguage(savedLang);
     },
     
     changeLanguage(langCode) {
