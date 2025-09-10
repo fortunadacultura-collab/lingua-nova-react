@@ -293,14 +293,19 @@ const dialogueTranslationManager = {
     },
     
     loadStoredLanguage() {
-        // Load saved language
-        const savedLang = localStorage.getItem('translationLanguage') || 'pt';
+        // Load saved language from native language manager
+        const savedLang = window.nativeLanguageManager?.getCurrentNativeLanguage() || 'pt';
+        console.log('Dialogues: Carregando idioma salvo:', savedLang);
         this.changeLanguage(savedLang);
     },
     
     changeLanguage(langCode) {
         this.currentLanguage = langCode;
-        localStorage.setItem('translationLanguage', langCode);
+        
+        // Use native language manager to save language
+        if (window.nativeLanguageManager) {
+            window.nativeLanguageManager.changeNativeLanguage(langCode);
+        }
         
         if (appConfig.initialized) {
             this.updateAllTranslations();
@@ -320,6 +325,33 @@ const dialogueTranslationManager = {
 // DOM Elements cache
 let domElements = {};
 
+// Função para traduzir a página
+function translatePage() {
+    if (!window.nativeLanguageManager) {
+        console.log('Dialogues: nativeLanguageManager não disponível');
+        return;
+    }
+    
+    const currentLanguage = window.nativeLanguageManager.getCurrentNativeLanguage();
+    const translations = window.nativeLanguageManager.getTranslations();
+    
+    if (!translations || !translations[currentLanguage]) {
+        console.log('Dialogues: Traduções não disponíveis para', currentLanguage);
+        return;
+    }
+    
+    console.log('Dialogues: Traduzindo página para', currentLanguage);
+    
+    // Traduzir elementos com data-translate
+    const elementsToTranslate = document.querySelectorAll('[data-translate]');
+    elementsToTranslate.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[currentLanguage][key]) {
+            element.textContent = translations[currentLanguage][key];
+        }
+    });
+}
+
 // Initialize the application
 async function init() {
     if (appConfig.initialized) {
@@ -332,8 +364,19 @@ async function init() {
         
         initDomElements();
         
-        // Inicializar o gerenciador de traduções PRIMEIRO
+        // Inicializar o gerenciador de idioma nativo PRIMEIRO
+        if (window.nativeLanguageManager) {
+            await window.nativeLanguageManager.init();
+            console.log('Dialogues: Sistema de idiomas nativo inicializado');
+        }
+        
+        // Inicializar o gerenciador de traduções
         dialogueTranslationManager.init();
+        
+        // Traduzir a página após inicialização
+        setTimeout(() => {
+            translatePage();
+        }, 500);
         
         // Load data from external JSON
         const response = await fetch('data/data.json');
@@ -928,16 +971,15 @@ function updateTimeDisplay(current, total) {
 }
 
 function updatePlayerControls() {
-    if (!domElements.playBtn || !domElements.pauseBtn || !domElements.stopBtn) return;
-    
-    if (appConfig.isPlaying) {
-        domElements.playBtn.classList.add('disabled');
-        domElements.pauseBtn.classList.remove('disabled');
-        domElements.stopBtn.classList.remove('disabled');
-    } else {
-        domElements.playBtn.classList.remove('disabled');
-        domElements.pauseBtn.classList.add('disabled');
-        domElements.stopBtn.classList.add('disabled');
+    if (domElements.playBtn) {
+        domElements.playBtn.style.display = appConfig.isPlaying ? 'none' : 'inline-flex';
+    }
+    if (domElements.pauseBtn) {
+        domElements.pauseBtn.style.display = appConfig.isPlaying ? 'inline-flex' : 'none';
+    }
+    if (domElements.stopBtn) {
+        // Stop button should be visible when playing
+        domElements.stopBtn.style.display = appConfig.isPlaying ? 'inline-flex' : 'none';
     }
 }
 

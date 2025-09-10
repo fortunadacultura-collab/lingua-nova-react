@@ -1,4 +1,93 @@
+// Initialize the application
+async function init() {
+    console.log('Initializing new_deck.js...');
+    
+    try {
+        // Wait for navbar to load first
+        await waitForNavbar();
+        
+        // Initialize native language manager
+        if (window.nativeLanguageManager) {
+            await window.nativeLanguageManager.init();
+            console.log('✅ [NEW_DECK] Native Language Manager inicializado');
+        }
+        
+        // Wait for native language manager to initialize and apply language
+        setTimeout(() => {
+            const currentLang = window.nativeLanguageManager?.getCurrentNativeLanguage() || 'pt';
+            console.log('💾 [NEW_DECK] Idioma atual do sistema:', currentLang);
+            translatePage(currentLang);
+        }, 500);
+        
+        console.log('New deck initialization completed');
+    } catch (error) {
+        console.error('Failed to initialize new deck:', error);
+    }
+}
+
+// Translate page function
+function translatePage(targetLanguage) {
+    console.log('🌐 [NEW_DECK] Traduzindo página para:', targetLanguage);
+    
+    if (!window.nativeLanguageManager || !window.nativeLanguageManager.translations) {
+        console.warn('❌ [NEW_DECK] Sistema de tradução não disponível');
+        return;
+    }
+    
+    const translations = window.nativeLanguageManager.translations[targetLanguage];
+    if (!translations) {
+        console.warn('❌ [NEW_DECK] Traduções não encontradas para:', targetLanguage);
+        return;
+    }
+    
+    // Apply translations to elements with data-translate attribute
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[key]) {
+            element.textContent = translations[key];
+        }
+    });
+    
+    // Apply translations to placeholders
+    document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (translations[key]) {
+            element.placeholder = translations[key];
+        }
+    });
+    
+    console.log('✅ [NEW_DECK] Página traduzida com sucesso');
+}
+
+// Wait for navbar to be loaded
+function waitForNavbar() {
+    return new Promise((resolve) => {
+        const checkNavbar = () => {
+            const navbarContainer = document.getElementById('navbar-container');
+            const userLanguageElement = document.getElementById('user-language');
+            
+            if (navbarContainer && navbarContainer.children.length > 0 && userLanguageElement) {
+                console.log('Navbar loaded successfully in new_deck');
+                resolve();
+            } else {
+                setTimeout(checkNavbar, 100);
+            }
+        };
+        
+        checkNavbar();
+        
+        // Timeout after 5 seconds
+        setTimeout(() => {
+            console.warn('Navbar loading timeout in new_deck');
+            resolve();
+        }, 5000);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the application first
+    init();
+    
     // Idioma de aprendizado (target language)
     const targetLanguageWrapper = document.querySelector('.target-language-wrapper');
     if (targetLanguageWrapper) {

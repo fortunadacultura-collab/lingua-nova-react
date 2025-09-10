@@ -39,6 +39,11 @@ async function init() {
         await loadUserData();
     // Wait for app data to load
     try {
+        // Inicializar o gerenciador de idioma nativo PRIMEIRO
+        if (window.nativeLanguageManager) {
+            await window.nativeLanguageManager.init();
+        }
+        
         if (!appData) {
             await loadAppData();
         }
@@ -136,18 +141,38 @@ function updateTargetLanguageSelector() {
 
 // Translate the entire page
 function translatePage(langCode) {
+    console.log('🌐 translatePage chamada com idioma:', langCode);
+    console.log('📊 Estado atual - currentLanguage:', currentLanguage, 'localStorage linguaNovaLanguage:', localStorage.getItem('linguaNovaLanguage'));
+    
     document.documentElement.lang = langCode;
     currentLanguage = langCode;
+    
+    // Sincronizar todos os sistemas de localStorage
     localStorage.setItem('linguaNovaLanguage', langCode);
+    localStorage.setItem('nativeLanguage', langCode);
+    localStorage.setItem('translationLanguage', langCode);
+    
+    console.log('💾 LocalStorage atualizado para:', langCode);
     
     const translations = appData.translations[langCode];
+    
+    if (!translations) {
+        console.error('❌ Traduções não encontradas para o idioma:', langCode);
+        return;
+    }
+    
+    console.log('📝 Aplicando traduções para elementos com data-translate...');
+    let translatedCount = 0;
     
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
         if (translations[key]) {
             element.textContent = translations[key];
+            translatedCount++;
         }
     });
+    
+    console.log(`✅ ${translatedCount} elementos traduzidos para ${langCode}`);
     
     updateTargetLanguageDropdown();
     updateLanguageSelector();
@@ -304,6 +329,20 @@ function setupEventListeners() {
             changeTargetLanguage(lang);
             targetLanguageWrapper?.classList.remove('active');
         });
+    });
+    
+    // Listen for translation language changes
+    document.addEventListener('translationLanguageChanged', (e) => {
+        const newLanguage = e.detail.language;
+        console.log('🔄 Index.js recebeu evento translationLanguageChanged:', newLanguage);
+        
+        // Verificar se o idioma é diferente do atual para evitar loops
+        if (newLanguage !== currentLanguage && appData && appData.translations && appData.translations[newLanguage]) {
+            console.log('✅ Aplicando tradução para:', newLanguage);
+            translatePage(newLanguage);
+        } else {
+            console.log('⚠️ Idioma já aplicado ou não suportado:', newLanguage);
+        }
     });
     
     // Flashcard flip

@@ -43,22 +43,22 @@
         <!-- Study Header -->
         <div class="study-header">
             <div class="deck-info">
-                <h1 id="deck-title">Carregando...</h1>
-                <p id="deck-description">Preparando sua sessão de estudo...</p>
+                <h1 id="deck-title" data-translate="deckTitleLoading">Carregando...</h1>
+                <p id="deck-description" data-translate="deckDescriptionLoading">Preparando sua sessão de estudo...</p>
             </div>
             
             <div class="study-modes">
                 <button class="mode-btn active" data-mode="learn">
                     <i class="fas fa-graduation-cap"></i>
-                    <span>Aprender</span>
+                    <span data-translate="studyModeLearn">Aprender</span>
                 </button>
                 <button class="mode-btn" data-mode="review">
                     <i class="fas fa-redo"></i>
-                    <span>Revisar</span>
+                    <span data-translate="studyModeReview">Revisar</span>
                 </button>
                 <button class="mode-btn" data-mode="cram">
                     <i class="fas fa-bolt"></i>
-                    <span>Intensivo</span>
+                    <span data-translate="studyModeCram">Intensivo</span>
                 </button>
             </div>
         </div>
@@ -76,13 +76,13 @@
             <div id="flashcard" class="flashcard">
                 <div class="card-front">
                     <div class="card-content">
-                        <div id="card-front-text" class="card-text">Clique para começar</div>
+                        <div id="card-front-text" class="card-text" data-translate="cardClickToStart">Clique para começar</div>
                         <div id="card-front-media" class="card-media"></div>
                     </div>
                 </div>
                 <div class="card-back">
                     <div class="card-content">
-                        <div id="card-back-text" class="card-text">Resposta aparecerá aqui</div>
+                        <div id="card-back-text" class="card-text" data-translate="cardAnswerHere">Resposta aparecerá aqui</div>
                         <div id="card-back-media" class="card-media"></div>
                     </div>
                 </div>
@@ -93,23 +93,23 @@
         <div id="rating-container" class="rating-container" style="display: none;">
             <button class="rating-btn again" data-rating="0">
                 <i class="fas fa-times"></i>
-                <span>Novamente</span>
-                <small>< 1 min</small>
+                <span data-translate="ratingAgain">Novamente</span>
+                <small data-translate="ratingAgainTime">< 1 min</small>
             </button>
             <button class="rating-btn hard" data-rating="1">
                 <i class="fas fa-frown"></i>
-                <span>Difícil</span>
-                <small>< 6 min</small>
+                <span data-translate="ratingHard">Difícil</span>
+                <small data-translate="ratingHardTime">< 6 min</small>
             </button>
             <button class="rating-btn good" data-rating="2">
                 <i class="fas fa-smile"></i>
-                <span>Bom</span>
-                <small>< 10 min</small>
+                <span data-translate="ratingGood">Bom</span>
+                <small data-translate="ratingGoodTime">< 10 min</small>
             </button>
             <button class="rating-btn easy" data-rating="3">
                 <i class="fas fa-laugh"></i>
-                <span>Fácil</span>
-                <small>4 dias</small>
+                <span data-translate="ratingEasy">Fácil</span>
+                <small data-translate="ratingEasyTime">4 dias</small>
             </button>
         </div>
 
@@ -117,10 +117,10 @@
         <div id="navigation-controls" class="navigation-controls">
             <button id="prev-btn" class="nav-btn">
                 <i class="fas fa-chevron-left"></i>
-                <span>Anterior</span>
+                <span data-translate="navPrevious">Anterior</span>
             </button>
             <button id="next-btn" class="nav-btn">
-                <span>Próximo</span>
+                <span data-translate="navNext">Próximo</span>
                 <i class="fas fa-chevron-right"></i>
             </button>
         </div>
@@ -129,22 +129,22 @@
         <div class="study-controls">
             <button id="shuffle-btn" class="control-btn">
                 <i class="fas fa-random"></i>
-                <span>Embaralhar</span>
+                <span data-translate="controlShuffle">Embaralhar</span>
             </button>
             <button id="mark-difficult-btn" class="control-btn">
                 <i class="fas fa-star"></i>
-                <span>Marcar como Difícil</span>
+                <span data-translate="controlMarkDifficult">Marcar como Difícil</span>
             </button>
             <button id="reset-btn" class="control-btn">
                 <i class="fas fa-redo"></i>
-                <span>Reiniciar</span>
+                <span data-translate="controlReset">Reiniciar</span>
             </button>
         </div>
 
         <!-- Statistics -->
         <div class="stats-section">
             <div class="stats-header">
-                <h3>Estatísticas da Sessão</h3>
+                <h3 data-translate="statsSessionTitle">Estatísticas da Sessão</h3>
                 <button id="toggle-stats" class="toggle-btn">
                     <i class="fas fa-chevron-down"></i>
                 </button>
@@ -152,19 +152,19 @@
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-value" id="stat-cards-studied">0</div>
-                    <div class="stat-label">Cartas Estudadas</div>
+                    <div class="stat-label" data-translate="statsCardsStudied">Cartas Estudadas</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value" id="stat-mastery">0%</div>
-                    <div class="stat-label">Taxa de Acerto</div>
+                    <div class="stat-label" data-translate="statsMasteryRate">Taxa de Acerto</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value" id="stat-due">0</div>
-                    <div class="stat-label">Para Revisar</div>
+                    <div class="stat-label" data-translate="statsDueReview">Para Revisar</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value" id="stat-streak">0</div>
-                    <div class="stat-label">Sequência</div>
+                    <div class="stat-label" data-translate="statsStreak">Sequência</div>
                 </div>
             </div>
         </div>

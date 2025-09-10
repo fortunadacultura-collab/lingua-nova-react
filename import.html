@@ -26,7 +26,7 @@
     <div class="content-below-navbar">
         <!-- Page Title -->
         <div class="page-title-container">
-            <h1 class="page-title">Importar Flashcards</h1>
+            <h1 class="page-title" data-translate="importFlashcardsTitle">Importar Flashcards</h1>
         </div>
 
         <!-- Main Container -->
@@ -34,7 +34,7 @@
             <!-- Search Bar -->
             <div class="search-container">
                 <div class="search-bar">
-                    <input type="text" class="search-input" id="searchInput" placeholder="Buscar decks...">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Buscar decks..." data-translate-placeholder="searchDecksPlaceholder">
                     <button class="search-btn" id="searchBtn">
                         <i class="fas fa-search"></i>
                     </button>
@@ -50,11 +50,11 @@
             <div class="load-buttons-container">
                 <button class="load-more-btn" id="loadMoreBtn">
                     <i class="fas fa-chevron-down"></i>
-                    Carregar Mais
+                    <span data-translate="loadMore">Carregar Mais</span>
                 </button>
                 <button class="load-less-btn" id="loadLessBtn">
                     <i class="fas fa-chevron-up"></i>
-                    Mostrar Menos
+                    <span data-translate="showLess">Mostrar Menos</span>
                 </button>
             </div>
 
@@ -62,39 +62,39 @@
             <div class="create-deck-container">
                 <button class="create-deck-btn" onclick="createNewDeck()">
                     <i class="fas fa-plus"></i>
-                    Criar Novo Deck
+                    <span data-translate="createNewDeck">Criar Novo Deck</span>
                 </button>
             </div>
 
             <!-- Import/Export Section -->
             <div class="import-export-section">
-                <h2 class="section-title">Importar & Exportar</h2>
+                <h2 class="section-title" data-translate="importExportTitle">Importar & Exportar</h2>
                 <div class="import-export-options">
                     <div class="option-card">
                         <div class="option-icon">
                             <i class="fas fa-file-csv"></i>
                         </div>
-                        <h3 class="option-title">Importar CSV</h3>
-                        <p class="option-description">Importe flashcards de arquivos CSV com mapeamento automático de campos.</p>
-                        <button class="option-btn" id="importCSVBtn">Importar CSV</button>
+                        <h3 class="option-title" data-translate="importCSVTitle">Importar CSV</h3>
+                        <p class="option-description" data-translate="importCSVDesc">Importe flashcards de arquivos CSV com mapeamento automático de campos.</p>
+                        <button class="option-btn" id="importCSVBtn" data-translate="importCSVBtn">Importar CSV</button>
                     </div>
                     
                     <div class="option-card">
                         <div class="option-icon">
                             <i class="fas fa-file-archive"></i>
                         </div>
-                        <h3 class="option-title">Importar Anki</h3>
-                        <p class="option-description">Importe decks do Anki (.apkg) mantendo toda a formatação.</p>
-                        <button class="option-btn" id="importAnkiBtn">Importar Anki</button>
+                        <h3 class="option-title" data-translate="importAnkiTitle">Importar Anki</h3>
+                        <p class="option-description" data-translate="importAnkiDesc">Importe decks do Anki (.apkg) mantendo toda a formatação.</p>
+                        <button class="option-btn" id="importAnkiBtn" data-translate="importAnkiBtn">Importar Anki</button>
                     </div>
                     
                     <div class="option-card">
                         <div class="option-icon">
                             <i class="fas fa-file-code"></i>
                         </div>
-                        <h3 class="option-title">Importar JSON</h3>
-                        <p class="option-description">Importe dados estruturados em formato JSON.</p>
-                        <button class="option-btn" id="importJSONBtn">Importar JSON</button>
+                        <h3 class="option-title" data-translate="importJSONTitle">Importar JSON</h3>
+                        <p class="option-description" data-translate="importJSONDesc">Importe dados estruturados em formato JSON.</p>
+                        <button class="option-btn" id="importJSONBtn" data-translate="importJSONBtn">Importar JSON</button>
                     </div>
                 </div>
             </div>
@@ -108,12 +108,12 @@
     <div class="modal-overlay" id="importModal">
         <div class="modal">
             <div class="modal-header">
-                <h2 class="modal-title">Importar Flashcards</h2>
+                <h2 class="modal-title" data-translate="importFlashcardsModalTitle">Importar Flashcards</h2>
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label class="form-label">Selecione o formato:</label>
+                    <label class="form-label" data-translate="selectFormatLabel">Selecione o formato:</label>
                     <div class="format-options">
                         <div class="format-option active" data-format="csv">
                             <div class="format-icon">📄</div>
@@ -131,10 +131,10 @@
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">Selecione o arquivo:</label>
+                    <label class="form-label" data-translate="selectFileLabel">Selecione o arquivo:</label>
                     <div class="file-upload">
                         <div class="file-upload-icon">📁</div>
-                        <div>Clique para selecionar ou arraste o arquivo aqui</div>
+                        <div data-translate="fileUploadText">Clique para selecionar ou arraste o arquivo aqui</div>
                         <input type="file" class="file-input" id="fileInput" accept=".csv,.json,.apkg">
                     </div>
                 </div>
@@ -143,8 +143,8 @@
                 <div id="fieldMapping" style="display: none;"></div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-outline modal-close">Cancelar</button>
-                <button class="btn btn-solid" onclick="confirmImport()">Importar</button>
+                <button class="btn btn-outline modal-close" data-translate="cancel">Cancelar</button>
+                <button class="btn btn-solid" onclick="confirmImport()" data-translate="import">Importar</button>
             </div>
         </div>
     </div>
@@ -153,32 +153,32 @@
     <div class="modal-overlay" id="createDeckModal">
         <div class="modal">
             <div class="modal-header">
-                <h2 class="modal-title">Criar Novo Deck</h2>
+                <h2 class="modal-title" data-translate="createNewDeckModalTitle">Criar Novo Deck</h2>
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label class="form-label">Nome do Deck:</label>
-                    <input type="text" class="form-control" placeholder="Digite o nome do deck">
+                    <label class="form-label" data-translate="deckNameLabel">Nome do Deck:</label>
+                    <input type="text" class="form-control" placeholder="Digite o nome do deck" data-translate-placeholder="deckNamePlaceholder">
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Descrição:</label>
-                    <textarea class="form-control" rows="3" placeholder="Descreva o conteúdo do deck"></textarea>
+                    <label class="form-label" data-translate="descriptionLabel">Descrição:</label>
+                    <textarea class="form-control" rows="3" placeholder="Descreva o conteúdo do deck" data-translate-placeholder="descriptionPlaceholder"></textarea>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Categoria:</label>
+                    <label class="form-label" data-translate="categoryLabel">Categoria:</label>
                     <select class="form-control">
-                        <option>Vocabulário</option>
-                        <option>Gramática</option>
-                        <option>Conversação</option>
-                        <option>Expressões</option>
-                        <option>Outros</option>
+                        <option data-translate="vocabularyCategory">Vocabulário</option>
+                        <option data-translate="grammarCategory">Gramática</option>
+                        <option data-translate="conversationCategory">Conversação</option>
+                        <option data-translate="expressionsCategory">Expressões</option>
+                        <option data-translate="othersCategory">Outros</option>
                     </select>
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-outline modal-close">Cancelar</button>
-                <button class="btn btn-solid">Criar Deck</button>
+                <button class="btn btn-outline modal-close" data-translate="cancel">Cancelar</button>
+                <button class="btn btn-solid" data-translate="createDeck">Criar Deck</button>
             </div>
         </div>
     </div>
@@ -186,13 +186,13 @@
     <!-- Toast Notification -->
     <div class="toast" id="toast">
         <i class="fas fa-check-circle" id="toastIcon"></i>
-        <span id="toastMessage">Mensagem de notificação</span>
+        <span id="toastMessage" data-translate="notificationMessage">Mensagem de notificação</span>
     </div>
 
     <!-- Cloud Sync Status -->
     <div class="sync-status" id="syncStatus">
         <i class="fas fa-sync-alt sync-icon"></i>
-        Verificando sincronização...
+        <span data-translate="checkingSyncStatus">Verificando sincronização...</span>
     </div>
 
     <!-- Scripts -->
@@ -203,5 +203,10 @@
     <script src="js/language-manager.js"></script>
     <script src="js/native-language.js"></script>
     <script src="js/my_decks.js"></script>
+    <script src="js/import.js"></script>
+    <script>
+        // Initialize the page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
 </body>
 </html>

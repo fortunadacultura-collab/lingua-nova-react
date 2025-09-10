@@ -1,3 +1,79 @@
+// Import Page Translation Manager
+const importTranslationManager = {
+    currentLanguage: 'pt',
+    
+    init() {
+        this.setupEventListeners();
+        this.loadStoredLanguage();
+    },
+    
+    setupEventListeners() {
+        document.addEventListener('translationLanguageChanged', (e) => {
+            this.changeLanguage(e.detail.language);
+        });
+        
+        document.addEventListener('nativeLanguageChanged', (e) => {
+            this.changeLanguage(e.detail.language);
+        });
+    },
+    
+    loadStoredLanguage() {
+        // Load saved language from native language manager
+        const savedLang = window.nativeLanguageManager?.getCurrentNativeLanguage() || 'pt';
+        console.log('Import: Carregando idioma salvo:', savedLang);
+        this.changeLanguage(savedLang);
+    },
+    
+    changeLanguage(langCode) {
+        console.log(`Import: Mudando idioma para ${langCode}`);
+        this.currentLanguage = langCode;
+        
+        // Apenas traduzir a página, não chamar changeNativeLanguage para evitar loop
+        this.updateAllTranslations();
+    },
+    
+    updateAllTranslations() {
+        this.translatePage();
+        // Notificar navbar para atualizar suas traduções
+        if (window.updateUITexts) {
+            window.updateUITexts(this.currentLanguage);
+        }
+    },
+    
+    async translatePage() {
+        try {
+            const response = await fetch('data/translations.json');
+            const translations = await response.json();
+            const langTranslations = translations[this.currentLanguage] || translations['pt'];
+            
+            // Traduzir todos os elementos com data-translate
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (langTranslations[key]) {
+                    element.textContent = langTranslations[key];
+                }
+            });
+            
+            // Traduzir placeholders
+            document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                if (langTranslations[key]) {
+                    element.placeholder = langTranslations[key];
+                }
+            });
+            
+            console.log(`Import: Página traduzida para ${this.currentLanguage}`);
+        } catch (error) {
+            console.error('Erro ao carregar traduções:', error);
+        }
+    }
+};
+
+// Global variables
+let appConfig = {
+    initialized: false
+};
+
 // Sample deck data
 const decks = [
     {
@@ -115,11 +191,74 @@ let csvData = null;
 let fieldMapping = {};
 
 // Initialize the page
-function initializePage() {
+function waitForNavbar() {
+    return new Promise((resolve) => {
+        const checkNavbar = () => {
+            const navbarContainer = document.getElementById('navbar-container');
+            const userLanguage = document.getElementById('user-language');
+            
+            if (navbarContainer && navbarContainer.innerHTML.trim() !== '' && userLanguage) {
+                console.log('✅ [IMPORT] Navbar detectado no DOM');
+                resolve();
+            } else {
+                console.log('⏳ [IMPORT] Aguardando navbar carregar...');
+                setTimeout(checkNavbar, 100);
+            }
+        };
+        checkNavbar();
+    });
+}
+
+/**
+ * Global init function - called from HTML
+ */
+async function init() {
+    if (appConfig.initialized) {
+        console.log("Import: App already initialized");
+        return;
+    }
+    
+    try {
+        console.log('Import: Initializing application...');
+        
+        // Aguardar o navbar carregar
+        await waitForNavbar();
+        
+        // Inicializar o gerenciador de idioma nativo PRIMEIRO
+        if (window.nativeLanguageManager) {
+            await window.nativeLanguageManager.init();
+            console.log('Import: Sistema de idiomas nativo inicializado');
+        } else {
+            console.warn('Import: nativeLanguageManager não encontrado');
+        }
+        
+        // Inicializar o gerenciador de traduções
+        importTranslationManager.init();
+        
+        // Traduzir a página após inicialização
+        setTimeout(() => {
+            importTranslationManager.translatePage();
+        }, 500);
+        
+        // Initialize page components
+        initializeImportPage();
+        setupEventListeners();
+        setupImportEventListeners();
+        checkCloudSyncStatus();
+        
+        appConfig.initialized = true;
+        console.log('Import: Application initialized successfully');
+    } catch (error) {
+        console.error('Import: Initialization error:', error);
+    }
+}
+
+/**
+ * Initialize the Import page
+ */
+function initializeImportPage() {
+    console.log('Initializing Import functionality...');
     renderDecks();
-    setupEventListeners();
-    setupImportEventListeners();
-    checkCloudSyncStatus();
 }
 
 // Render decks based on current page and filters
@@ -624,4 +763,4 @@ function logout() {
 }
 
 // Initialize page when DOM is loaded
-document.addEventListener('DOMContentLoaded', initializePage);
+// Remove the old DOMContentLoaded listener since it's now handled in HTML

@@ -256,19 +256,29 @@ const storyTranslationManager = {
         document.addEventListener('translationLanguageChanged', (e) => {
             const newLanguage = e.detail.language;
             this.changeLanguage(newLanguage);
+            // Also update appConfig to load stories in the correct language
+            appConfig.currentLanguage = newLanguage;
+        });
+        
+        // Listen for native language changes from navbar
+        document.addEventListener('nativeLanguageChanged', (e) => {
+            const newLanguage = e.detail.language;
+            this.changeLanguage(newLanguage);
+            // Also update appConfig to load stories in the correct language
+            appConfig.currentLanguage = newLanguage;
         });
     },
     
     loadStoredLanguage() {
-        // Load saved language
-        const savedLang = localStorage.getItem('storyTranslationLanguage') || 'en';
+        // Load saved language - using same key as dialogues for consistency
+        const savedLang = localStorage.getItem('translationLanguage') || 'pt';
         this.currentLanguage = savedLang;
     },
     
     changeLanguage(langCode) {
         this.currentLanguage = langCode;
-        localStorage.setItem('storyTranslationLanguage', langCode);
-        updateAllTranslations();
+        localStorage.setItem('translationLanguage', langCode);
+        this.updateAllTranslations();
     },
     
     updateAllTranslations() {
@@ -278,8 +288,7 @@ const storyTranslationManager = {
         
         translationElements.forEach((element, index) => {
             if (paragraphs[index] && paragraphs[index].translations) {
-                const translation = paragraphs[index].translations[this.currentLanguage] || 
-                                  paragraphs[index].translations.pt || '';
+                const translation = paragraphs[index].translations[this.currentLanguage] || '';
                 element.textContent = translation;
             }
         });
@@ -295,6 +304,11 @@ async function init() {
         
         // Initialize DOM elements
         initDomElements();
+        
+        // Initialize native language manager first
+        if (window.nativeLanguageManager) {
+            await window.nativeLanguageManager.init();
+        }
         
         // Initialize managers
         volumeManager.init();
@@ -485,7 +499,7 @@ function renderStoryContent(storyData) {
         const translationElement = document.createElement('div');
         translationElement.className = 'translation-text';
         const currentLang = storyTranslationManager.currentLanguage;
-        translationElement.textContent = paragraph.translations[currentLang] || paragraph.translations.pt || '';
+        translationElement.textContent = paragraph.translations[currentLang] || '';
         
         paragraphElement.appendChild(textElement);
         paragraphElement.appendChild(translationElement);
@@ -769,6 +783,9 @@ function updatePlayerControls() {
     if (domElements.pauseBtn) {
         domElements.pauseBtn.style.display = appConfig.isPlaying ? 'inline-flex' : 'none';
     }
+    if (domElements.stopBtn) {
+        domElements.stopBtn.style.display = appConfig.isPlaying ? 'inline-flex' : 'none';
+    }
 }
 
 // Toggle translation mode
@@ -931,14 +948,32 @@ function setupEventListeners() {
     // Player controls
     if (domElements.playBtn) {
         domElements.playBtn.addEventListener('click', playStory);
+        domElements.playBtn.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.95)';
+        });
+        domElements.playBtn.addEventListener('touchend', function() {
+            this.style.transform = 'scale(1)';
+        });
     }
     
     if (domElements.pauseBtn) {
         domElements.pauseBtn.addEventListener('click', pauseStory);
+        domElements.pauseBtn.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.95)';
+        });
+        domElements.pauseBtn.addEventListener('touchend', function() {
+            this.style.transform = 'scale(1)';
+        });
     }
     
     if (domElements.stopBtn) {
         domElements.stopBtn.addEventListener('click', stopStory);
+        domElements.stopBtn.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.95)';
+        });
+        domElements.stopBtn.addEventListener('touchend', function() {
+            this.style.transform = 'scale(1)';
+        });
     }
     
     if (domElements.translateBtn) {

@@ -124,7 +124,40 @@ class NavbarManager {
 
     changeNativeLanguage(langCode) {
         console.log(`Selecionado idioma nativo: ${langCode}`);
+        
+        // Salvar preferência imediatamente quando selecionado manualmente
+        localStorage.setItem('nativeLanguage', langCode);
+        
+        // Notificar mudança
         notifyNativeLanguageChange(langCode);
+        
+        // Atualizar seletor visual imediatamente
+        this.updateNativeLanguageSelector(langCode);
+    }
+    
+    updateNativeLanguageSelector(langCode) {
+        const userSelected = document.getElementById('user-language');
+        const userOptions = document.getElementById('user-language-options');
+        
+        if (userSelected && userOptions) {
+            const option = userOptions.querySelector(`li[data-value="${langCode}"]`);
+            if (option) {
+                const flag = option.getAttribute('data-flag');
+                const flagImg = userSelected.querySelector('img');
+                
+                if (flagImg) {
+                    flagImg.src = `assets/images/flags/${flag}.svg`;
+                    flagImg.alt = langCode.toUpperCase();
+                    flagImg.style.display = 'inline-block'; // Mostrar a bandeira
+                }
+                
+                // Atualizar seleção visual
+                userOptions.querySelectorAll('li').forEach(li => {
+                    li.classList.remove('selected');
+                });
+                option.classList.add('selected');
+            }
+        }
     }
 
     toggleLanguageSelector(selector) {
@@ -331,6 +364,14 @@ function closeUserMenu() {
 }
 
 function notifyNativeLanguageChange(langCode) {
+    // Evitar disparar eventos se já estamos processando uma mudança
+    if (window.nativeLanguageManager && window.nativeLanguageManager.isChangingLanguage) {
+        console.log('Evitando evento duplicado durante mudança de idioma');
+        return;
+    }
+    
+    console.log(`Notificando mudança de idioma nativo para: ${langCode}`);
+    
     document.dispatchEvent(new CustomEvent('nativeLanguageChanged', {
         detail: { language: langCode }
     }));

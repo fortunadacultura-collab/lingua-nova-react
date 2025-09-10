@@ -1,10 +1,10 @@
 // native-language.js - CORREÇÃO DO LOOP INFINITO
 class NativeLanguageManager {
     constructor() {
-        this.currentNativeLanguage = 'pt';
+        this.currentNativeLanguage = null; // Não definir padrão para evitar flash
         this.translations = {};
         this.isChangingLanguage = false; // ⚠️ FLAG PARA PREVENIR LOOP
-        this.init();
+        // Não chamar init() no construtor para evitar problemas de timing
     }
 
     async init() {
@@ -34,31 +34,53 @@ class NativeLanguageManager {
         });
     }
 
-    loadUserPreference() {
+    async loadUserPreference() {
         const savedLang = localStorage.getItem('nativeLanguage');
+        console.log('🔍 loadUserPreference - savedLang:', savedLang);
+        
         if (savedLang) {
-            this.changeNativeLanguage(savedLang);
+            console.log('✅ Aplicando idioma salvo:', savedLang);
+            // Aplicar idioma salvo diretamente sem causar flash
+            await this.applyLanguage(savedLang, false);
         } else {
+            console.log('🔄 Nenhum idioma salvo, iniciando detecção automática...');
             // Auto-detect if no preference is saved
-            this.autoDetectLanguage();
+            await this.autoDetectLanguage();
+        }
+    }
+
+    async autoDetectLanguage() {
+        try {
+            console.log('🌍 [NATIVE-LANG] Iniciando detecção automática de idioma...');
+            
+            // CORREÇÃO: Sempre usar português como padrão
+            console.log('🇧🇷 [NATIVE-LANG] Aplicando português como idioma padrão');
+            await this.applyLanguage('pt', true);
+            
+        } catch (error) {
+            console.error('❌ [NATIVE-LANG] Erro na detecção automática de idioma:', error);
+            // Fallback para português
+            await this.applyLanguage('pt', true);
         }
     }
 
     // ⚠️ NOVA FUNÇÃO: Aplicar idioma sem causar loop
     async applyLanguage(langCode, isAutoDetection = false) {
         if (this.isChangingLanguage || langCode === this.currentNativeLanguage) {
+            console.log('⏭️ [NATIVE-LANG] applyLanguage ignorado - já aplicando ou idioma igual:', langCode);
             return;
         }
 
         this.isChangingLanguage = true;
         
-        console.log(`Aplicando idioma: ${langCode} (detecção automática: ${isAutoDetection})`);
+        console.log('🎯 [NATIVE-LANG] Aplicando idioma:', langCode, '(detecção automática:', isAutoDetection, ')');
+        console.log('📍 [NATIVE-LANG] Idioma anterior:', this.currentNativeLanguage);
         
         this.currentNativeLanguage = langCode;
         this.updateUITexts(langCode);
         
-        // Garantir que o seletor de idioma seja atualizado corretamente
-        await this.updateLanguageSelector(langCode);
+        // Aguardar navbar estar carregado e atualizar seletor
+        await this.waitForNavbarAndUpdateSelector(langCode);
         
         if (isAutoDetection) {
             // Salva a detecção automática para futuro
@@ -66,13 +88,52 @@ class NativeLanguageManager {
             console.log(`Idioma detectado automaticamente salvo: ${langCode}`);
         }
         
-        this.notifyLanguageChange(langCode, false); // ⚠️ Não redisparar evento
+        this.notifyLanguageChange(langCode, true); // ⚠️ Sempre disparar evento para aplicar traduções
         
         this.isChangingLanguage = false;
     }
 
+    async waitForNavbarAndUpdateSelector(langCode) {
+        // Aguardar até que o navbar esteja carregado
+        const maxAttempts = 20; // 2 segundos máximo
+        let attempts = 0;
+        
+        const checkNavbar = async () => {
+            const userLanguageElement = document.getElementById('user-language');
+            if (userLanguageElement) {
+                await this.updateLanguageSelector(langCode);
+                return true;
+            }
+            return false;
+        };
+        
+        // Tentar imediatamente
+        if (await checkNavbar()) {
+            return;
+        }
+        
+        // Se não encontrou, aguardar com polling
+        const pollInterval = setInterval(async () => {
+            attempts++;
+            if (await checkNavbar() || attempts >= maxAttempts) {
+                clearInterval(pollInterval);
+                if (attempts >= maxAttempts) {
+                    console.warn('Timeout aguardando navbar carregar para atualizar bandeira');
+                }
+            }
+        }, 100);
+    }
+
     notifyLanguageChange(langCode, shouldDispatch = true) {
+        console.log('🔔 nativeLanguageManager.notifyLanguageChange:', langCode, 'shouldDispatch:', shouldDispatch);
+        
         if (shouldDispatch) {
+            // Sincronizar localStorage em todas as páginas para manter consistência
+            console.log('📄 Sincronizando localStorage para idioma:', langCode);
+            localStorage.setItem('linguaNovaLanguage', langCode);
+            localStorage.setItem('translationLanguage', langCode)
+            
+            console.log('🚀 Disparando evento translationLanguageChanged para:', langCode);
             document.dispatchEvent(new CustomEvent('translationLanguageChanged', {
                 detail: { language: langCode }
             }));
@@ -119,6 +180,7 @@ class NativeLanguageManager {
                     const flagUrl = `assets/images/flags/${flag}.svg`;
                     flagImg.src = flagUrl;
                     flagImg.alt = langCode.toUpperCase();
+                    flagImg.style.display = 'inline-block'; // Mostrar a bandeira
                     console.log(`Bandeira atualizada: ${flagUrl}`);
                 } else {
                     console.warn('Elemento de imagem da bandeira não encontrado');
@@ -138,14 +200,20 @@ class NativeLanguageManager {
     }
 
     updateUITexts(langCode) {
+        console.log('🔄 [NATIVE-LANG] updateUITexts chamado com idioma:', langCode);
         const translations = this.translations[langCode] || {};
+        console.log('📚 [NATIVE-LANG] Traduções disponíveis para', langCode, ':', Object.keys(translations).length, 'chaves');
         
+        let elementsTranslated = 0;
         document.querySelectorAll('[data-translate]').forEach(element => {
             const key = element.getAttribute('data-translate');
             if (translations[key]) {
                 element.textContent = translations[key];
+                elementsTranslated++;
             }
         });
+        
+        console.log('✅ [NATIVE-LANG] Elementos traduzidos:', elementsTranslated);
 
         const pageTitle = document.querySelector('title');
         if (pageTitle && translations['pageTitle']) {
@@ -177,3 +245,30 @@ class NativeLanguageManager {
 const nativeLanguageManager = new NativeLanguageManager();
 window.nativeLanguageManager = nativeLanguageManager;
 window.getTranslation = (key) => nativeLanguageManager.getTranslation(key);
+
+// Função global para sincronizar com idioma detectado (chamada pelo navbar)
+window.syncWithDetectedLanguage = async function() {
+    try {
+        console.log('Sincronizando com idioma detectado...');
+        
+        // Verificar se já há uma preferência salva
+        const savedLang = localStorage.getItem('nativeLanguage');
+        if (savedLang) {
+            console.log(`Idioma já salvo: ${savedLang}, não fazendo detecção automática`);
+            return;
+        }
+        
+        // Só fazer detecção automática se não houver preferência salva
+        if (window.languageDetector && nativeLanguageManager) {
+            const detectedLang = await window.languageDetector.getPreferredLanguage();
+            console.log(`Sincronizando com idioma detectado: ${detectedLang}`);
+            
+            // Aplicar sem salvar (deixar o usuário decidir)
+            await nativeLanguageManager.applyLanguage(detectedLang, false);
+        }
+    } catch (error) {
+        console.error('Erro ao sincronizar com idioma detectado:', error);
+    }
+};
+
+console.log('🌐 Native Language Manager inicializado com sucesso');

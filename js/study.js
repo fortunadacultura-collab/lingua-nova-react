@@ -177,12 +177,103 @@ const deckData = {
     ]
 };
 
+// Função para aguardar o navbar carregar
+function waitForNavbar() {
+    return new Promise((resolve) => {
+        const checkNavbar = () => {
+            const navbarContainer = document.getElementById('navbar-container');
+            const userLanguage = document.getElementById('user-language');
+            
+            if (navbarContainer && navbarContainer.innerHTML.trim() !== '' && userLanguage) {
+                console.log('✅ [STUDY] Navbar detectado no DOM');
+                resolve();
+            } else {
+                console.log('⏳ [STUDY] Aguardando navbar carregar...');
+                setTimeout(checkNavbar, 100);
+            }
+        };
+        checkNavbar();
+    });
+}
+
+// Função para traduzir a página
+function translatePage(targetLanguage) {
+    console.log('🌐 [STUDY] translatePage chamada com idioma:', targetLanguage);
+    
+    if (!window.nativeLanguageManager || !window.nativeLanguageManager.translations) {
+        console.warn('❌ [STUDY] Sistema de traduções não disponível');
+        return;
+    }
+
+    const translations = window.nativeLanguageManager.translations[targetLanguage];
+    if (!translations) {
+        console.warn(`❌ [STUDY] Traduções não encontradas para: ${targetLanguage}`);
+        return;
+    }
+
+    // Aplicar traduções nos elementos com data-translate
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[key]) {
+            element.textContent = translations[key];
+        }
+    });
+
+    console.log('✅ [STUDY] Traduções aplicadas para:', targetLanguage);
+}
+
 // Initialize the page
-document.addEventListener('DOMContentLoaded', function() {
+// Listener para mudanças de idioma
+document.addEventListener('translationLanguageChanged', function(event) {
+    const newLanguage = event.detail.language;
+    console.log('🔄 [STUDY] Evento de mudança de idioma recebido:', newLanguage);
+    translatePage(newLanguage);
+});
+
+document.addEventListener('nativeLanguageChanged', function(event) {
+    const newLanguage = event.detail.language;
+    console.log('🔄 [STUDY] Evento de idioma nativo recebido:', newLanguage);
+    translatePage(newLanguage);
+});
+
+// Função de inicialização principal
+async function init() {
+    console.log('🚀 [STUDY] Iniciando aplicação...');
+    
+    try {
+        // Aguardar o navbar carregar
+        await waitForNavbar();
+        
+        // Inicializar o gerenciador de idioma nativo PRIMEIRO
+        if (window.nativeLanguageManager) {
+            await window.nativeLanguageManager.init();
+            console.log('✅ [STUDY] Sistema de idiomas nativo inicializado');
+        } else {
+            console.warn('❌ [STUDY] nativeLanguageManager não encontrado');
+        }
+        
+        // Traduzir a página após inicialização
+        setTimeout(() => {
+            const currentLang = window.nativeLanguageManager?.getCurrentLanguage() || 'pt';
+            translatePage(currentLang);
+        }, 500);
+        
+        // Configurar listeners do navbar
+        setupNavbarEventListeners();
+        
+        console.log('✅ [STUDY] Aplicação inicializada com sucesso');
+    } catch (error) {
+        console.error('❌ [STUDY] Erro na inicialização:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', async function() {
+    // Inicializar aplicação
+    await init();
+    
     initializeFirebaseAuth();
     setupAuthEventListeners();
     setupEventListeners();
-    setupNavbarEventListeners();
     // RESET: Inicializar sempre com dados zerados
     resetStudySession();
 });
@@ -417,8 +508,8 @@ function initializeStudySession() {
     const deckId = urlParams.get('deck');
     
     // In a real app, you would fetch the deck data based on the ID
-    document.getElementById('deck-title').textContent = deckData.title;
-    document.getElementById('deck-description').textContent = deckData.description;
+    // Não sobrescrever o textContent para manter as traduções
+    // Os elementos já têm data-translate="deckTitleLoading" e "deckDescriptionLoading"
     
     // Load cards from localStorage or use default
     const savedCards = localStorage.getItem(`deck-${deckId}-cards`);
@@ -851,8 +942,8 @@ function resetStudySession() {
     currentCardIndex = 0;
     
     // Atualizar a interface
-    document.getElementById('deck-title').textContent = deckData.title;
-    document.getElementById('deck-description').textContent = deckData.description;
+    // Não sobrescrever o textContent para manter as traduções
+    // Os elementos já têm data-translate configurado
     
     filterCardsByStudyMode();
     updateCardDisplay();

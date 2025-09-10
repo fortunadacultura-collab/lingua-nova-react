@@ -25,21 +25,21 @@
     <div class="container">
         <!-- Hero Section -->
         <div class="hero-section">
-            <h1 class="hero-title">Domine idiomas com Flashcards Inteligentes</h1>
-            <p class="hero-subtitle">Sistema de repetição espaçada baseado em IA para aprender vocabulário de forma eficiente e duradoura.</p>
+            <h1 class="hero-title" data-translate="my_decks_hero_title">Domine idiomas com Flashcards Inteligentes</h1>
+            <p class="hero-subtitle" data-translate="my_decks_hero_subtitle">Sistema de repetição espaçada baseado em IA para aprender vocabulário de forma eficiente e duradoura.</p>
             
             <div class="cta-buttons">
                 <button class="btn btn-solid btn-large">
-                    <i class="fas fa-plus"></i> Criar Deck
+                    <i class="fas fa-plus"></i> <span data-translate="my_decks_create_deck">Criar Deck</span>
                 </button>
                 <button class="btn btn-outline btn-large">
-                    <i class="fas fa-users"></i> Explorar Comunidade
+                    <i class="fas fa-users"></i> <span data-translate="my_decks_explore_community">Explorar Comunidade</span>
                 </button>
             </div>
         </div>
 
         <!-- Deck Grid -->
-        <h2 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text);">Seus Decks Recentes</h2>
+        <h2 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text);" data-translate="my_decks_recent_title">Seus Decks Recentes</h2>
         
         <div class="deck-grid">
             <!-- Deck 1 -->
@@ -48,15 +48,15 @@
                     <i class="fas fa-flag-usa"></i>
                 </div>
                 <div class="deck-content">
-                    <h3 class="deck-title">Inglês Básico</h3>
-                    <p class="deck-description">Vocabulário essencial para iniciantes em inglês.</p>
+                    <h3 class="deck-title" data-translate="deck_title_basic_english">Inglês Básico</h3>
+                    <p class="deck-description" data-translate="deck_description_basic_english">Vocabulário essencial para iniciantes em inglês.</p>
                     <div class="deck-stats">
-                        <span class="deck-stat"><i class="fas fa-cards"></i> 52 cartas</span>
+                        <span class="deck-stat"><i class="fas fa-cards"></i> 52 <span data-translate="deck_cards_count">cartas</span></span>
                         <span class="deck-stat"><i class="fas fa-check-circle"></i> 80%</span>
                     </div>
                     <div class="deck-actions">
                         <button class="action-btn btn-study">
-                            <i class="fas fa-play"></i> Estudar
+                            <i class="fas fa-play"></i> <span data-translate="deck_study_button">Estudar</span>
                         </button>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="deck-actions">
                         <button class="action-btn btn-study">
-                            <i class="fas fa-play"></i> Estudar
+                            <i class="fas fa-play"></i> <span data-translate="deck_study_button">Estudar</span>
                         </button>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="deck-actions">
                         <button class="action-btn btn-study">
-                            <i class="fas fa-play"></i> Estudar
+                            <i class="fas fa-play"></i> <span data-translate="deck_study_button">Estudar</span>
                         </button>
                     </div>
                 </div>
@@ -106,6 +106,19 @@
 
     <div id="footer-container"></div>
 
+    <script>
+    // Initialize the application after everything is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set a small timeout to ensure all elements are rendered
+        setTimeout(function() {
+            if (typeof init === 'function') {
+                init().catch(function(error) {
+                    console.error('Failed to initialize app:', error);
+                });
+            }
+        }, 100);
+    });
+    </script>
     <script src="js/data.js"></script>
     <script src="js/geo-ip-detector.js"></script>
     <script src="js/user-avatar.js"></script>

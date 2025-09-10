@@ -1,15 +1,133 @@
 // Add Cards Page JavaScript
 
-// Initialize the page when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Add Cards page loaded');
+// Translation Manager for Add Cards page
+const addCardsTranslationManager = {
+    currentLanguage: 'pt',
     
-    // Initialize page components
-    initializeAddCards();
+    init() {
+        this.setupEventListeners();
+        this.loadStoredLanguage();
+    },
     
-    // Setup event listeners
-    setupEventListeners();
-});
+    setupEventListeners() {
+        document.addEventListener('translationLanguageChanged', (e) => {
+            this.changeLanguage(e.detail.language);
+        });
+        
+        document.addEventListener('nativeLanguageChanged', (e) => {
+            this.changeLanguage(e.detail.language);
+        });
+    },
+    
+    loadStoredLanguage() {
+        // Load saved language from native language manager
+        const savedLang = window.nativeLanguageManager?.getCurrentNativeLanguage() || 'pt';
+        console.log('Add Cards: Carregando idioma salvo:', savedLang);
+        this.changeLanguage(savedLang);
+    },
+    
+    changeLanguage(langCode) {
+        console.log(`Add Cards: Mudando idioma para ${langCode}`);
+        this.currentLanguage = langCode;
+        
+        // Apenas traduzir a página, não chamar changeNativeLanguage para evitar loop
+        this.updateAllTranslations();
+    },
+    
+    updateAllTranslations() {
+        this.translatePage();
+        // Notificar navbar para atualizar suas traduções
+        if (window.updateUITexts) {
+            window.updateUITexts(this.currentLanguage);
+        }
+    },
+    
+    async translatePage() {
+        try {
+            const response = await fetch('data/translations.json');
+            const translations = await response.json();
+            const langTranslations = translations[this.currentLanguage] || translations['pt'];
+            
+            // Traduzir todos os elementos com data-translate
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (langTranslations[key]) {
+                    element.textContent = langTranslations[key];
+                }
+            });
+            
+            console.log(`Add Cards: Página traduzida para ${this.currentLanguage}`);
+        } catch (error) {
+            console.error('Erro ao carregar traduções:', error);
+        }
+    }
+};
+
+// Global variables
+let appConfig = {
+    initialized: false
+};
+
+// Função para aguardar o navbar carregar
+function waitForNavbar() {
+    return new Promise((resolve) => {
+        const checkNavbar = () => {
+            const navbarContainer = document.getElementById('navbar-container');
+            const userLanguage = document.getElementById('user-language');
+            
+            if (navbarContainer && navbarContainer.innerHTML.trim() !== '' && userLanguage) {
+                console.log('✅ [ADD_CARDS] Navbar detectado no DOM');
+                resolve();
+            } else {
+                console.log('⏳ [ADD_CARDS] Aguardando navbar carregar...');
+                setTimeout(checkNavbar, 100);
+            }
+        };
+        checkNavbar();
+    });
+}
+
+/**
+ * Global init function - called from HTML
+ */
+async function init() {
+    if (appConfig.initialized) {
+        console.log("Add Cards: App already initialized");
+        return;
+    }
+    
+    try {
+        console.log('Add Cards: Initializing application...');
+        
+        // Aguardar o navbar carregar
+        await waitForNavbar();
+        
+        // Inicializar o gerenciador de idioma nativo PRIMEIRO
+        if (window.nativeLanguageManager) {
+            await window.nativeLanguageManager.init();
+            console.log('Add Cards: Sistema de idiomas nativo inicializado');
+        } else {
+            console.warn('Add Cards: nativeLanguageManager não encontrado');
+        }
+        
+        // Inicializar o gerenciador de traduções
+        addCardsTranslationManager.init();
+        
+        // Traduzir a página após inicialização
+        setTimeout(() => {
+            addCardsTranslationManager.translatePage();
+        }, 500);
+        
+        // Initialize page components
+        initializeAddCards();
+        setupEventListeners();
+        
+        appConfig.initialized = true;
+        console.log('Add Cards: Application initialized successfully');
+    } catch (error) {
+        console.error('Add Cards: Initialization error:', error);
+    }
+}
 
 /**
  * Initialize the Add Cards page
