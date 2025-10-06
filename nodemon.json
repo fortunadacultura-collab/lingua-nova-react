@@ -1,0 +1,15 @@
+{
+  "watch": [
+    "server",
+    "server/**/*.js",
+    "server/**/*.json"
+  ],
+  "ignore": [
+    "server/uploads/**",
+    "server/uploads/apkg/**",
+    "server/uploads/avatars/**",
+    "public/**",
+    "build/**"
+  ],
+  "ext": "js,json"
+}
