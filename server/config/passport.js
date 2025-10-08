@@ -19,15 +19,24 @@ passport.deserializeUser(async (id, done) => {
 });
 
 // Estratégia Google - só configura se as credenciais forem válidas
+const normalizeBaseUrl = (url) => {
+  if (!url) return '';
+  try {
+    return String(url).replace(/\/+$/, '');
+  } catch (_) {
+    return '';
+  }
+};
+const BACKEND_URL = normalizeBaseUrl(process.env.BACKEND_URL);
 if (process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_ID !== 'demo-google-client-id') {
   console.log('🔧 Configurando Google OAuth Strategy...');
   console.log('📋 Client ID:', process.env.GOOGLE_CLIENT_ID);
-  console.log('📋 Callback URL:', '/api/auth/google/callback');
+  console.log('📋 Callback URL:', BACKEND_URL ? `${BACKEND_URL}/api/auth/google/callback` : '/api/auth/google/callback');
   
   passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: '/api/auth/google/callback'
+    callbackURL: BACKEND_URL ? `${BACKEND_URL}/api/auth/google/callback` : '/api/auth/google/callback'
   }, async (accessToken, refreshToken, profile, done) => {
     try {
       console.log('🔐 Google OAuth callback executado');
@@ -87,7 +96,7 @@ if (process.env.FACEBOOK_APP_ID && process.env.FACEBOOK_APP_ID !== 'demo-faceboo
   passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: '/auth/facebook/callback',
+    callbackURL: BACKEND_URL ? `${BACKEND_URL}/auth/facebook/callback` : '/auth/facebook/callback',
     profileFields: ['id', 'emails', 'name', 'picture']
   }, async (accessToken, refreshToken, profile, done) => {
     try {
@@ -127,7 +136,7 @@ if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_ID !== 'demo-githu
   passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: '/api/auth/github/callback'
+    callbackURL: BACKEND_URL ? `${BACKEND_URL}/api/auth/github/callback` : '/api/auth/github/callback'
   }, async (accessToken, refreshToken, profile, done) => {
     try {
       let user = await User.findByGithubId(profile.id);

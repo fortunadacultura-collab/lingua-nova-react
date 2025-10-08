@@ -28,9 +28,41 @@ app.use((req, res, next) => {
   next();
 });
 
-// CORS configuration
+// CORS configuration (supports multiple origins via CORS_ORIGINS or FRONTEND_URLS)
+const parseOrigins = (raw) => {
+  if (!raw) return [];
+  return String(raw)
+    .split(',')
+    .map(s => s.trim())
+    .filter(Boolean);
+};
+const allowedOrigins = (
+  parseOrigins(process.env.CORS_ORIGINS) ||
+  parseOrigins(process.env.FRONTEND_URLS)
+);
+if (allowedOrigins.length === 0 && process.env.FRONTEND_URL) {
+  allowedOrigins.push(process.env.FRONTEND_URL.trim());
+}
+if (allowedOrigins.length === 0) {
+  allowedOrigins.push('http://localhost:3001');
+}
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3001',
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true); // Allow non-browser or same-origin
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    return callback(new Error(`Not allowed by CORS: ${origin}`));
+  },
+  credentials: true
+}));
+
+// Explicit preflight for all routes
+app.options('*', cors({
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    return callback(new Error(`Not allowed by CORS: ${origin}`));
+  },
   credentials: true
 }));
 
