@@ -200,8 +200,10 @@ app.get('/auth/facebook/callback', (req, res, next) => {
 // Serve static files from React build
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../build')));
-  
-  app.get('*', (req, res) => {
+
+  // Não interceptar rotas da API com o fallback do SPA
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api/')) return next();
     res.sendFile(path.join(__dirname, '../build', 'index.html'));
   });
 }
